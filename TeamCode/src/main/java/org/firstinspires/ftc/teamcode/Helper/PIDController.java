@@ -1,7 +1,8 @@
-package org.firstinspires.ftc.teamcode;
+package org.firstinspires.ftc.teamcode.Helper;
 
 import com.qualcomm.robotcore.util.ElapsedTime;
 
+// Create an instance of this for every time a PID is used
 public class PIDController {
 
     private double Kp, Ki, Kd;
