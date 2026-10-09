@@ -26,4 +26,18 @@ android {
 
 dependencies {
     implementation project(':FtcRobotController')
+    implementation 'org.tensorflow:tensorflow-lite:2.17.0'
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    // 0.6.0 starts Limelight proxy ports that conflict with Panels.
+    implementation('com.acmerobotics.dashboard:dashboard:0.4.16') {
+        exclude group: 'org.firstinspires.ftc'
+    }
+}
+
+repositories { maven { url = 'https://maven.brott.dev/' } }
+
+android {
+    androidResources { noCompress += ['tflite'] }
+    defaultConfig { testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner' }
 }
