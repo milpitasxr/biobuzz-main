@@ -19,39 +19,50 @@
 <variable id="r`Qo@zLIIRNw00v4ME#6">USE_WEBCAM</variable>
 <variable id="`MO]_m^k(QQVFsmO0piS">gainControl</variable>
 <variable id="q7V4gy@?S[9RZE|~gPq{">DESIRED_TAG_ID</variable>
-<variable id="/7IP.{]-zm[38fS):()8">targetFound</variable>
+<variable id="v%NKJqm!;MwULVIg?imp">DESIRED_CLUSTER_NAME</variable>
 <variable type="VisionPortal.Builder" id="!t`ktlc.Mvx1y5*ze7y1">visionPortalBuilder</variable>
+<variable id="/7IP.{]-zm[38fS):()8">targetFound</variable>
+<variable id="oZ3%3s`_@3gX]qHbNgg7">targetName</variable>
+<variable id="1oaUL)SbQVcp%=%TL_l2">targetID</variable>
+<variable id="Q%@Cd(C30HvB8D2?xO;9">targetRange</variable>
+<variable id="B(d[koXGS9S!72acpgPL">targetBearing</variable>
+<variable id="[uut}(Q?JdnagOK$LiGi">targetYaw</variable>
 <variable id="2cp5dpP4m#;Z#X?@6tKK">drive</variable>
 <variable id="m~hZapLdzIhL=nHkYIe;">turn</variable>
-<variable id="J;j3e]FHYTSZm!blZq-!">desiredTag</variable>
 <variable id="T)GzvySAakrgcUoIqzq}">currentDetections</variable>
 <variable id="+R?IN^C_z$-/^5#BM*=W">detection</variable>
 <variable id="xQp_n0K.o5pMb6uEgjO*">rangeError</variable>
 <variable id="{e+[3W#@tJ8P5zbnR1pI">headingError</variable>
 </variables>
-<block type="procedures_defnoreturn" id="WtpyD@tEu+EoY=P9iY,D" deletable="false" x="25" y="713">
+<block type="procedures_defnoreturn" id="WtpyD@tEu+EoY=P9iY,D" deletable="false" x="25" y="790">
 <field name="NAME">runOpMode</field>
-<comment pinned="true" h="685" w="734">This OpMode illustrates using a camera to locate and drive towards a specific AprilTag. This OpMode assumes a basic two-wheel (Tank) Robot Drivetrain.
+<comment pinned="true" h="762" w="749">This OpMode illustrates using a camera to locate and drive towards a specific AprilTag or AprilTag Cluster.
+A "Cluster" is a group of Apriltags that share a common origin, and are identified by name.
+This OpMode assumes a basic two-wheel (Tank) Robot Drivetrain.
 
 For an introduction to AprilTags, see the ftc-docs https://ftc-docs.firstinspires.org/en/latest/apriltag/vision_portal/apriltag_intro/apriltag-intro.html
 
-When an AprilTag in the TagLibrary is detected, the SDK provides location and orientation of the tag, relative to the camera. This information is provided in the "ftcPose" property of the returned "detection", and is explained in the ftc-docs https://ftc-docs.firstinspires.org/apriltag-detection-values
+When an AprilTag/Cluster in the TagLibrary is detected, the SDK provides location and orientation of the target, relative to the camera. This information is provided in the "ftcPose" property of the returned "detection", and is explained in the ftc-docs https://ftc-docs.firstinspires.org/apriltag-detection-values
 
-The driving goal is to rotate to keep the tag centered in the camera, while driving towards the tag to achieve the desired distance. To reduce any motion blur (which will interrupt the detection process) the Camera exposure is reduced to a very low value (5mS). You can determine the best exposure and gain values by using the ConceptAprilTagOptimizeExposure OpMode.
+For a single tag, the "Drive Target" is the center of the Tag.  For a cluster of tags, the "Drive Target" will be the
+(0,0,0) ORIGIN of the cluster, which may have been positioned somewhere other than the center of the cluster in
+order to help to locate a game objective.
 
-This OpMode assumes a Robot Configuration with motors named left_drive and right_drive. The motor directions must be set so a positive power goes forward on both wheels. This sample assumes that the default AprilTag Library (usually for the current season) is being loaded by default, so you should choose to approach a valid tag ID.
+The driving goal is to rotate to keep the Target centered in the camera, while driving towards the target to achieve the desired distance. To reduce any motion blur (which will interrupt the detection process) the Camera exposure is reduced to a very low value (5mS). You can determine the best exposure and gain values by using the ConceptAprilTagOptimizeExposure OpMode.
+
+This OpMode assumes a Robot Configuration with motors named left_drive and right_drive. The motor directions must be set so a positive power goes forward on both wheels. This sample assumes that the current game AprilTag Library (usually for the current season) is being loaded by default, so you should choose to approach a valid tag ID.
 
 Under manual control, the left stick will move forward/back, and the right stick will rotate the robot. This is called POV Joystick mode, different than Tank Drive (where each joystick controls a wheel). Manually drive the robot until it displays Target data on the Driver Station.
 
 Press and hold the Left Bumper to enable the automatic "Drive to target" mode. Release the Left Bumper to return to manual driving mode.
 
 Under "Drive To Target" mode, the robot has two goals:
-1) Turn the robot to always keep the Tag centered on the camera frame. (Use the Target Bearing to turn the robot.)
-2) Drive towards the Tag to get to the desired distance. (Use Tag Range to drive the robot forward/backward.)
+1) Turn the robot to always keep the Target centered on the camera frame. (Use the Target Bearing to turn the robot.)
+2) Drive towards the Target to get to the desired distance. (Use TargetRange to drive the robot forward/backward.)
 
 Use DESIRED_DISTANCE to set how close you want the robot to get to the target.
 Speed and Turn sensitivity can be adjusted using the SPEED_GAIN and TURN_GAIN constants.</comment>
-<data>{"commentPositionLeft":-18,"commentPositionTop":-713}</data>
+<data>{"commentPositionLeft":-18,"commentPositionTop":-790}</data>
 <statement name="STACK">
 <block type="comment" id="Lc#BFtj*NTB48YL;eBl.">
 <field name="COMMENT">Adjust these numbers to suit your robot.</field>
@@ -62,7 +73,7 @@ Speed and Turn sensitivity can be adjusted using the SPEED_GAIN and TURN_GAIN co
 <data>{"commentPositionLeft":306,"commentPositionTop":-30}</data>
 <value name="VALUE">
 <block type="math_number" id="b7E?cm]7Uj^bjAFwMIK+">
-<field name="NUM">12</field>
+<field name="NUM">30</field>
 </block>
 </value>
 <next>
@@ -130,7 +141,7 @@ Speed and Turn sensitivity can be adjusted using the SPEED_GAIN and TURN_GAIN co
 <next>
 <block type="variables_set" id="(8otI~hy)R.ZxFg/P@,L">
 <field name="VAR" id="q7V4gy@?S[9RZE|~gPq{">DESIRED_TAG_ID</field>
-<comment pinned="false" h="80" w="160">Choose the tag you want to approach or set to -1 for ANY tag.</comment>
+<comment pinned="false" h="80" w="160">The tag you want to approach, or set to -1 for ANY tag.</comment>
 <data>{"commentPositionLeft":269,"commentPositionTop":-12}</data>
 <value name="VALUE">
 <block type="math_number" id="dcDJzQ~2~[)KAlSnbHI#">
@@ -138,13 +149,63 @@ Speed and Turn sensitivity can be adjusted using the SPEED_GAIN and TURN_GAIN co
 </block>
 </value>
 <next>
+<block type="variables_set" id="{0MXh],]PuBMW*KFQp0+">
+<field name="VAR" id="v%NKJqm!;MwULVIg?imp">DESIRED_CLUSTER_NAME</field>
+<comment pinned="false" h="64" w="277">The cluster name you want to approach, or empty string for ANY cluster.</comment>
+<data>{"commentPositionLeft":348,"commentPositionTop":-28}</data>
+<value name="VALUE">
+<block type="text" id="]r_qB%Td`;3:nG6BM1Ia">
+<field name="TEXT"/>
+</block>
+</value>
+<next>
 <block type="variables_set" id="T?LV1.Zf$R#Zz3~aV3uL">
 <field name="VAR" id="/7IP.{]-zm[38fS):()8">targetFound</field>
-<comment pinned="false" h="39" w="274">Whether an AprilTag target is detected</comment>
+<comment pinned="false" h="37" w="329">Whether an AprilTag/Cluster target is detected</comment>
 <data>{"commentPositionLeft":249,"commentPositionTop":-16}</data>
 <value name="VALUE">
 <block type="logic_boolean" id="isU;{xkW5h3J6Z_b1K^l">
 <field name="BOOL">FALSE</field>
+</block>
+</value>
+<next>
+<block type="variables_set" id="AsT70|po)MXoUxNq)h;L">
+<field name="VAR" id="oZ3%3s`_@3gX]qHbNgg7">targetName</field>
+<value name="VALUE">
+<block type="text" id="H0#|H*71~-AKW~!.0`{(">
+<field name="TEXT">none</field>
+</block>
+</value>
+<next>
+<block type="variables_set" id="qj43{f/jI5EhWkhNq#B~">
+<field name="VAR" id="1oaUL)SbQVcp%=%TL_l2">targetID</field>
+<value name="VALUE">
+<block type="math_number" id="WS?k0)1%*Z][K:XD6a9;">
+<field name="NUM">0</field>
+</block>
+</value>
+<next>
+<block type="variables_set" id=".{wD)7bIkVUs0:KmNM`=">
+<field name="VAR" id="Q%@Cd(C30HvB8D2?xO;9">targetRange</field>
+<value name="VALUE">
+<block type="math_number" id="r3-Zki5-B)04-,`h|mp$">
+<field name="NUM">0</field>
+</block>
+</value>
+<next>
+<block type="variables_set" id="}:h/M*^oy!WY~Gp}1ff`">
+<field name="VAR" id="B(d[koXGS9S!72acpgPL">targetBearing</field>
+<value name="VALUE">
+<block type="math_number" id="(C?]6^gMLH18_k2*u|qP">
+<field name="NUM">0</field>
+</block>
+</value>
+<next>
+<block type="variables_set" id="muE2W~nV3pklG$E:dj(.">
+<field name="VAR" id="[uut}(Q?JdnagOK$LiGi">targetYaw</field>
+<value name="VALUE">
+<block type="math_number" id="4fFxF|4onEE}5JHay8Yw">
+<field name="NUM">0</field>
 </block>
 </value>
 <next>
@@ -284,12 +345,6 @@ Speed and Turn sensitivity can be adjusted using the SPEED_GAIN and TURN_GAIN co
 </block>
 </value>
 <next>
-<block type="variables_set" id="|.X-E*AA9Vdx|WcPv:Sw">
-<field name="VAR" id="J;j3e]FHYTSZm!blZq-!">desiredTag</field>
-<value name="VALUE">
-<block type="misc_null" id="[iMiiIW?U{Xz4IsH+-e]"/>
-</value>
-<next>
 <block type="comment" id="|9w@YgB5@2o5#3.Mbnj{">
 <field name="COMMENT">Step through the list of detected tags and look for a matching tag.</field>
 <next>
@@ -313,15 +368,28 @@ Speed and Turn sensitivity can be adjusted using the SPEED_GAIN and TURN_GAIN co
 </block>
 </value>
 <statement name="DO">
+<block type="controls_if" id="`P9HVp,ME#9CtF+F^/-k">
+<mutation else="1"/>
+<value name="IF0">
+<block type="aprilTagDetection2_getProperty_Boolean" id="P@H/YhC9)JU02A#%T$Zu">
+<field name="PROP">isSingleDetection</field>
+<value name="APRIL_TAG_DETECTION">
+<block type="variables_get" id="7L1?m-8=nU),Sk{yI]L/">
+<field name="VAR" id="+R?IN^C_z$-/^5#BM*=W">detection</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
 <block type="comment" id="eIluF`J{V1;Dl]q~20`?">
 <field name="COMMENT">Look to see if we have size info on this tag.</field>
 <next>
 <block type="controls_if" id="2Ea@_=#{t]YLd1^=yGhA">
 <mutation else="1"/>
 <value name="IF0">
-<block type="aprilTagDetection_getProperty_IsNotNull" id="[EFU!?MQQSkOh;B4G1h@">
+<block type="aprilTagSingleDetection_getProperty_IsNotNull" id="[EFU!?MQQSkOh;B4G1h@">
 <field name="PROP">metadata</field>
-<value name="APRIL_TAG_DETECTION">
+<value name="APRIL_TAG_SINGLE_DETECTION">
 <block type="variables_get" id=")iYuA?(~tP$lf|A?=4gk">
 <field name="VAR" id="+R?IN^C_z$-/^5#BM*=W">detection</field>
 </block>
@@ -356,9 +424,9 @@ Speed and Turn sensitivity can be adjusted using the SPEED_GAIN and TURN_GAIN co
 <block type="logic_compare" id="[UwGRS4dRj_inp:+:V/t">
 <field name="OP">EQ</field>
 <value name="A">
-<block type="aprilTagDetection_getProperty_Number" id="6sSQlEf4_3;I~R-$ou!_">
+<block type="aprilTagSingleDetection_getProperty_Number" id="6sSQlEf4_3;I~R-$ou!_">
 <field name="PROP">id</field>
-<value name="APRIL_TAG_DETECTION">
+<value name="APRIL_TAG_SINGLE_DETECTION">
 <block type="variables_get" id="a)y`c)v$e91B..T+sXJ)">
 <field name="VAR" id="+R?IN^C_z$-/^5#BM*=W">detection</field>
 </block>
@@ -378,6 +446,71 @@ Speed and Turn sensitivity can be adjusted using the SPEED_GAIN and TURN_GAIN co
 <block type="comment" id="X@sHdb{!iK~#NtRE;kB`">
 <field name="COMMENT">Yes, we want to use this tag.</field>
 <next>
+<block type="variables_set" id="eadJ%7B.8K7Unxd.Qni{">
+<field name="VAR" id="oZ3%3s`_@3gX]qHbNgg7">targetName</field>
+<value name="VALUE">
+<block type="aprilTagSingleDetection_getProperty_String" id="upH#;n9~(VFj}dDMuF2h">
+<field name="PROP">metadata.name</field>
+<value name="APRIL_TAG_SINGLE_DETECTION">
+<block type="variables_get" id=":`Ac+3JA-MJAGw(KCB64">
+<field name="VAR" id="+R?IN^C_z$-/^5#BM*=W">detection</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="j[z*}W(Dw,IJFb@cea*B">
+<field name="VAR" id="1oaUL)SbQVcp%=%TL_l2">targetID</field>
+<value name="VALUE">
+<block type="aprilTagSingleDetection_getProperty_Number" id="/KjC~i;{Uj@W4}p+xkkt">
+<field name="PROP">id</field>
+<value name="APRIL_TAG_SINGLE_DETECTION">
+<block type="variables_get" id="2TV-q92io:hCGCwA%Lbw">
+<field name="VAR" id="+R?IN^C_z$-/^5#BM*=W">detection</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="xPl%3L{DKPGMt{i-?:]K">
+<field name="VAR" id="Q%@Cd(C30HvB8D2?xO;9">targetRange</field>
+<value name="VALUE">
+<block type="aprilTagDetection2_getProperty_Number" id="^GhnEb)uU!5[;z%cw=Fg">
+<field name="PROP">ftcPose.range</field>
+<value name="APRIL_TAG_DETECTION">
+<block type="variables_get" id="{RyG}-DV8DoYBsmtzU:u">
+<field name="VAR" id="+R?IN^C_z$-/^5#BM*=W">detection</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="v!wfqOLXVhDFyMzf^k5$">
+<field name="VAR" id="B(d[koXGS9S!72acpgPL">targetBearing</field>
+<value name="VALUE">
+<block type="aprilTagDetection2_getProperty_Number" id="!EQk3/WX#^M7z%?j_2sh">
+<field name="PROP">ftcPose.bearing</field>
+<value name="APRIL_TAG_DETECTION">
+<block type="variables_get" id="?W5d{fI}5O^bhZ%#Gfl]">
+<field name="VAR" id="+R?IN^C_z$-/^5#BM*=W">detection</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="BK4xm$Qg*t,fKmijJf)m">
+<field name="VAR" id="[uut}(Q?JdnagOK$LiGi">targetYaw</field>
+<value name="VALUE">
+<block type="aprilTagDetection2_getProperty_Number" id="EmhOijJShZO$,WOMsYdL">
+<field name="PROP">ftcPose.yaw</field>
+<value name="APRIL_TAG_DETECTION">
+<block type="variables_get" id="6+tkUHGR!;#cpTjhgrdR">
+<field name="VAR" id="+R?IN^C_z$-/^5#BM*=W">detection</field>
+</block>
+</value>
+</block>
+</value>
+<next>
 <block type="variables_set" id=";};0ey#USto3f(cW_$ci">
 <field name="VAR" id="/7IP.{]-zm[38fS):()8">targetFound</field>
 <value name="VALUE">
@@ -386,19 +519,19 @@ Speed and Turn sensitivity can be adjusted using the SPEED_GAIN and TURN_GAIN co
 </block>
 </value>
 <next>
-<block type="variables_set" id="/|]Mnu:W6%s.]MT%+.!~">
-<field name="VAR" id="J;j3e]FHYTSZm!blZq-!">desiredTag</field>
-<value name="VALUE">
-<block type="variables_get" id="0]eum.]K6[6R9J9IpWKF">
-<field name="VAR" id="+R?IN^C_z$-/^5#BM*=W">detection</field>
-</block>
-</value>
-<next>
 <block type="comment" id="gH{2u|67o~M;#/OZWJ@`">
 <field name="COMMENT">Don't look any further.</field>
 <next>
 <block type="controls_flow_statements" id="[,d7bg7QB-=f]2Cu8U6)">
 <field name="FLOW">BREAK</field>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
 </block>
 </next>
 </block>
@@ -431,9 +564,9 @@ Speed and Turn sensitivity can be adjusted using the SPEED_GAIN and TURN_GAIN co
 </block>
 </value>
 <value name="ADD1">
-<block type="aprilTagDetection_getProperty_Number" id="i3u=@h#k7,(0sin0QYj8">
+<block type="aprilTagSingleDetection_getProperty_Number" id="i3u=@h#k7,(0sin0QYj8">
 <field name="PROP">id</field>
-<value name="APRIL_TAG_DETECTION">
+<value name="APRIL_TAG_SINGLE_DETECTION">
 <block type="variables_get" id="X,SpesXrIvc)S9)6!REn">
 <field name="VAR" id="+R?IN^C_z$-/^5#BM*=W">detection</field>
 </block>
@@ -477,9 +610,9 @@ Speed and Turn sensitivity can be adjusted using the SPEED_GAIN and TURN_GAIN co
 </block>
 </value>
 <value name="ADD1">
-<block type="aprilTagDetection_getProperty_Number" id="JoAoXoiA?RWbeT)B_L$B">
+<block type="aprilTagSingleDetection_getProperty_Number" id="JoAoXoiA?RWbeT)B_L$B">
 <field name="PROP">id</field>
-<value name="APRIL_TAG_DETECTION">
+<value name="APRIL_TAG_SINGLE_DETECTION">
 <block type="variables_get" id="P{@3A@Sm.4RV=4K}zkx%">
 <field name="VAR" id="+R?IN^C_z$-/^5#BM*=W">detection</field>
 </block>
@@ -499,6 +632,147 @@ Speed and Turn sensitivity can be adjusted using the SPEED_GAIN and TURN_GAIN co
 </statement>
 </block>
 </next>
+</block>
+</statement>
+<statement name="ELSE">
+<block type="controls_if" id="Z:5tWbsT4O+pfgl,d~~c">
+<value name="IF0">
+<block type="logic_operation" id="UlDBl4fK*(%}Uyef4N=F" inline="false">
+<field name="OP">OR</field>
+<value name="A">
+<block type="logic_compare" id="Ml#%9qL_AyTk}n^wiSQr">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="XKvEEpl#jquy]n]n@K:t">
+<field name="VAR" id="v%NKJqm!;MwULVIg?imp">DESIRED_CLUSTER_NAME</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id="qXhpZMX6V)I[aHM(~yt*">
+<field name="TEXT"/>
+</block>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="logic_compare" id="*]lg_we@5Lai4V_GnRzX" inline="false">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="aprilTagClusterDetection_getProperty_String" id="[4^cd0%ehoY}#iWPj=!+">
+<field name="PROP">metadata.shortName</field>
+<value name="APRIL_TAG_CLUSTER_DETECTION">
+<block type="variables_get" id="sdZwxqHVZ48rc,{?ph_i">
+<field name="VAR" id="+R?IN^C_z$-/^5#BM*=W">detection</field>
+</block>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="variables_get" id="Od[1*ai2:FLO@DA=CK;+">
+<field name="VAR" id="v%NKJqm!;MwULVIg?imp">DESIRED_CLUSTER_NAME</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="comment" id="m|w|]eY*~%H(;@aZh+-o">
+<field name="COMMENT">Yes, we want to use this tag.</field>
+<next>
+<block type="variables_set" id="}YhWbIT=,3N3w#U3{y?-">
+<field name="VAR" id="oZ3%3s`_@3gX]qHbNgg7">targetName</field>
+<value name="VALUE">
+<block type="aprilTagClusterDetection_getProperty_String" id="082l;m,mvED7xsqs6)OV">
+<field name="PROP">metadata.shortName</field>
+<value name="APRIL_TAG_CLUSTER_DETECTION">
+<block type="variables_get" id="zOn*f=NNIY`XcRw9^O|o">
+<field name="VAR" id="+R?IN^C_z$-/^5#BM*=W">detection</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="i:1LQ4eqiML{Y4$Ig^cD">
+<field name="VAR" id="1oaUL)SbQVcp%=%TL_l2">targetID</field>
+<value name="VALUE">
+<block type="math_number" id="JFv:fk6Z+K@;}alIkY;V">
+<field name="NUM">-1</field>
+</block>
+</value>
+<next>
+<block type="variables_set" id="5|xKfw*0:dUsiX/V^z7~">
+<field name="VAR" id="Q%@Cd(C30HvB8D2?xO;9">targetRange</field>
+<value name="VALUE">
+<block type="aprilTagDetection2_getProperty_Number" id="taE(02F_+JU)gq@?BFY2">
+<field name="PROP">ftcPose.range</field>
+<value name="APRIL_TAG_DETECTION">
+<block type="variables_get" id="u0,=:GWHQ~wxebU}sb$O">
+<field name="VAR" id="+R?IN^C_z$-/^5#BM*=W">detection</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="j;A;1`kqXqq]i[},n$7P">
+<field name="VAR" id="B(d[koXGS9S!72acpgPL">targetBearing</field>
+<value name="VALUE">
+<block type="aprilTagDetection2_getProperty_Number" id="k-WyJP~[@*9FT|!.Qe^J">
+<field name="PROP">ftcPose.bearing</field>
+<value name="APRIL_TAG_DETECTION">
+<block type="variables_get" id="J}$9fF;[uDB(8W3]!GH%">
+<field name="VAR" id="+R?IN^C_z$-/^5#BM*=W">detection</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="[`%u]!u~W?Ek-UOBZP(5">
+<field name="VAR" id="[uut}(Q?JdnagOK$LiGi">targetYaw</field>
+<value name="VALUE">
+<block type="aprilTagDetection2_getProperty_Number" id="3EZS[,q^Y[yk*=sA*zTj">
+<field name="PROP">ftcPose.yaw</field>
+<value name="APRIL_TAG_DETECTION">
+<block type="variables_get" id="pj{H5O~n0e8RNSrU7AYo">
+<field name="VAR" id="+R?IN^C_z$-/^5#BM*=W">detection</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="d(UyzgVm`Pm?[`yp:]Sd">
+<field name="VAR" id="/7IP.{]-zm[38fS):()8">targetFound</field>
+<value name="VALUE">
+<block type="logic_boolean" id="6]PVz..Ny~+%gH=U:@$D">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+<next>
+<block type="comment" id="@)Mlh/`L_dnnbYBqO4%y">
+<field name="COMMENT">Don't look any further.</field>
+<next>
+<block type="controls_flow_statements" id="$1+)%XA=]hMG`D.mZVsC">
+<field name="FLOW">BREAK</field>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</statement>
 </block>
 </statement>
 <next>
@@ -557,32 +831,22 @@ Speed and Turn sensitivity can be adjusted using the SPEED_GAIN and TURN_GAIN co
 </block>
 </value>
 <value name="ADD1">
-<block type="aprilTagDetection_getProperty_Number" id="jB*QyX^etjIs*],a-iUy">
-<field name="PROP">id</field>
-<value name="APRIL_TAG_DETECTION">
-<block type="variables_get" id="rGD*Zcu,YY!60T8iDWVh">
-<field name="VAR" id="J;j3e]FHYTSZm!blZq-!">desiredTag</field>
-</block>
-</value>
+<block type="variables_get" id="MB{bG35YEX~F7aXbLk16">
+<field name="VAR" id="1oaUL)SbQVcp%=%TL_l2">targetID</field>
 </block>
 </value>
 <value name="ADD2">
-<block type="text" id="..JXGivfBDgMlgOKS-IY">
+<block type="text" id="+GnRlm*X0zrAZV@k9LHS">
 <field name="TEXT"> (</field>
 </block>
 </value>
 <value name="ADD3">
-<block type="aprilTagDetection_getProperty_String" id=")aS8@2?,i}0ay4v!9dsw">
-<field name="PROP">metadata.name</field>
-<value name="APRIL_TAG_DETECTION">
-<block type="variables_get" id="./TEpd`!hD{^9ThTj3Ev">
-<field name="VAR" id="J;j3e]FHYTSZm!blZq-!">desiredTag</field>
-</block>
-</value>
+<block type="variables_get" id="CRnh4aU4u:{6ek$dEl*/">
+<field name="VAR" id="oZ3%3s`_@3gX]qHbNgg7">targetName</field>
 </block>
 </value>
 <value name="ADD4">
-<block type="text" id="XxK_PIaa=}GAh?K/Er`K">
+<block type="text" id="Dvb~?1YAF#.{58k6GzIu">
 <field name="TEXT">)</field>
 </block>
 </value>
@@ -602,27 +866,22 @@ Speed and Turn sensitivity can be adjusted using the SPEED_GAIN and TURN_GAIN co
 <block type="text_join" id="qVsA=hs7;9Kl0ePS.~Q~">
 <mutation items="2"/>
 <value name="ADD0">
-<block type="misc_formatNumber_withWidth" id="~IS!x9v%ABbCi.nL@#aA">
+<block type="misc_formatNumber_withWidth" id="k##d+WH!rZ4;qTCn}t|(">
 <value name="NUMBER">
-<shadow type="math_number" id="Pco+AO)A7mjOE=u/RcSE">
+<shadow type="math_number" id="`L||Ik]Bdi:u2EMhd8wm">
 <field name="NUM">3.14159265</field>
 </shadow>
-<block type="aprilTagDetection_getProperty_Number" id="uSE9I]mkMDos%I^{=8OM">
-<field name="PROP">ftcPose.range</field>
-<value name="APRIL_TAG_DETECTION">
-<block type="variables_get" id="vDO?+9yHE3T^3I{C/doV">
-<field name="VAR" id="J;j3e]FHYTSZm!blZq-!">desiredTag</field>
-</block>
-</value>
+<block type="variables_get" id=":/5DCnG6`]8b|:t40aXL">
+<field name="VAR" id="Q%@Cd(C30HvB8D2?xO;9">targetRange</field>
 </block>
 </value>
 <value name="WIDTH">
-<shadow type="math_number" id="O4D4{ordpI/h4rv:[~kX">
+<shadow type="math_number" id="JbzmXwW|qaZ:?,/qx^=x">
 <field name="NUM">5</field>
 </shadow>
 </value>
 <value name="PRECISION">
-<shadow type="math_number" id="PxQ/MjJv]/^~jRlb2wx?">
+<shadow type="math_number" id="U/Hm-9Amj;pDJx(pdoI~">
 <field name="NUM">1</field>
 </shadow>
 </value>
@@ -649,27 +908,22 @@ Speed and Turn sensitivity can be adjusted using the SPEED_GAIN and TURN_GAIN co
 <block type="text_join" id="(;(a:VR$y2EA}kBIC}Y#">
 <mutation items="2"/>
 <value name="ADD0">
-<block type="misc_formatNumber_withWidth" id="fV0glNpu_.HWFj%fyqp/">
+<block type="misc_formatNumber_withWidth" id="1TNE)i9eEUo?Mz2?m$II">
 <value name="NUMBER">
-<shadow type="math_number" id="lZf^z9$magW1F47p`qb-">
+<shadow type="math_number" id=";ltmK`6iZ/i^2Rt3=nX]">
 <field name="NUM">3.14159265</field>
 </shadow>
-<block type="aprilTagDetection_getProperty_Number" id="yOijjm~`T5{}]24,ZH]I">
-<field name="PROP">ftcPose.bearing</field>
-<value name="APRIL_TAG_DETECTION">
-<block type="variables_get" id="Q$))zM(HB~q;W%B*%Y:@">
-<field name="VAR" id="J;j3e]FHYTSZm!blZq-!">desiredTag</field>
-</block>
-</value>
+<block type="variables_get" id="[9I^db.oG[EQA/9!m`Lp">
+<field name="VAR" id="B(d[koXGS9S!72acpgPL">targetBearing</field>
 </block>
 </value>
 <value name="WIDTH">
-<shadow type="math_number" id="UG{5`$8FP_a=wq5VEdcN">
+<shadow type="math_number" id="8x.#+)6U@jqE!%@wr}4w">
 <field name="NUM">3</field>
 </shadow>
 </value>
 <value name="PRECISION">
-<shadow type="math_number" id="[zj1c@#L0=C4#VkSfTf^">
+<shadow type="math_number" id="JBV?~?R{3FnO2r=vME;v">
 <field name="NUM">0</field>
 </shadow>
 </value>
@@ -682,6 +936,50 @@ Speed and Turn sensitivity can be adjusted using the SPEED_GAIN and TURN_GAIN co
 </value>
 </block>
 </value>
+<next>
+<block type="telemetry_addTextData_All" id="Zq`]x+@cBs~RtLC0%_1I">
+<value name="KEY">
+<shadow type="text" id="jNO9Q`,QWI7Be7YdgqW$">
+<field name="TEXT">Yaw</field>
+</shadow>
+</value>
+<value name="TEXT">
+<shadow type="text">
+<field name="TEXT">text</field>
+</shadow>
+<block type="text_join" id="pWBaf.YnwXul)i)yr_z+">
+<mutation items="2"/>
+<value name="ADD0">
+<block type="misc_formatNumber_withWidth" id="1/vgmM]_6|5K1)uelv7L">
+<value name="NUMBER">
+<shadow type="math_number" id="9Y7z}@s!D8[?`izh7Eog">
+<field name="NUM">3.14159265</field>
+</shadow>
+<block type="variables_get" id="J1y515}dT{5Q=5yhh^pe">
+<field name="VAR" id="[uut}(Q?JdnagOK$LiGi">targetYaw</field>
+</block>
+</value>
+<value name="WIDTH">
+<shadow type="math_number" id="wX+7IUh{1H:(1-zp(UJ=">
+<field name="NUM">3</field>
+</shadow>
+</value>
+<value name="PRECISION">
+<shadow type="math_number" id="#k10YQ~i6{rFSmq56SIP">
+<field name="NUM">0</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="ADD1">
+<block type="text" id="kKz8#8(fd~]@yLND?l:S">
+<field name="TEXT"> degrees</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</next>
 </block>
 </next>
 </block>
@@ -751,13 +1049,8 @@ Speed and Turn sensitivity can be adjusted using the SPEED_GAIN and TURN_GAIN co
 <shadow type="math_number" id="w5wq|~}m0{N3]ge,D-GF">
 <field name="NUM">1</field>
 </shadow>
-<block type="aprilTagDetection_getProperty_Number" id="i^l$q)i8{du4C9_L8pEK">
-<field name="PROP">ftcPose.range</field>
-<value name="APRIL_TAG_DETECTION">
-<block type="variables_get" id="*6~{ickw$+7o+p]D%JO-">
-<field name="VAR" id="J;j3e]FHYTSZm!blZq-!">desiredTag</field>
-</block>
-</value>
+<block type="variables_get" id="bgUYH6524v_j={0rxBqY">
+<field name="VAR" id="Q%@Cd(C30HvB8D2?xO;9">targetRange</field>
 </block>
 </value>
 <value name="B">
@@ -774,13 +1067,8 @@ Speed and Turn sensitivity can be adjusted using the SPEED_GAIN and TURN_GAIN co
 <block type="variables_set" id="#Xl2,2}lTBY9d^ak%eA6">
 <field name="VAR" id="{e+[3W#@tJ8P5zbnR1pI">headingError</field>
 <value name="VALUE">
-<block type="aprilTagDetection_getProperty_Number" id="w/G~7Nq@%pVgkM]vJI5O">
-<field name="PROP">ftcPose.bearing</field>
-<value name="APRIL_TAG_DETECTION">
-<block type="variables_get" id="TD2,,:wKj-o/!nlDn8pF">
-<field name="VAR" id="J;j3e]FHYTSZm!blZq-!">desiredTag</field>
-</block>
-</value>
+<block type="variables_get" id="Gt-#@_Bbpchy{OyMR)eq">
+<field name="VAR" id="B(d[koXGS9S!72acpgPL">targetBearing</field>
 </block>
 </value>
 <next>
@@ -1172,8 +1460,6 @@ Speed and Turn sensitivity can be adjusted using the SPEED_GAIN and TURN_GAIN co
 </block>
 </next>
 </block>
-</next>
-</block>
 </statement>
 </block>
 </next>
@@ -1236,9 +1522,21 @@ Speed and Turn sensitivity can be adjusted using the SPEED_GAIN and TURN_GAIN co
 </block>
 </next>
 </block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
 </statement>
 </block>
-<block type="procedures_defnoreturn" id="cjkNT_C2*CVXvQWKDxiq" x="25" y="5298">
+<block type="procedures_defnoreturn" id="cjkNT_C2*CVXvQWKDxiq" x="25" y="6223">
 <mutation>
 <arg name="x" varid="W4qCb:|R{(hWCs5bjj7X"/>
 <arg name="yaw" varid="gCY}1t^(lz*Nz-fu6Cd8"/>
@@ -1447,7 +1745,7 @@ Positive yaw is counter-clockwise.</comment>
 </block>
 </statement>
 </block>
-<block type="procedures_defnoreturn" id="x38*YXy-5+7H?BT(C.o!" x="25" y="5855">
+<block type="procedures_defnoreturn" id="x38*YXy-5+7H?BT(C.o!" x="25" y="6780">
 <field name="NAME">initAprilTag</field>
 <comment pinned="true" h="39" w="227">Initialize the AprilTag processor.</comment>
 <data>{"commentPositionLeft":-46,"commentPositionTop":-61}</data>
@@ -1581,7 +1879,7 @@ Positive yaw is counter-clockwise.</comment>
 </block>
 </statement>
 </block>
-<block type="procedures_defnoreturn" id="Qrq{*{vj#NZ6XdSQlFR]" x="25" y="6592">
+<block type="procedures_defnoreturn" id="Qrq{*{vj#NZ6XdSQlFR]" x="25" y="7517">
 <mutation>
 <arg name="exposureMs" varid="SyG#C3GAjkl8pSBY{VOl"/>
 <arg name="gain" varid="qze4g3wN?_rCL5HG%Db["/>
@@ -1888,6 +2186,6 @@ This can only be called after calling initAprilTag, and only works for webcams.<
 </xml>
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
 <Extra>
-<OpModeMeta flavor="TELEOP" group="" autoTransition="" />
+<OpModeMeta flavor="TELEOP" group="Concept" />
 <Enabled value="true" />
 </Extra>

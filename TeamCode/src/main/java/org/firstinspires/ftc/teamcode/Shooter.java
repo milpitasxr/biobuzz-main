@@ -4,11 +4,12 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 import com.qualcomm.robotcore.hardware.Servo;
 
+import org.firstinspires.ftc.teamcode.Helper.GamepadHelper;
 import org.firstinspires.ftc.teamcode.Helper.PIDController;
 
 public class Shooter {
-    DcMotorEx pollen;
-    DcMotorEx nectar;
+    DcMotorEx pollenShoot;
+    DcMotorEx nectarShoot;
     Servo pollenHood;
     Servo nectarHood;
     OpMode op;
@@ -27,18 +28,66 @@ public class Shooter {
     public boolean runFlywheel = false;
     public double batteryVoltage = 0;
 
+    // Screamage Shooter shi
+    public static double tarVel = 1400; // ticks per sec
+    public static double nPower = 1400; // ticks per sec
 
-    public Shooter(OpMode opmode){
+    public static double pHood = 0.5;
+    public static double nHood = 0.5;
+
+    public static String shootAction;
+
+    GamepadHelper xbox;
+
+
+    public Shooter(OpMode opmode, GamepadHelper gamepadHelper){
         op = opmode;
-        pollen = op.hardwareMap.get(DcMotorEx.class, "pollen");
-        nectar = op.hardwareMap.get(DcMotorEx.class, "nectar");
+        xbox = gamepadHelper;
+
+        pollenShoot = op.hardwareMap.get(DcMotorEx.class, "pollen");
+//        nectarShoot = op.hardwareMap.get(DcMotorEx.class, "nectar");
 
         pollenHood = op.hardwareMap.get(Servo.class, "pollenHood");
-        nectarHood = op.hardwareMap.get(Servo.class, "nectarHood");
+//        nectarHood = op.hardwareMap.get(Servo.class, "nectarHood");
 
-        pollen.setZeroPowerBehavior(DcMotorEx.ZeroPowerBehavior.FLOAT);
-        nectar.setZeroPowerBehavior(DcMotorEx.ZeroPowerBehavior.FLOAT);
+        pollenShoot.setZeroPowerBehavior(DcMotorEx.ZeroPowerBehavior.FLOAT);
+//        nectarShoot.setZeroPowerBehavior(DcMotorEx.ZeroPowerBehavior.FLOAT);
+    }
 
+    public void setFlywheelSpeed(double target){
+        if (tarVel == 0) {
+            pollenShoot.setPower(0);
+            pid.reset();
+            return;
+        }
 
+        double current = pollenShoot.getVelocity();
+        double error = target - current;
+
+        pid.setConstants(Kp, Ki, Kd, maxI);
+
+        double shootPower = pid.update(error);
+
+        pollenShoot.setPower(shootPower);
+        op.telemetry.addData("target", target);
+        op.telemetry.addData("current", current);
+        op.telemetry.addData("error", error);
+    }
+
+    public void updateFlywheel(){
+        if(runFlywheel){
+            setFlywheelSpeed(tarVel);
+
+        }else {
+            pollenShoot.setPower(0);
+        }
+    }
+
+    public void updateShooter(){
+        if (xbox.edge.get("dpad_right") == 1){
+            runFlywheel = !runFlywheel;
+        }
+
+        updateFlywheel();
     }
 }

@@ -951,7 +951,7 @@ Can only be called AFTER calling initAprilTag.</comment>
 <field name="VAR" id=".uqD6]$?cUF@4ZsL~9X~">myExposureControl</field>
 <value name="VALUE">
 <block type="visionPortal_getExposureControl" id=".uALlbFqmRKs7/xJtMD?">
-<comment pinned="false" h="73.07942199707031" w="319.13739013671875">Get the ExposureControl object, to allow adjusting the camera's exposure.</comment>
+<comment pinned="false" h="73" w="319">Get the ExposureControl object, to allow adjusting the camera's exposure.</comment>
 <data>{"commentPositionLeft":-25,"commentPositionTop":-103}</data>
 <value name="VISION_PORTAL">
 <block type="variables_get" id="=^ja.@i/3{NbiOsH]=5;">
@@ -1328,6 +1328,6 @@ Can only be called AFTER calling initAprilTag.</comment>
 </xml>
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
 <Extra>
-<OpModeMeta flavor="TELEOP" group="" autoTransition="" />
+<OpModeMeta flavor="TELEOP" group="Concept" />
 <Enabled value="true" />
 </Extra>

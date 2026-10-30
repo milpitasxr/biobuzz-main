@@ -338,165 +338,201 @@ detections multiple times.
       </block>
     </category>
     <category name="AprilTagDetection">
-      <block type="aprilTagDetection_getProperty_Number">
-        <field name="PROP">id</field>
-        <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
-      </block>
-      <block type="aprilTagDetection_getProperty_Number">
-        <field name="PROP">hamming</field>
-        <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
-      </block>
-      <block type="aprilTagDetection_getProperty_Number">
-        <field name="PROP">decisionMargin</field>
-        <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
-      </block>
-      <block type="aprilTagDetection_getProperty_Number">
-        <field name="PROP">center.x</field>
-        <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
-      </block>
-      <block type="aprilTagDetection_getProperty_Number">
-        <field name="PROP">center.y</field>
-        <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
-      </block>
-      <block type="aprilTagDetection_getProperty_Number">
-        <field name="PROP">corners[0].x</field>
-        <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
-      </block>
-      <block type="aprilTagDetection_getProperty_Number">
-        <field name="PROP">corners[0].y</field>
-        <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
-      </block>
-      <block type="aprilTagDetection_getProperty_Number">
-        <field name="PROP">corners[1].x</field>
-        <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
-      </block>
-      <block type="aprilTagDetection_getProperty_Number">
-        <field name="PROP">corners[1].y</field>
-        <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
-      </block>
-      <block type="aprilTagDetection_getProperty_Number">
-        <field name="PROP">corners[2].x</field>
-        <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
-      </block>
-      <block type="aprilTagDetection_getProperty_Number">
-        <field name="PROP">corners[2].y</field>
-        <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
-      </block>
-      <block type="aprilTagDetection_getProperty_Number">
-        <field name="PROP">corners[3].x</field>
-        <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
-      </block>
-      <block type="aprilTagDetection_getProperty_Number">
-        <field name="PROP">corners[3].y</field>
-        <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
-      </block>
-      <block type="aprilTagDetection_getProperty_IsNotNull">
-        <field name="PROP">metadata</field>
-        <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
-      </block>
-      <block type="aprilTagDetection_getProperty_String">
-        <field name="PROP">metadata.name</field>
-        <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
-      </block>
-      <block type="aprilTagDetection_getProperty_AprilTagMetadata">
-        <field name="PROP">metadata</field>
-        <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
-      </block>
-      <block type="aprilTagDetection_getProperty_IsNotNull">
+      <block type="aprilTagDetection2_getProperty_IsNotNull">
         <field name="PROP">ftcPose</field>
         <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
       </block>
-      <block type="aprilTagDetection_getProperty_Number">
+      <block type="aprilTagDetection2_getProperty_Number">
         <field name="PROP">ftcPose.x</field>
         <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
       </block>
-      <block type="aprilTagDetection_getProperty_Number">
+      <block type="aprilTagDetection2_getProperty_Number">
         <field name="PROP">ftcPose.y</field>
         <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
       </block>
-      <block type="aprilTagDetection_getProperty_Number">
+      <block type="aprilTagDetection2_getProperty_Number">
         <field name="PROP">ftcPose.z</field>
         <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
       </block>
-      <block type="aprilTagDetection_getProperty_Number">
-        <field name="PROP">ftcPose.yaw</field>
-        <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
-      </block>
-      <block type="aprilTagDetection_getProperty_Number">
+      <block type="aprilTagDetection2_getProperty_Number">
         <field name="PROP">ftcPose.pitch</field>
         <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
       </block>
-      <block type="aprilTagDetection_getProperty_Number">
+      <block type="aprilTagDetection2_getProperty_Number">
         <field name="PROP">ftcPose.roll</field>
         <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
       </block>
-      <block type="aprilTagDetection_getProperty_Number">
-        <field name="PROP">ftcPose.range</field>
+      <block type="aprilTagDetection2_getProperty_Number">
+        <field name="PROP">ftcPose.yaw</field>
         <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
       </block>
-      <block type="aprilTagDetection_getProperty_Number">
+      <block type="aprilTagDetection2_getProperty_Number">
         <field name="PROP">ftcPose.bearing</field>
         <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
       </block>
-      <block type="aprilTagDetection_getProperty_Number">
+      <block type="aprilTagDetection2_getProperty_Number">
         <field name="PROP">ftcPose.elevation</field>
         <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
       </block>
-      <block type="aprilTagDetection_getProperty_AprilTagPoseFtc">
+      <block type="aprilTagDetection2_getProperty_Number">
+        <field name="PROP">ftcPose.range</field>
+        <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
+      </block>
+      <block type="aprilTagDetection2_getProperty_AprilTagPoseFtc">
         <field name="PROP">ftcPose</field>
         <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
       </block>
-      <block type="aprilTagDetection_getProperty_IsNotNull">
+      <block type="aprilTagDetection2_getProperty_IsNotNull">
         <field name="PROP">rawPose</field>
         <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
       </block>
-      <block type="aprilTagDetection_getProperty_Number">
+      <block type="aprilTagDetection2_getProperty_Number">
         <field name="PROP">rawPose.x</field>
         <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
       </block>
-      <block type="aprilTagDetection_getProperty_Number">
+      <block type="aprilTagDetection2_getProperty_Number">
         <field name="PROP">rawPose.y</field>
         <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
       </block>
-      <block type="aprilTagDetection_getProperty_Number">
+      <block type="aprilTagDetection2_getProperty_Number">
         <field name="PROP">rawPose.z</field>
         <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
       </block>
-      <block type="aprilTagDetection_getProperty_MatrixF">
+      <block type="aprilTagDetection2_getProperty_MatrixF">
         <field name="PROP">rawPose.R</field>
         <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
       </block>
-      <block type="aprilTagDetection_getProperty_AprilTagPoseRaw">
+      <block type="aprilTagDetection2_getProperty_AprilTagPoseRaw">
         <field name="PROP">rawPose</field>
         <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
       </block>
-      <block type="aprilTagDetection_getProperty_IsNotNull">
+      <block type="aprilTagDetection2_getProperty_IsNotNull">
         <field name="PROP">robotPose</field>
         <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
       </block>
-      <block type="aprilTagDetection_getProperty_Number">
+      <block type="aprilTagDetection2_getProperty_Number">
         <field name="PROP">robotPose.position.x</field>
         <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
       </block>
-      <block type="aprilTagDetection_getProperty_Number">
+      <block type="aprilTagDetection2_getProperty_Number">
         <field name="PROP">robotPose.position.y</field>
         <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
       </block>
-      <block type="aprilTagDetection_getProperty_Number">
+      <block type="aprilTagDetection2_getProperty_Number">
         <field name="PROP">robotPose.position.z</field>
         <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
       </block>
-      <block type="aprilTagDetection_getProperty_Number">
-        <field name="PROP">robotPose.orientation.roll</field>
-        <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
-      </block>
-      <block type="aprilTagDetection_getProperty_Number">
+      <block type="aprilTagDetection2_getProperty_Number">
         <field name="PROP">robotPose.orientation.pitch</field>
         <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
       </block>
-      <block type="aprilTagDetection_getProperty_Number">
+      <block type="aprilTagDetection2_getProperty_Number">
+        <field name="PROP">robotPose.orientation.roll</field>
+        <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
+      </block>
+      <block type="aprilTagDetection2_getProperty_Number">
         <field name="PROP">robotPose.orientation.yaw</field>
         <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
+      </block>
+      <block type="aprilTagDetection2_getProperty_DistanceUnit">
+        <field name="PROP">distanceUnit</field>
+        <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
+      </block>
+    </category>
+    <category name="AprilTagSingleDetection">
+      <block type="aprilTagDetection2_getProperty_Boolean">
+        <field name="PROP">isSingleDetection</field>
+        <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
+      </block>
+      <block type="aprilTagSingleDetection_getProperty_Number">
+        <field name="PROP">id</field>
+        <value name="APRIL_TAG_SINGLE_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagSingleDetection</field></block></value>
+      </block>
+      <block type="aprilTagSingleDetection_getProperty_Number">
+        <field name="PROP">hamming</field>
+        <value name="APRIL_TAG_SINGLE_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagSingleDetection</field></block></value>
+      </block>
+      <block type="aprilTagSingleDetection_getProperty_Number">
+        <field name="PROP">decisionMargin</field>
+        <value name="APRIL_TAG_SINGLE_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagSingleDetection</field></block></value>
+      </block>
+      <block type="aprilTagSingleDetection_getProperty_Number">
+        <field name="PROP">center.x</field>
+        <value name="APRIL_TAG_SINGLE_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagSingleDetection</field></block></value>
+      </block>
+      <block type="aprilTagSingleDetection_getProperty_Number">
+        <field name="PROP">center.y</field>
+        <value name="APRIL_TAG_SINGLE_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagSingleDetection</field></block></value>
+      </block>
+      <block type="aprilTagSingleDetection_getProperty_Number">
+        <field name="PROP">corners[0].x</field>
+        <value name="APRIL_TAG_SINGLE_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagSingleDetection</field></block></value>
+      </block>
+      <block type="aprilTagSingleDetection_getProperty_Number">
+        <field name="PROP">corners[0].y</field>
+        <value name="APRIL_TAG_SINGLE_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagSingleDetection</field></block></value>
+      </block>
+      <block type="aprilTagSingleDetection_getProperty_Number">
+        <field name="PROP">corners[1].x</field>
+        <value name="APRIL_TAG_SINGLE_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagSingleDetection</field></block></value>
+      </block>
+      <block type="aprilTagSingleDetection_getProperty_Number">
+        <field name="PROP">corners[1].y</field>
+        <value name="APRIL_TAG_SINGLE_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagSingleDetection</field></block></value>
+      </block>
+      <block type="aprilTagSingleDetection_getProperty_Number">
+        <field name="PROP">corners[2].x</field>
+        <value name="APRIL_TAG_SINGLE_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagSingleDetection</field></block></value>
+      </block>
+      <block type="aprilTagSingleDetection_getProperty_Number">
+        <field name="PROP">corners[2].y</field>
+        <value name="APRIL_TAG_SINGLE_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagSingleDetection</field></block></value>
+      </block>
+      <block type="aprilTagSingleDetection_getProperty_Number">
+        <field name="PROP">corners[3].x</field>
+        <value name="APRIL_TAG_SINGLE_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagSingleDetection</field></block></value>
+      </block>
+      <block type="aprilTagSingleDetection_getProperty_Number">
+        <field name="PROP">corners[3].y</field>
+        <value name="APRIL_TAG_SINGLE_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagSingleDetection</field></block></value>
+      </block>
+      <block type="aprilTagSingleDetection_getProperty_IsNotNull">
+        <field name="PROP">metadata</field>
+        <value name="APRIL_TAG_SINGLE_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagSingleDetection</field></block></value>
+      </block>
+      <block type="aprilTagSingleDetection_getProperty_String">
+        <field name="PROP">metadata.name</field>
+        <value name="APRIL_TAG_SINGLE_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagSingleDetection</field></block></value>
+      </block>
+      <block type="aprilTagSingleDetection_getProperty_AprilTagMetadata">
+        <field name="PROP">metadata</field>
+        <value name="APRIL_TAG_SINGLE_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagSingleDetection</field></block></value>
+      </block>
+    </category>
+    <category name="AprilTagClusterDetection">
+      <block type="aprilTagDetection2_getProperty_Boolean">
+        <field name="PROP">isClusterDetection</field>
+        <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
+      </block>
+      <block type="aprilTagClusterDetection_getProperty_Number">
+        <field name="PROP">percentClusterFound</field>
+        <value name="APRIL_TAG_CLUSTER_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagClusterDetection</field></block></value>
+      </block>
+      <block type="aprilTagClusterDetection_getProperty_IsNotNull">
+        <field name="PROP">metadata</field>
+        <value name="APRIL_TAG_CLUSTER_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagClusterDetection</field></block></value>
+      </block>
+      <block type="aprilTagClusterDetection_getProperty_String">
+        <field name="PROP">metadata.name</field>
+        <value name="APRIL_TAG_CLUSTER_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagClusterDetection</field></block></value>
+      </block>
+      <block type="aprilTagClusterDetection_getProperty_String">
+        <field name="PROP">metadata.shortName</field>
+        <value name="APRIL_TAG_CLUSTER_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagClusterDetection</field></block></value>
+      </block>
+      <block type="aprilTagClusterDetection_getProperty_AprilTagClusterMetadata">
+        <field name="PROP">metadata</field>
+        <value name="APRIL_TAG_CLUSTER_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagClusterDetection</field></block></value>
       </block>
     </category>
     <category name="AprilTagLibrary">
@@ -509,11 +545,22 @@ detections multiple times.
           </block>
         </value>
       </block>
+<!--
       <block type="variables_set">
         <field name="VAR">myAprilTagLibrary</field>
         <value name="VALUE">
-          <block type="aprilTagGameDatabase_DecodeTagLibrary">
+          <block type="aprilTagGameDatabase_getDecodeTagLibrary">
             <comment pinned="false" h="150" w="325">Get the AprilTagLibrary for the Decode FTC game.
+            </comment>
+          </block>
+        </value>
+      </block>
+-->
+      <block type="variables_set">
+        <field name="VAR">myAprilTagLibrary</field>
+        <value name="VALUE">
+          <block type="aprilTagGameDatabase_getBioBuzzTagLibrary">
+            <comment pinned="false" h="150" w="325">Get the AprilTagLibrary for the BioBuzz FTC game.
             </comment>
           </block>
         </value>
@@ -528,6 +575,7 @@ detections multiple times.
         </value>
       </block>
       <placeholder_apriltag_exportedAprilTagLibraries/>
+<!--
       <block type="aprilTagLibraryBuilder_create_assign">
         <comment pinned="false" h="150" w="325">Create a new AprilTagLibrary.Builder objectand assigns it to a variable.
         </comment>
@@ -581,6 +629,7 @@ detections multiple times.
           </block>
         </value>
       </block>
+-->
       <block type="variables_set">
         <field name="VAR">myAprilTagMetadata</field>
         <value name="VALUE">
@@ -589,9 +638,9 @@ detections multiple times.
             </comment>
             <value name="APRIL_TAG_LIBRARY"><block type="variables_get"><field name="VAR">myAprilTagLibrary</field></block></value>
             <value name="ID">
-              <block type="aprilTagDetection_getProperty_Number">
+              <block type="aprilTagSingleDetection_getProperty_Number">
                 <field name="PROP">id</field>
-                <value name="APRIL_TAG_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagDetection</field></block></value>
+                <value name="APRIL_TAG_SINGLE_DETECTION"><block type="variables_get"><field name="VAR">myAprilTagSingleDetection</field></block></value>
               </block>
             </value>
           </block>
@@ -599,6 +648,7 @@ detections multiple times.
       </block>
     </category>
     <category name="AprilTagMetadata">
+<!--
       <block type="variables_set">
         <comment pinned="false" h="150" w="325">Create a new AprilTagMetdata object and assign it to a variable.
         </comment>
@@ -627,6 +677,7 @@ detections multiple times.
           </block>
         </value>
       </block>
+-->
       <block type="aprilTagMetadata_getProperty_DistanceUnit">
         <field name="PROP">distanceUnit</field>
         <value name="APRIL_TAG_METADATA"><block type="variables_get"><field name="VAR">myAprilTagMetadata</field></block></value>
@@ -650,6 +701,28 @@ detections multiple times.
       <block type="aprilTagMetadata_getProperty_Number">
         <field name="PROP">tagsize</field>
         <value name="APRIL_TAG_METADATA"><block type="variables_get"><field name="VAR">myAprilTagMetadata</field></block></value>
+      </block>
+    </category>
+    <category name="AprilTagClusterMetadata">
+      <block type="aprilTagClusterMetadata_getProperty_DistanceUnit">
+        <field name="PROP">distanceUnit</field>
+        <value name="APRIL_TAG_CLUSTER_METADATA"><block type="variables_get"><field name="VAR">myAprilTagClusterMetadata</field></block></value>
+      </block>
+      <block type="aprilTagClusterMetadata_getProperty_Quaternion">
+        <field name="PROP">fieldOrientation</field>
+        <value name="APRIL_TAG_CLUSTER_METADATA"><block type="variables_get"><field name="VAR">myAprilTagClusterMetadata</field></block></value>
+      </block>
+      <block type="aprilTagClusterMetadata_getProperty_VectorF">
+        <field name="PROP">fieldPosition</field>
+        <value name="APRIL_TAG_CLUSTER_METADATA"><block type="variables_get"><field name="VAR">myAprilTagClusterMetadata</field></block></value>
+      </block>
+      <block type="aprilTagClusterMetadata_getProperty_String">
+        <field name="PROP">name</field>
+        <value name="APRIL_TAG_CLUSTER_METADATA"><block type="variables_get"><field name="VAR">myAprilTagClusterMetadata</field></block></value>
+      </block>
+      <block type="aprilTagClusterMetadata_getProperty_String">
+        <field name="PROP">shortName</field>
+        <value name="APRIL_TAG_CLUSTER_METADATA"><block type="variables_get"><field name="VAR">myAprilTagClusterMetadata</field></block></value>
       </block>
     </category>
   </category>
@@ -1428,5 +1501,21 @@ detections multiple times.
         <value name="WHITE_BALANCE_TEMPERATURE"><shadow type="math_number"><field name="NUM">3000</field></shadow></value>
       </block>
     </category>
+  </category>
+  <category name="CameraCompatibiityManager">
+      <block type="cameraCompatibilityManager_addQuirk">
+        <value name="VID"><shadow type="math_number"><field name="NUM">0</field></shadow></value>
+        <value name="PID"><shadow type="math_number"><field name="NUM">0</field></shadow></value>
+        <value name="QUIRK"><shadow type="cameraCompatibilityManager_typedEnum_quirk"></shadow></value>
+      </block>
+      <block type="cameraCompatibilityManager_removeQuirk">
+        <value name="VID"><shadow type="math_number"><field name="NUM">0</field></shadow></value>
+        <value name="PID"><shadow type="math_number"><field name="NUM">0</field></shadow></value>
+        <value name="QUIRK"><shadow type="cameraCompatibilityManager_typedEnum_quirk"></shadow></value>
+      </block>
+      <block type="cameraCompatibilityManager_getQuirks">
+        <value name="VID"><shadow type="math_number"><field name="NUM">0</field></shadow></value>
+        <value name="PID"><shadow type="math_number"><field name="NUM">0</field></shadow></value>
+      </block>
   </category>
 </category>

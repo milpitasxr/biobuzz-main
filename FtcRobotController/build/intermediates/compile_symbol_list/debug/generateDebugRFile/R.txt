@@ -325,6 +325,7 @@ int attr colorControlHighlight 0x0
 int attr colorControlNormal 0x0
 int attr colorError 0x0
 int attr colorErrorContainer 0x0
+int attr colorInitReady 0x0
 int attr colorMedium 0x0
 int attr colorMediumLight 0x0
 int attr colorMediumMedium 0x0
@@ -3079,6 +3080,7 @@ int drawable design_ic_visibility_off 0x0
 int drawable design_password_eye 0x0
 int drawable design_snackbar_background 0x0
 int drawable feedback_shape_orange 0x0
+int drawable first_biobuzz_logo_ftc 0x0
 int drawable freightfrenzy_background 0x0
 int drawable ic_arrow_back_black_24 0x0
 int drawable ic_arrow_back_black_24dp 0x0
@@ -3317,6 +3319,8 @@ int id clockwise 0x0
 int id colorSwatch 0x0
 int id compress 0x0
 int id configIsReadOnlyFeedback 0x0
+int id config_tree_caption 0x0
+int id config_tree_layout 0x0
 int id configureButton 0x0
 int id configureFromTemplate 0x0
 int id configureFromTemplateArea 0x0
@@ -3400,6 +3404,7 @@ int id file_buttons 0x0
 int id file_delete_button 0x0
 int id file_edit_button 0x0
 int id file_info_layout 0x0
+int id file_tree_button 0x0
 int id filename_editText 0x0
 int id files_holder 0x0
 int id fill 0x0
@@ -3760,6 +3765,7 @@ int id transition_pause_alpha 0x0
 int id transition_position 0x0
 int id transition_scene_layoutid_cache 0x0
 int id transition_transform 0x0
+int id tree_bottom 0x0
 int id triangle 0x0
 int id txtIsDSInstalled 0x0
 int id txtIsDSInstalled_img 0x0
@@ -3941,6 +3947,7 @@ int layout backbar_layout 0x0
 int layout banner_parent 0x0
 int layout button_list 0x0
 int layout color_list_preference_line_item 0x0
+int layout config_tree 0x0
 int layout custom_dialog 0x0
 int layout design_bottom_navigation_item 0x0
 int layout design_bottom_sheet_dialog 0x0
@@ -4332,6 +4339,7 @@ int string configTypeServoFullRange 0x0
 int string configTypeServos 0x0
 int string configTypeUnknown 0x0
 int string configTypeWebcam 0x0
+int string config_tree_caption 0x0
 int string configurationNotSaved 0x0
 int string configureFromTemplate 0x0
 int string configure_activity 0x0
@@ -4425,6 +4433,7 @@ int string file_activate_button 0x0
 int string file_delete_button 0x0
 int string file_edit_button 0x0
 int string file_prompt 0x0
+int string file_tree_button 0x0
 int string filename_editText 0x0
 int string filler_text 0x0
 int string firmwareContext 0x0
@@ -4948,6 +4957,7 @@ int string titleWarnAbout2_4GhzBand 0x0
 int string titleWarnAboutIncorrectClocks 0x0
 int string titleWarnAboutMismatchedAppVersions 0x0
 int string titleWarnAboutObsoleteSoftware 0x0
+int string title_activity_config_tree 0x0
 int string title_activity_configfromtemplate 0x0
 int string title_activity_load 0x0
 int string title_activity_wifi_channel_selector 0x0

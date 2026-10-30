@@ -140,6 +140,7 @@
     <attr format="color" name="colorAlmostDark"/>
     <attr format="color" name="colorContainer"/>
     <attr format="color" name="colorErrorContainer"/>
+    <attr format="color" name="colorInitReady"/>
     <attr format="color" name="colorMedium"/>
     <attr format="color" name="colorMediumLight"/>
     <attr format="color" name="colorMediumMedium"/>
@@ -2293,6 +2294,7 @@
     <string name="configTypeServos">Servos</string>
     <string name="configTypeUnknown">[Unknown]</string>
     <string name="configTypeWebcam">Webcam</string>
+    <string name="config_tree_caption">Configuration tree:</string>
     <string name="configurationNotSaved">Configuration not saved.</string>
     <string name="configureFromTemplate">Configure from Template</string>
     <string name="configure_activity">Configure Robot</string>
@@ -2301,7 +2303,7 @@
     <string name="configure_settings">Change Channel</string>
     <string name="confirmConfigDeleteMessage">Are you sure you want to delete this configuration?</string>
     <string name="confirmConfigDeleteTitle">Confirm Configuration Delete</string>
-    <string name="connectedToContext">The team numbers in the robot controller and driver station names do not match. Refer to the FTC Competition Manual for device naming rules.</string>
+    <string name="connectedToContext">The team numbers in the robot controller and driver station names do not match, or a device name is invalid. Refer to the FTC Competition Manual for device naming rules.</string>
     <string name="connection_owner_default">NONE</string>
     <string name="connection_owner_password_default">password</string>
     <string name="continuous_servo_description">a continuous rotation servo</string>
@@ -2387,6 +2389,7 @@
     <string name="file_delete_button">Delete</string>
     <string name="file_edit_button">Edit</string>
     <string name="file_prompt">Choose Configuration File</string>
+    <string name="file_tree_button">Tree</string>
     <string name="filename_editText">Filename</string>
     <string name="filler_text">lorem ipsum</string>
     <string name="firmwareContext">The firmware version of the Control Hub and/or Expansion Hub is less than the minimum version, %1$s, specified in the FTC Competition Manual.</string>
@@ -2929,6 +2932,7 @@
     <string name="titleWarnAboutIncorrectClocks">Incorrect clocks warning</string>
     <string name="titleWarnAboutMismatchedAppVersions">Mismatched apps warning</string>
     <string name="titleWarnAboutObsoleteSoftware">Obsolete software warning</string>
+    <string name="title_activity_config_tree">Configuration Tree</string>
     <string name="title_activity_configfromtemplate">Configure from Template</string>
     <string name="title_activity_load">Load Configuration File</string>
     <string name="title_activity_wifi_channel_selector">Wi-Fi Channel Selection</string>
@@ -3059,6 +3063,7 @@
         <item name="android:buttonStyle">@style/FtcButtonStyle</item>
         <item name="textWhite">@color/text_white</item>
         <item name="colorReady">@color/light_green</item>
+        <item name="colorInitReady">@color/light_teal</item>
     </style>
     <style name="AppTheme.Blue">
         <item name="textBright">@color/bright_blue</item>

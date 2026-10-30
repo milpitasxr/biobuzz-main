@@ -734,41 +734,29 @@ Blockly.Blocks['aprilTagProcessor_getDetectionsUpdate'] = Blockly.Blocks['aprilT
 Blockly.JavaScript['aprilTagProcessor_getDetectionsUpdate'] = Blockly.JavaScript['aprilTagProcessor_getFreshDetections'];
 Blockly.FtcJava['aprilTagProcessor_getDetectionsUpdate'] = Blockly.FtcJava['aprilTagProcessor_getFreshDetections'];
 
+// AprilTagDetection
 
-Blockly.Blocks['aprilTagDetection_getProperty_Number'] = {
+Blockly.Blocks['aprilTagDetection2_getProperty_Number'] = {
   init: function() {
     var PROPERTY_CHOICES = [
-        ['id', 'id'],
-        ['hamming', 'hamming'],
-        ['decisionMargin', 'decisionMargin'],
-        ['center.x', 'center.x'],
-        ['center.y', 'center.y'],
-        ['corners[0].x', 'corners[0].x'],
-        ['corners[0].y', 'corners[0].y'],
-        ['corners[1].x', 'corners[1].x'],
-        ['corners[1].y', 'corners[1].y'],
-        ['corners[2].x', 'corners[2].x'],
-        ['corners[2].y', 'corners[2].y'],
-        ['corners[3].x', 'corners[3].x'],
-        ['corners[3].y', 'corners[3].y'],
         ['ftcPose.x', 'ftcPose.x'],
         ['ftcPose.y', 'ftcPose.y'],
         ['ftcPose.z', 'ftcPose.z'],
-        ['ftcPose.yaw', 'ftcPose.yaw'],
         ['ftcPose.pitch', 'ftcPose.pitch'],
         ['ftcPose.roll', 'ftcPose.roll'],
-        ['ftcPose.range', 'ftcPose.range'],
+        ['ftcPose.yaw', 'ftcPose.yaw'],
         ['ftcPose.bearing', 'ftcPose.bearing'],
         ['ftcPose.elevation', 'ftcPose.elevation'],
+        ['ftcPose.range', 'ftcPose.range'],
         ['rawPose.x', 'rawPose.x'],
         ['rawPose.y', 'rawPose.y'],
         ['rawPose.z', 'rawPose.z'],
         ['robotPose.position.x', 'robotPose.position.x'],
         ['robotPose.position.y', 'robotPose.position.y'],
         ['robotPose.position.z', 'robotPose.position.z'],
-        ['robotPose.orientation.roll', 'robotPose.orientation.roll'],
         ['robotPose.orientation.pitch', 'robotPose.orientation.pitch'],
         ['robotPose.orientation.yaw', 'robotPose.orientation.yaw'],
+        ['robotPose.orientation.roll', 'robotPose.orientation.roll'],
     ];
     this.setOutput(true, 'Number');
     this.appendDummyInput()
@@ -782,36 +770,23 @@ Blockly.Blocks['aprilTagDetection_getProperty_Number'] = {
     // Assign 'this' to a variable for use in the closures below.
     var thisBlock = this;
     var TOOLTIPS = [
-        ['id', 'Returns the id field of the AprilTagDetection.'],
-        ['hamming', 'Returns the hamming field of the AprilTagDetection.'],
-        ['decisionMargin', 'Returns the decisionMargin field of the AprilTagDetection.'],
-        ['center.x', 'Returns the center.x field of the AprilTagDetection.'],
-        ['center.y', 'Returns the center.y field of the AprilTagDetection.'],
-        ['corners[0].x', 'Returns the corners[0].x field of the AprilTagDetection.'],
-        ['corners[0].y', 'Returns the corners[0].y field of the AprilTagDetection.'],
-        ['corners[1].x', 'Returns the corners[1].x field of the AprilTagDetection.'],
-        ['corners[1].y', 'Returns the corners[1].y field of the AprilTagDetection.'],
-        ['corners[2].x', 'Returns the corners[2].x field of the AprilTagDetection.'],
-        ['corners[2].y', 'Returns the corners[2].y field of the AprilTagDetection.'],
-        ['corners[3].x', 'Returns the corners[3].x field of the AprilTagDetection.'],
-        ['corners[3].y', 'Returns the corners[3].y field of the AprilTagDetection.'],
         ['ftcPose.x', 'Returns the ftcPose.x field of the AprilTagDetection.'],
         ['ftcPose.y', 'Returns the ftcPose.y field of the AprilTagDetection.'],
         ['ftcPose.z', 'Returns the ftcPose.z field of the AprilTagDetection.'],
-        ['ftcPose.yaw', 'Returns the ftcPose.yaw field of the AprilTagDetection.'],
         ['ftcPose.pitch', 'Returns the ftcPose.pitch field of the AprilTagDetection.'],
         ['ftcPose.roll', 'Returns the ftcPose.roll field of the AprilTagDetection.'],
-        ['ftcPose.range', 'Returns the ftcPose.range field of the AprilTagDetection.'],
+        ['ftcPose.yaw', 'Returns the ftcPose.yaw field of the AprilTagDetection.'],
         ['ftcPose.bearing', 'Returns the ftcPose.bearing field of the AprilTagDetection.'],
         ['ftcPose.elevation', 'Returns the ftcPose.elevation field of the AprilTagDetection.'],
+        ['ftcPose.range', 'Returns the ftcPose.range field of the AprilTagDetection.'],
         ['rawPose.x', 'Returns the rawPose.x field of the AprilTagDetection.'],
         ['rawPose.y', 'Returns the rawPose.y field of the AprilTagDetection.'],
         ['rawPose.z', 'Returns the rawPose.z field of the AprilTagDetection.'],
         ['robotPose.position.x', 'Returns the robotPose.position.x field of the AprilTagDetection.'],
         ['robotPose.position.y', 'Returns the robotPose.position.y field of the AprilTagDetection.'],
         ['robotPose.position.z', 'Returns the robotPose.position.z field of the AprilTagDetection.'],
-        ['robotPose.orientation.roll', 'Returns the robotPose.orientation.roll field of the AprilTagDetection.'],
         ['robotPose.orientation.pitch', 'Returns the robotPose.orientation.pitch field of the AprilTagDetection.'],
+        ['robotPose.orientation.roll', 'Returns the robotPose.orientation.roll field of the AprilTagDetection.'],
         ['robotPose.orientation.yaw', 'Returns the robotPose.orientation.yaw field of the AprilTagDetection.'],
     ];
     this.setTooltip(function() {
@@ -826,48 +801,33 @@ Blockly.Blocks['aprilTagDetection_getProperty_Number'] = {
     this.getFtcJavaOutputType = function() {
       var property = thisBlock.getFieldValue('PROP');
       switch (property) {
-        case 'id':
-        case 'hamming':
-          return 'int';
-        case 'decisionMargin':
-          return 'float';
-        case 'center.x':
-        case 'center.y':
-        case 'corners[0].x':
-        case 'corners[0].y':
-        case 'corners[1].x':
-        case 'corners[1].y':
-        case 'corners[2].x':
-        case 'corners[2].y':
-        case 'corners[3].x':
-        case 'corners[3].y':
         case 'ftcPose.x':
         case 'ftcPose.y':
         case 'ftcPose.z':
-        case 'ftcPose.yaw':
         case 'ftcPose.pitch':
         case 'ftcPose.roll':
-        case 'ftcPose.range':
+        case 'ftcPose.yaw':
         case 'ftcPose.bearing':
         case 'ftcPose.elevation':
+        case 'ftcPose.range':
         case 'rawPose.x':
         case 'rawPose.y':
         case 'rawPose.z':
         case 'robotPose.position.x':
         case 'robotPose.position.y':
         case 'robotPose.position.z':
-        case 'robotPose.orientation.roll':
         case 'robotPose.orientation.pitch':
+        case 'robotPose.orientation.roll':
         case 'robotPose.orientation.yaw':
           return 'double';
         default:
-          throw 'Unexpected property ' + property + ' (aprilTagDetection_getProperty_Number getOutputType).';
+          throw 'Unexpected property ' + property + ' (aprilTagDetection2_getProperty_Number getOutputType).';
       }
     };
   }
 };
 
-Blockly.JavaScript['aprilTagDetection_getProperty_Number'] = function(block) {
+Blockly.JavaScript['aprilTagDetection2_getProperty_Number'] = function(block) {
   var property = block.getFieldValue('PROP');
   var aprilTagDetection = Blockly.JavaScript.valueToCode(
       block, 'APRIL_TAG_DETECTION', Blockly.JavaScript.ORDER_MEMBER);
@@ -876,7 +836,7 @@ Blockly.JavaScript['aprilTagDetection_getProperty_Number'] = function(block) {
   return wrapJavaScriptCode(code, blockLabel);
 };
 
-Blockly.FtcJava['aprilTagDetection_getProperty_Number'] = function(block) {
+Blockly.FtcJava['aprilTagDetection2_getProperty_Number'] = function(block) {
   var property = block.getFieldValue('PROP');
   var aprilTagDetection = Blockly.FtcJava.valueToCode(
       block, 'APRIL_TAG_DETECTION', Blockly.FtcJava.ORDER_MEMBER);
@@ -891,11 +851,11 @@ Blockly.FtcJava['aprilTagDetection_getProperty_Number'] = function(block) {
     case 'robotPose.position.z':
       code = aprilTagDetection + '.robotPose.getPosition().z';
       break;
-    case 'robotPose.orientation.roll':
-      code = aprilTagDetection + '.robotPose.getOrientation().getRoll()';
-      break;
     case 'robotPose.orientation.pitch':
       code = aprilTagDetection + '.robotPose.getOrientation().getPitch()';
+      break;
+    case 'robotPose.orientation.roll':
+      code = aprilTagDetection + '.robotPose.getOrientation().getRoll()';
       break;
     case 'robotPose.orientation.yaw':
       code = aprilTagDetection + '.robotPose.getOrientation().getYaw()';
@@ -907,58 +867,9 @@ Blockly.FtcJava['aprilTagDetection_getProperty_Number'] = function(block) {
   return [code, Blockly.FtcJava.ORDER_MEMBER];
 };
 
-Blockly.Blocks['aprilTagDetection_getProperty_String'] = {
+Blockly.Blocks['aprilTagDetection2_getProperty_IsNotNull'] = {
   init: function() {
     var PROPERTY_CHOICES = [
-        ['metadata.name', 'metadata.name'],
-    ];
-    this.setOutput(true, 'String');
-    this.appendDummyInput()
-        .appendField(createNonEditableField('AprilTagDetection'))
-        .appendField('.')
-        .appendField(new Blockly.FieldDropdown(PROPERTY_CHOICES), 'PROP');
-    this.appendValueInput('APRIL_TAG_DETECTION').setCheck('AprilTagDetection')
-        .appendField('aprilTagDetection')
-        .setAlign(Blockly.ALIGN_RIGHT);
-    this.setColour(getPropertyColor);
-    // Assign 'this' to a variable for use in the closures below.
-    var thisBlock = this;
-    var TOOLTIPS = [
-        ['metadata.name', 'Returns the metadata.name field of the AprilTagDetection.'],
-    ];
-    this.setTooltip(function() {
-      var key = thisBlock.getFieldValue('PROP');
-      for (var i = 0; i < TOOLTIPS.length; i++) {
-        if (TOOLTIPS[i][0] == key) {
-          return TOOLTIPS[i][1];
-        }
-      }
-      return '';
-    });
-  }
-};
-
-Blockly.JavaScript['aprilTagDetection_getProperty_String'] = function(block) {
-  var property = block.getFieldValue('PROP');
-  var aprilTagDetection = Blockly.JavaScript.valueToCode(
-      block, 'APRIL_TAG_DETECTION', Blockly.JavaScript.ORDER_MEMBER);
-  var code = aprilTagDetection + '.' + property;
-  var blockLabel = 'AprilTagDetection.' + block.getField('PROP').getText();
-  return wrapJavaScriptCode(code, blockLabel);
-};
-
-Blockly.FtcJava['aprilTagDetection_getProperty_String'] = function(block) {
-  var property = block.getFieldValue('PROP');
-  var aprilTagDetection = Blockly.FtcJava.valueToCode(
-      block, 'APRIL_TAG_DETECTION', Blockly.FtcJava.ORDER_MEMBER);
-  var code = aprilTagDetection + '.' + property;
-  return [code, Blockly.FtcJava.ORDER_MEMBER];
-};
-
-Blockly.Blocks['aprilTagDetection_getProperty_IsNotNull'] = {
-  init: function() {
-    var PROPERTY_CHOICES = [
-        ['metadata', 'metadata'],
         ['ftcPose', 'ftcPose'],
         ['rawPose', 'rawPose'],
         ['robotPose', 'robotPose'],
@@ -977,7 +888,6 @@ Blockly.Blocks['aprilTagDetection_getProperty_IsNotNull'] = {
     // Assign 'this' to a variable for use in the closures below.
     var thisBlock = this;
     var TOOLTIPS = [
-        ['metadata', 'Returns true if the metadata field of the AprilTagDetection is not null.'],
         ['ftcPose', 'Returns true if the ftcPose field of the AprilTagDetection is not null.'],
         ['rawPose', 'Returns true if the rawPose field of the AprilTagDetection is not null.'],
         ['robotPose', 'Returns true if the robotPose field of the AprilTagDetection is not null.'],
@@ -994,7 +904,7 @@ Blockly.Blocks['aprilTagDetection_getProperty_IsNotNull'] = {
   }
 };
 
-Blockly.JavaScript['aprilTagDetection_getProperty_IsNotNull'] = function(block) {
+Blockly.JavaScript['aprilTagDetection2_getProperty_IsNotNull'] = function(block) {
   var property = block.getFieldValue('PROP');
   var aprilTagDetection = Blockly.JavaScript.valueToCode(
       block, 'APRIL_TAG_DETECTION', Blockly.JavaScript.ORDER_MEMBER);
@@ -1003,7 +913,7 @@ Blockly.JavaScript['aprilTagDetection_getProperty_IsNotNull'] = function(block) 
   return wrapJavaScriptCode(code, blockLabel);
 };
 
-Blockly.FtcJava['aprilTagDetection_getProperty_IsNotNull'] = function(block) {
+Blockly.FtcJava['aprilTagDetection2_getProperty_IsNotNull'] = function(block) {
   var property = block.getFieldValue('PROP');
   var aprilTagDetection = Blockly.FtcJava.valueToCode(
       block, 'APRIL_TAG_DETECTION', Blockly.FtcJava.ORDER_MEMBER);
@@ -1011,55 +921,7 @@ Blockly.FtcJava['aprilTagDetection_getProperty_IsNotNull'] = function(block) {
   return [code, Blockly.FtcJava.ORDER_EQUALITY];
 };
 
-Blockly.Blocks['aprilTagDetection_getProperty_AprilTagMetadata'] = {
-  init: function() {
-    var PROPERTY_CHOICES = [
-        ['metadata', 'metadata'],
-    ];
-    this.setOutput(true, 'AprilTagMetadata');
-    this.appendDummyInput()
-        .appendField(createNonEditableField('AprilTagDetection'))
-        .appendField('.')
-        .appendField(new Blockly.FieldDropdown(PROPERTY_CHOICES), 'PROP');
-    this.appendValueInput('APRIL_TAG_DETECTION').setCheck('AprilTagDetection')
-        .appendField('aprilTagDetection')
-        .setAlign(Blockly.ALIGN_RIGHT);
-    this.setColour(getPropertyColor);
-    // Assign 'this' to a variable for use in the closures below.
-    var thisBlock = this;
-    var TOOLTIPS = [
-        ['metadata', 'Returns the metadata field of the AprilTagDetection.'],
-    ];
-    this.setTooltip(function() {
-      var key = thisBlock.getFieldValue('PROP');
-      for (var i = 0; i < TOOLTIPS.length; i++) {
-        if (TOOLTIPS[i][0] == key) {
-          return TOOLTIPS[i][1];
-        }
-      }
-      return '';
-    });
-  }
-};
-
-Blockly.JavaScript['aprilTagDetection_getProperty_AprilTagMetadata'] = function(block) {
-  var property = block.getFieldValue('PROP');
-  var aprilTagDetection = Blockly.JavaScript.valueToCode(
-      block, 'APRIL_TAG_DETECTION', Blockly.JavaScript.ORDER_MEMBER);
-  var code = aprilTagDetection + '.' + property;
-  var blockLabel = 'AprilTagDetection.' + block.getField('PROP').getText();
-  return wrapJavaScriptCode(code, blockLabel);
-};
-
-Blockly.FtcJava['aprilTagDetection_getProperty_AprilTagMetadata'] = function(block) {
-  var property = block.getFieldValue('PROP');
-  var aprilTagDetection = Blockly.FtcJava.valueToCode(
-      block, 'APRIL_TAG_DETECTION', Blockly.FtcJava.ORDER_MEMBER);
-  var code = aprilTagDetection + '.' + property;
-  return [code, Blockly.FtcJava.ORDER_MEMBER];
-};
-
-Blockly.Blocks['aprilTagDetection_getProperty_AprilTagPoseFtc'] = {
+Blockly.Blocks['aprilTagDetection2_getProperty_AprilTagPoseFtc'] = {
   init: function() {
     var PROPERTY_CHOICES = [
         ['ftcPose', 'ftcPose'],
@@ -1090,7 +952,7 @@ Blockly.Blocks['aprilTagDetection_getProperty_AprilTagPoseFtc'] = {
   }
 };
 
-Blockly.JavaScript['aprilTagDetection_getProperty_AprilTagPoseFtc'] = function(block) {
+Blockly.JavaScript['aprilTagDetection2_getProperty_AprilTagPoseFtc'] = function(block) {
   var property = block.getFieldValue('PROP');
   var aprilTagDetection = Blockly.JavaScript.valueToCode(
       block, 'APRIL_TAG_DETECTION', Blockly.JavaScript.ORDER_MEMBER);
@@ -1102,7 +964,7 @@ Blockly.JavaScript['aprilTagDetection_getProperty_AprilTagPoseFtc'] = function(b
   return [wrappedCode, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
-Blockly.FtcJava['aprilTagDetection_getProperty_AprilTagPoseFtc'] = function(block) {
+Blockly.FtcJava['aprilTagDetection2_getProperty_AprilTagPoseFtc'] = function(block) {
   var property = block.getFieldValue('PROP');
   var aprilTagDetection = Blockly.FtcJava.valueToCode(
       block, 'APRIL_TAG_DETECTION', Blockly.FtcJava.ORDER_MEMBER);
@@ -1110,7 +972,7 @@ Blockly.FtcJava['aprilTagDetection_getProperty_AprilTagPoseFtc'] = function(bloc
   return [code, Blockly.FtcJava.ORDER_MEMBER];
 };
 
-Blockly.Blocks['aprilTagDetection_getProperty_AprilTagPoseRaw'] = {
+Blockly.Blocks['aprilTagDetection2_getProperty_AprilTagPoseRaw'] = {
   init: function() {
     var PROPERTY_CHOICES = [
         ['rawPose', 'rawPose'],
@@ -1141,7 +1003,7 @@ Blockly.Blocks['aprilTagDetection_getProperty_AprilTagPoseRaw'] = {
   }
 };
 
-Blockly.JavaScript['aprilTagDetection_getProperty_AprilTagPoseRaw'] = function(block) {
+Blockly.JavaScript['aprilTagDetection2_getProperty_AprilTagPoseRaw'] = function(block) {
   var property = block.getFieldValue('PROP');
   var aprilTagDetection = Blockly.JavaScript.valueToCode(
       block, 'APRIL_TAG_DETECTION', Blockly.JavaScript.ORDER_MEMBER);
@@ -1153,7 +1015,7 @@ Blockly.JavaScript['aprilTagDetection_getProperty_AprilTagPoseRaw'] = function(b
   return [wrappedCode, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
-Blockly.FtcJava['aprilTagDetection_getProperty_AprilTagPoseRaw'] = function(block) {
+Blockly.FtcJava['aprilTagDetection2_getProperty_AprilTagPoseRaw'] = function(block) {
   var property = block.getFieldValue('PROP');
   var aprilTagDetection = Blockly.FtcJava.valueToCode(
       block, 'APRIL_TAG_DETECTION', Blockly.FtcJava.ORDER_MEMBER);
@@ -1161,58 +1023,7 @@ Blockly.FtcJava['aprilTagDetection_getProperty_AprilTagPoseRaw'] = function(bloc
   return [code, Blockly.FtcJava.ORDER_MEMBER];
 };
 
-Blockly.Blocks['aprilTagDetection_getProperty_AprilTagPoseRobot'] = {
-  init: function() {
-    var PROPERTY_CHOICES = [
-        ['robotPose', 'robotPose'],
-    ];
-    this.setOutput(true, 'AprilTagPoseRobot');
-    this.appendDummyInput()
-        .appendField(createNonEditableField('AprilTagDetection'))
-        .appendField('.')
-        .appendField(new Blockly.FieldDropdown(PROPERTY_CHOICES), 'PROP');
-    this.appendValueInput('APRIL_TAG_DETECTION').setCheck('AprilTagDetection')
-        .appendField('aprilTagDetection')
-        .setAlign(Blockly.ALIGN_RIGHT);
-    this.setColour(getPropertyColor);
-    // Assign 'this' to a variable for use in the closures below.
-    var thisBlock = this;
-    var TOOLTIPS = [
-        ['robotPose', 'Returns the robotPose field of the AprilTagDetection.'],
-    ];
-    this.setTooltip(function() {
-      var key = thisBlock.getFieldValue('PROP');
-      for (var i = 0; i < TOOLTIPS.length; i++) {
-        if (TOOLTIPS[i][0] == key) {
-          return TOOLTIPS[i][1];
-        }
-      }
-      return '';
-    });
-  }
-};
-
-Blockly.JavaScript['aprilTagDetection_getProperty_AprilTagPoseRobot'] = function(block) {
-  var property = block.getFieldValue('PROP');
-  var aprilTagDetection = Blockly.JavaScript.valueToCode(
-      block, 'APRIL_TAG_DETECTION', Blockly.JavaScript.ORDER_MEMBER);
-  var o = aprilTagDetection + '.' + property;
-  var code = aprilTagIdentifierForJavaScript + '.createAprilTagPoseRobot(' +
-      '"GETTER", "AprilTagDetection", "' + property + '", ' +
-      'JSON.stringify(' + o + '))';
-  var wrappedCode = 'evalIfTruthy(' + o + ', \'' + code + '\', null)';
-  return [wrappedCode, Blockly.JavaScript.ORDER_FUNCTION_CALL];
-};
-
-Blockly.FtcJava['aprilTagDetection_getProperty_AprilTagPoseRobot'] = function(block) {
-  var property = block.getFieldValue('PROP');
-  var aprilTagDetection = Blockly.FtcJava.valueToCode(
-      block, 'APRIL_TAG_DETECTION', Blockly.FtcJava.ORDER_MEMBER);
-  var code = aprilTagDetection + '.' + property;
-  return [code, Blockly.FtcJava.ORDER_MEMBER];
-};
-
-Blockly.Blocks['aprilTagDetection_getProperty_MatrixF'] = {
+Blockly.Blocks['aprilTagDetection2_getProperty_MatrixF'] = {
   init: function() {
     var PROPERTY_CHOICES = [
         ['rawPose.R', 'rawPose.R'],
@@ -1243,7 +1054,7 @@ Blockly.Blocks['aprilTagDetection_getProperty_MatrixF'] = {
   }
 };
 
-Blockly.JavaScript['aprilTagDetection_getProperty_MatrixF'] = function(block) {
+Blockly.JavaScript['aprilTagDetection2_getProperty_MatrixF'] = function(block) {
   var property = block.getFieldValue('PROP');
   var aprilTagDetection = Blockly.JavaScript.valueToCode(
       block, 'APRIL_TAG_DETECTION', Blockly.JavaScript.ORDER_MEMBER);
@@ -1255,11 +1066,639 @@ Blockly.JavaScript['aprilTagDetection_getProperty_MatrixF'] = function(block) {
   return [wrappedCode, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
-Blockly.FtcJava['aprilTagDetection_getProperty_MatrixF'] = function(block) {
+Blockly.FtcJava['aprilTagDetection2_getProperty_MatrixF'] = function(block) {
   var property = block.getFieldValue('PROP');
   var aprilTagDetection = Blockly.FtcJava.valueToCode(
       block, 'APRIL_TAG_DETECTION', Blockly.FtcJava.ORDER_MEMBER);
   var code = aprilTagDetection + '.' + property;
+  return [code, Blockly.FtcJava.ORDER_MEMBER];
+};
+
+Blockly.Blocks['aprilTagDetection2_getProperty_AprilTagPoseRobot'] = {
+  init: function() {
+    var PROPERTY_CHOICES = [
+        ['robotPose', 'robotPose'],
+    ];
+    this.setOutput(true, 'AprilTagPoseRobot');
+    this.appendDummyInput()
+        .appendField(createNonEditableField('AprilTagDetection'))
+        .appendField('.')
+        .appendField(new Blockly.FieldDropdown(PROPERTY_CHOICES), 'PROP');
+    this.appendValueInput('APRIL_TAG_DETECTION').setCheck('AprilTagDetection')
+        .appendField('aprilTagDetection')
+        .setAlign(Blockly.ALIGN_RIGHT);
+    this.setColour(getPropertyColor);
+    // Assign 'this' to a variable for use in the closures below.
+    var thisBlock = this;
+    var TOOLTIPS = [
+        ['robotPose', 'Returns the robotPose field of the AprilTagDetection.'],
+    ];
+    this.setTooltip(function() {
+      var key = thisBlock.getFieldValue('PROP');
+      for (var i = 0; i < TOOLTIPS.length; i++) {
+        if (TOOLTIPS[i][0] == key) {
+          return TOOLTIPS[i][1];
+        }
+      }
+      return '';
+    });
+  }
+};
+
+Blockly.JavaScript['aprilTagDetection2_getProperty_AprilTagPoseRobot'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagDetection = Blockly.JavaScript.valueToCode(
+      block, 'APRIL_TAG_DETECTION', Blockly.JavaScript.ORDER_MEMBER);
+  var o = aprilTagDetection + '.' + property;
+  var code = aprilTagIdentifierForJavaScript + '.createAprilTagPoseRobot(' +
+      '"GETTER", "AprilTagDetection", "' + property + '", ' +
+      'JSON.stringify(' + o + '))';
+  var wrappedCode = 'evalIfTruthy(' + o + ', \'' + code + '\', null)';
+  return [wrappedCode, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+};
+
+Blockly.FtcJava['aprilTagDetection2_getProperty_AprilTagPoseRobot'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagDetection = Blockly.FtcJava.valueToCode(
+      block, 'APRIL_TAG_DETECTION', Blockly.FtcJava.ORDER_MEMBER);
+  var code = aprilTagDetection + '.' + property;
+  return [code, Blockly.FtcJava.ORDER_MEMBER];
+};
+
+Blockly.Blocks['aprilTagDetection2_getProperty_DistanceUnit'] = {
+  init: function() {
+    var PROPERTY_CHOICES = [
+        ['distanceUnit', 'distanceUnit'],
+    ];
+    this.setOutput(true, 'DistanceUnit');
+    this.appendDummyInput()
+        .appendField(createNonEditableField('AprilTagDetection'))
+        .appendField('.')
+        .appendField(new Blockly.FieldDropdown(PROPERTY_CHOICES), 'PROP');
+    this.appendValueInput('APRIL_TAG_DETECTION').setCheck('AprilTagDetection')
+        .appendField('aprilTagDetection')
+        .setAlign(Blockly.ALIGN_RIGHT);
+    this.setColour(getPropertyColor);
+    // Assign 'this' to a variable for use in the closures below.
+    var thisBlock = this;
+    var TOOLTIPS = [
+        ['distanceUnit', 'Returns the distanceUnit field of the AprilTagDetection.'],
+    ];
+    this.setTooltip(function() {
+      var key = thisBlock.getFieldValue('PROP');
+      for (var i = 0; i < TOOLTIPS.length; i++) {
+        if (TOOLTIPS[i][0] == key) {
+          return TOOLTIPS[i][1];
+        }
+      }
+      return '';
+    });
+  }
+};
+
+Blockly.JavaScript['aprilTagDetection2_getProperty_DistanceUnit'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagDetection = Blockly.JavaScript.valueToCode(
+      block, 'APRIL_TAG_DETECTION', Blockly.JavaScript.ORDER_MEMBER);
+  var code = aprilTagDetection + '.' + property;
+  var blockLabel = 'AprilTagDetection.' + block.getField('PROP').getText();
+  return wrapJavaScriptCode(code, blockLabel);
+};
+
+Blockly.FtcJava['aprilTagDetection2_getProperty_DistanceUnit'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagDetection = Blockly.FtcJava.valueToCode(
+      block, 'APRIL_TAG_DETECTION', Blockly.FtcJava.ORDER_MEMBER);
+  var code = aprilTagDetection + '.' + property;
+  return [code, Blockly.FtcJava.ORDER_MEMBER];
+};
+
+Blockly.Blocks['aprilTagDetection2_getProperty_Boolean'] = {
+  init: function() {
+    var PROPERTY_CHOICES = [
+        ['isSingleDetection', 'isSingleDetection'],
+        ['isClusterDetection', 'isClusterDetection'],
+    ];
+    this.setOutput(true, 'Boolean');
+    this.appendDummyInput()
+        .appendField(createNonEditableField('AprilTagDetection'))
+        .appendField('.')
+        .appendField(new Blockly.FieldDropdown(PROPERTY_CHOICES), 'PROP');
+    this.appendValueInput('APRIL_TAG_DETECTION').setCheck('AprilTagDetection')
+        .appendField('aprilTagDetection')
+        .setAlign(Blockly.ALIGN_RIGHT);
+    this.setColour(getPropertyColor);
+    // Assign 'this' to a variable for use in the closures below.
+    var thisBlock = this;
+    var TOOLTIPS = [
+        ['isSingleDetection', 'Returns true if this detection is an AprilTagSingleDetection.'],
+        ['isClusterDetection', 'Returns true if this detection is an AprilTagClusterDetection.'],
+    ];
+    this.setTooltip(function() {
+      var key = thisBlock.getFieldValue('PROP');
+      for (var i = 0; i < TOOLTIPS.length; i++) {
+        if (TOOLTIPS[i][0] == key) {
+          return TOOLTIPS[i][1];
+        }
+      }
+      return '';
+    });
+  }
+};
+
+Blockly.JavaScript['aprilTagDetection2_getProperty_Boolean'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagDetection = Blockly.JavaScript.valueToCode(
+      block, 'APRIL_TAG_DETECTION', Blockly.JavaScript.ORDER_MEMBER);
+  var code = aprilTagDetection + '.' + property;
+  var blockLabel = 'AprilTagDetection.' + block.getField('PROP').getText();
+  return wrapJavaScriptCode(code, blockLabel);
+};
+
+Blockly.FtcJava['aprilTagDetection2_getProperty_Boolean'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagDetection = Blockly.FtcJava.valueToCode(
+      block, 'APRIL_TAG_DETECTION', Blockly.FtcJava.ORDER_MEMBER);
+  var code;
+  switch (property) {
+    case 'isSingleDetection':
+      Blockly.FtcJava.generateImport_('AprilTagSingleDetection');
+      code = aprilTagDetection + ' instanceof AprilTagSingleDetection';
+      break;
+    case 'isClusterDetection':
+      Blockly.FtcJava.generateImport_('AprilTagClusterDetection');
+      code = aprilTagDetection + ' instanceof AprilTagClusterDetection';
+      break;
+    default:
+      code = aprilTagDetection + '.' + property;
+      break;
+  }
+  return [code, Blockly.FtcJava.ORDER_MEMBER];
+};
+
+// AprilTagSingleDetection
+
+Blockly.Blocks['aprilTagSingleDetection_getProperty_Number'] = {
+  init: function() {
+    var PROPERTY_CHOICES = [
+        ['id', 'id'],
+        ['hamming', 'hamming'],
+        ['decisionMargin', 'decisionMargin'],
+        ['center.x', 'center.x'],
+        ['center.y', 'center.y'],
+        ['corners[0].x', 'corners[0].x'],
+        ['corners[0].y', 'corners[0].y'],
+        ['corners[1].x', 'corners[1].x'],
+        ['corners[1].y', 'corners[1].y'],
+        ['corners[2].x', 'corners[2].x'],
+        ['corners[2].y', 'corners[2].y'],
+        ['corners[3].x', 'corners[3].x'],
+        ['corners[3].y', 'corners[3].y'],
+    ];
+    this.setOutput(true, 'Number');
+    this.appendDummyInput()
+        .appendField(createNonEditableField('AprilTagSingleDetection'))
+        .appendField('.')
+        .appendField(new Blockly.FieldDropdown(PROPERTY_CHOICES), 'PROP');
+    this.appendValueInput('APRIL_TAG_SINGLE_DETECTION').setCheck('AprilTagDetection')
+        .appendField('aprilTagSingleDetection')
+        .setAlign(Blockly.ALIGN_RIGHT);
+    this.setColour(getPropertyColor);
+    // Assign 'this' to a variable for use in the closures below.
+    var thisBlock = this;
+    var TOOLTIPS = [
+        ['id', 'Returns the id field of the AprilTagSingleDetection.'],
+        ['hamming', 'Returns the hamming field of the AprilTagSingleDetection.'],
+        ['decisionMargin', 'Returns the decisionMargin field of the AprilTagSingleDetection.'],
+        ['center.x', 'Returns the center.x field of the AprilTagSingleDetection.'],
+        ['center.y', 'Returns the center.y field of the AprilTagSingleDetection.'],
+        ['corners[0].x', 'Returns the corners[0].x field of the AprilTagSingleDetection.'],
+        ['corners[0].y', 'Returns the corners[0].y field of the AprilTagSingleDetection.'],
+        ['corners[1].x', 'Returns the corners[1].x field of the AprilTagSingleDetection.'],
+        ['corners[1].y', 'Returns the corners[1].y field of the AprilTagSingleDetection.'],
+        ['corners[2].x', 'Returns the corners[2].x field of the AprilTagSingleDetection.'],
+        ['corners[2].y', 'Returns the corners[2].y field of the AprilTagSingleDetection.'],
+        ['corners[3].x', 'Returns the corners[3].x field of the AprilTagSingleDetection.'],
+        ['corners[3].y', 'Returns the corners[3].y field of the AprilTagSingleDetection.'],
+    ];
+    this.setTooltip(function() {
+      var key = thisBlock.getFieldValue('PROP');
+      for (var i = 0; i < TOOLTIPS.length; i++) {
+        if (TOOLTIPS[i][0] == key) {
+          return TOOLTIPS[i][1];
+        }
+      }
+      return '';
+    });
+    this.getFtcJavaOutputType = function() {
+      var property = thisBlock.getFieldValue('PROP');
+      switch (property) {
+        case 'id':
+        case 'hamming':
+          return 'int';
+        case 'decisionMargin':
+          return 'float';
+        case 'center.x':
+        case 'center.y':
+        case 'corners[0].x':
+        case 'corners[0].y':
+        case 'corners[1].x':
+        case 'corners[1].y':
+        case 'corners[2].x':
+        case 'corners[2].y':
+        case 'corners[3].x':
+        case 'corners[3].y':
+          return 'double';
+        default:
+          throw 'Unexpected property ' + property + ' (aprilTagSingleDetection_getProperty_Number getOutputType).';
+      }
+    };
+  }
+};
+
+Blockly.JavaScript['aprilTagSingleDetection_getProperty_Number'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagSingleDetection = Blockly.JavaScript.valueToCode(
+      block, 'APRIL_TAG_SINGLE_DETECTION', Blockly.JavaScript.ORDER_MEMBER);
+  var code = aprilTagSingleDetection + '.' + property;
+  var blockLabel = 'AprilTagSingleDetection.' + block.getField('PROP').getText();
+  return wrapJavaScriptCode(code, blockLabel);
+};
+
+Blockly.FtcJava['aprilTagSingleDetection_getProperty_Number'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagSingleDetection = Blockly.FtcJava.valueToCode(
+      block, 'APRIL_TAG_SINGLE_DETECTION', Blockly.FtcJava.ORDER_MEMBER);
+  // This java code will throw ClassCastException if aprilTagSingleDetection is not an AprilTagSingleDetection.
+  Blockly.FtcJava.generateImport_('AprilTagSingleDetection');
+  var code = '((AprilTagSingleDetection) ' + aprilTagSingleDetection + ').' + property;
+  return [code, Blockly.FtcJava.ORDER_MEMBER];
+};
+
+Blockly.Blocks['aprilTagSingleDetection_getProperty_String'] = {
+  init: function() {
+    var PROPERTY_CHOICES = [
+        ['metadata.name', 'metadata.name'],
+    ];
+    this.setOutput(true, 'String');
+    this.appendDummyInput()
+        .appendField(createNonEditableField('AprilTagSingleDetection'))
+        .appendField('.')
+        .appendField(new Blockly.FieldDropdown(PROPERTY_CHOICES), 'PROP');
+    this.appendValueInput('APRIL_TAG_SINGLE_DETECTION').setCheck('AprilTagDetection')
+        .appendField('aprilTagSingleDetection')
+        .setAlign(Blockly.ALIGN_RIGHT);
+    this.setColour(getPropertyColor);
+    // Assign 'this' to a variable for use in the closures below.
+    var thisBlock = this;
+    var TOOLTIPS = [
+        ['metadata.name', 'Returns the metadata.name field of the AprilTagSingleDetection.'],
+    ];
+    this.setTooltip(function() {
+      var key = thisBlock.getFieldValue('PROP');
+      for (var i = 0; i < TOOLTIPS.length; i++) {
+        if (TOOLTIPS[i][0] == key) {
+          return TOOLTIPS[i][1];
+        }
+      }
+      return '';
+    });
+  }
+};
+
+Blockly.JavaScript['aprilTagSingleDetection_getProperty_String'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagSingleDetection = Blockly.JavaScript.valueToCode(
+      block, 'APRIL_TAG_SINGLE_DETECTION', Blockly.JavaScript.ORDER_MEMBER);
+  var code = aprilTagSingleDetection + '.' + property;
+  var blockLabel = 'AprilTagSingleDetection.' + block.getField('PROP').getText();
+  return wrapJavaScriptCode(code, blockLabel);
+};
+
+Blockly.FtcJava['aprilTagSingleDetection_getProperty_String'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagSingleDetection = Blockly.FtcJava.valueToCode(
+      block, 'APRIL_TAG_SINGLE_DETECTION', Blockly.FtcJava.ORDER_MEMBER);
+  // This java code will throw ClassCastException if aprilTagSingleDetection is not an AprilTagSingleDetection.
+  Blockly.FtcJava.generateImport_('AprilTagSingleDetection');
+  var code = '((AprilTagSingleDetection) ' + aprilTagSingleDetection + ').' + property;
+  return [code, Blockly.FtcJava.ORDER_MEMBER];
+};
+
+Blockly.Blocks['aprilTagSingleDetection_getProperty_IsNotNull'] = {
+  init: function() {
+    var PROPERTY_CHOICES = [
+        ['metadata', 'metadata'],
+    ];
+    this.setOutput(true, 'Boolean');
+    this.appendDummyInput()
+        .appendField(createNonEditableField('AprilTagSingleDetection'))
+        .appendField('.')
+        .appendField(new Blockly.FieldDropdown(PROPERTY_CHOICES), 'PROP')
+        .appendField('!=')
+        .appendField(createNonEditableField('null'));
+    this.appendValueInput('APRIL_TAG_SINGLE_DETECTION').setCheck('AprilTagDetection')
+        .appendField('aprilTagSingleDetection')
+        .setAlign(Blockly.ALIGN_RIGHT);
+    this.setColour(getPropertyColor);
+    // Assign 'this' to a variable for use in the closures below.
+    var thisBlock = this;
+    var TOOLTIPS = [
+        ['metadata', 'Returns true if the metadata field of the AprilTagSingleDetection is not null.'],
+    ];
+    this.setTooltip(function() {
+      var key = thisBlock.getFieldValue('PROP');
+      for (var i = 0; i < TOOLTIPS.length; i++) {
+        if (TOOLTIPS[i][0] == key) {
+          return TOOLTIPS[i][1];
+        }
+      }
+      return '';
+    });
+  }
+};
+
+Blockly.JavaScript['aprilTagSingleDetection_getProperty_IsNotNull'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagSingleDetection = Blockly.JavaScript.valueToCode(
+      block, 'APRIL_TAG_SINGLE_DETECTION', Blockly.JavaScript.ORDER_MEMBER);
+  var code = aprilTagSingleDetection + '.' + property + ' != null';
+  var blockLabel = 'AprilTagSingleDetection.' + block.getField('PROP').getText();
+  return wrapJavaScriptCode(code, blockLabel);
+};
+
+Blockly.FtcJava['aprilTagSingleDetection_getProperty_IsNotNull'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagSingleDetection = Blockly.FtcJava.valueToCode(
+      block, 'APRIL_TAG_SINGLE_DETECTION', Blockly.FtcJava.ORDER_MEMBER);
+  // This java code will throw ClassCastException if aprilTagSingleDetection is not an AprilTagSingleDetection.
+  Blockly.FtcJava.generateImport_('AprilTagSingleDetection');
+  var code = '((AprilTagSingleDetection) ' + aprilTagSingleDetection + ').' + property + ' != null';
+  return [code, Blockly.FtcJava.ORDER_EQUALITY];
+};
+
+Blockly.Blocks['aprilTagSingleDetection_getProperty_AprilTagMetadata'] = {
+  init: function() {
+    var PROPERTY_CHOICES = [
+        ['metadata', 'metadata'],
+    ];
+    this.setOutput(true, 'AprilTagMetadata');
+    this.appendDummyInput()
+        .appendField(createNonEditableField('AprilTagSingleDetection'))
+        .appendField('.')
+        .appendField(new Blockly.FieldDropdown(PROPERTY_CHOICES), 'PROP');
+    this.appendValueInput('APRIL_TAG_SINGLE_DETECTION').setCheck('AprilTagDetection')
+        .appendField('aprilTagSingleDetection')
+        .setAlign(Blockly.ALIGN_RIGHT);
+    this.setColour(getPropertyColor);
+    // Assign 'this' to a variable for use in the closures below.
+    var thisBlock = this;
+    var TOOLTIPS = [
+        ['metadata', 'Returns the metadata field of the AprilTagSingleDetection.'],
+    ];
+    this.setTooltip(function() {
+      var key = thisBlock.getFieldValue('PROP');
+      for (var i = 0; i < TOOLTIPS.length; i++) {
+        if (TOOLTIPS[i][0] == key) {
+          return TOOLTIPS[i][1];
+        }
+      }
+      return '';
+    });
+  }
+};
+
+Blockly.JavaScript['aprilTagSingleDetection_getProperty_AprilTagMetadata'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagSingleDetection = Blockly.JavaScript.valueToCode(
+      block, 'APRIL_TAG_SINGLE_DETECTION', Blockly.JavaScript.ORDER_MEMBER);
+  var code = aprilTagSingleDetection + '.' + property;
+  var blockLabel = 'AprilTagSingleDetection.' + block.getField('PROP').getText();
+  return wrapJavaScriptCode(code, blockLabel);
+};
+
+Blockly.FtcJava['aprilTagSingleDetection_getProperty_AprilTagMetadata'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagSingleDetection = Blockly.FtcJava.valueToCode(
+      block, 'APRIL_TAG_SINGLE_DETECTION', Blockly.FtcJava.ORDER_MEMBER);
+  // This java code will throw ClassCastException if aprilTagSingleDetection is not an AprilTagSingleDetection.
+  Blockly.FtcJava.generateImport_('AprilTagSingleDetection');
+  var code = '((AprilTagSingleDetection) ' + aprilTagSingleDetection + ').' + property;
+  return [code, Blockly.FtcJava.ORDER_MEMBER];
+};
+
+// AprilTagClusterDetection
+
+Blockly.Blocks['aprilTagClusterDetection_getProperty_Number'] = {
+  init: function() {
+    var PROPERTY_CHOICES = [
+        ['percentClusterFound', 'percentClusterFound'],
+    ];
+    this.setOutput(true, 'Number');
+    this.appendDummyInput()
+        .appendField(createNonEditableField('AprilTagClusterDetection'))
+        .appendField('.')
+        .appendField(new Blockly.FieldDropdown(PROPERTY_CHOICES), 'PROP');
+    this.appendValueInput('APRIL_TAG_CLUSTER_DETECTION').setCheck('AprilTagDetection')
+        .appendField('aprilTagClusterDetection')
+        .setAlign(Blockly.ALIGN_RIGHT);
+    this.setColour(getPropertyColor);
+    // Assign 'this' to a variable for use in the closures below.
+    var thisBlock = this;
+    var TOOLTIPS = [
+        ['percentClusterFound', 'Returns the percentClusterFound field of the AprilTagClusterDetection.'],
+    ];
+    this.setTooltip(function() {
+      var key = thisBlock.getFieldValue('PROP');
+      for (var i = 0; i < TOOLTIPS.length; i++) {
+        if (TOOLTIPS[i][0] == key) {
+          return TOOLTIPS[i][1];
+        }
+      }
+      return '';
+    });
+    this.getFtcJavaOutputType = function() {
+      var property = thisBlock.getFieldValue('PROP');
+      switch (property) {
+        case 'percentClusterFound':
+          return 'int';
+        default:
+          throw 'Unexpected property ' + property + ' (aprilTagClusterDetection_getProperty_Number getOutputType).';
+      }
+    };
+  }
+};
+
+Blockly.JavaScript['aprilTagClusterDetection_getProperty_Number'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagClusterDetection = Blockly.JavaScript.valueToCode(
+      block, 'APRIL_TAG_CLUSTER_DETECTION', Blockly.JavaScript.ORDER_MEMBER);
+  var code = aprilTagClusterDetection + '.' + property;
+  var blockLabel = 'AprilTagClusterDetection.' + block.getField('PROP').getText();
+  return wrapJavaScriptCode(code, blockLabel);
+};
+
+Blockly.FtcJava['aprilTagClusterDetection_getProperty_Number'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagClusterDetection = Blockly.FtcJava.valueToCode(
+      block, 'APRIL_TAG_CLUSTER_DETECTION', Blockly.FtcJava.ORDER_MEMBER);
+  // This java code will throw ClassCastException if aprilTagClusterDetection is not an AprilTagClusterDetection.
+  Blockly.FtcJava.generateImport_('AprilTagClusterDetection');
+  var code = '((AprilTagClusterDetection) ' + aprilTagClusterDetection + ').' + property;
+  return [code, Blockly.FtcJava.ORDER_MEMBER];
+};
+
+Blockly.Blocks['aprilTagClusterDetection_getProperty_String'] = {
+  init: function() {
+    var PROPERTY_CHOICES = [
+        ['metadata.name', 'metadata.name'],
+        ['metadata.shortName', 'metadata.shortName'],
+    ];
+    this.setOutput(true, 'String');
+    this.appendDummyInput()
+        .appendField(createNonEditableField('AprilTagClusterDetection'))
+        .appendField('.')
+        .appendField(new Blockly.FieldDropdown(PROPERTY_CHOICES), 'PROP');
+    this.appendValueInput('APRIL_TAG_CLUSTER_DETECTION').setCheck('AprilTagDetection')
+        .appendField('aprilTagClusterDetection')
+        .setAlign(Blockly.ALIGN_RIGHT);
+    this.setColour(getPropertyColor);
+    // Assign 'this' to a variable for use in the closures below.
+    var thisBlock = this;
+    var TOOLTIPS = [
+        ['metadata.name', 'Returns the metadata.name field of the AprilTagClusterDetection.'],
+        ['metadata.shortName', 'Returns the metadata.shortName field of the AprilTagClusterDetection.'],
+    ];
+    this.setTooltip(function() {
+      var key = thisBlock.getFieldValue('PROP');
+      for (var i = 0; i < TOOLTIPS.length; i++) {
+        if (TOOLTIPS[i][0] == key) {
+          return TOOLTIPS[i][1];
+        }
+      }
+      return '';
+    });
+  }
+};
+
+Blockly.JavaScript['aprilTagClusterDetection_getProperty_String'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagClusterDetection = Blockly.JavaScript.valueToCode(
+      block, 'APRIL_TAG_CLUSTER_DETECTION', Blockly.JavaScript.ORDER_MEMBER);
+  var code = aprilTagClusterDetection + '.' + property;
+  var blockLabel = 'AprilTagClusterDetection.' + block.getField('PROP').getText();
+  return wrapJavaScriptCode(code, blockLabel);
+};
+
+Blockly.FtcJava['aprilTagClusterDetection_getProperty_String'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagClusterDetection = Blockly.FtcJava.valueToCode(
+      block, 'APRIL_TAG_CLUSTER_DETECTION', Blockly.FtcJava.ORDER_MEMBER);
+  // This java code will throw ClassCastException if aprilTagClusterDetection is not an AprilTagClusterDetection.
+  Blockly.FtcJava.generateImport_('AprilTagClusterDetection');
+  var code = '((AprilTagClusterDetection) ' + aprilTagClusterDetection + ').' + property;
+  return [code, Blockly.FtcJava.ORDER_MEMBER];
+};
+
+Blockly.Blocks['aprilTagClusterDetection_getProperty_IsNotNull'] = {
+  init: function() {
+    var PROPERTY_CHOICES = [
+        ['metadata', 'metadata'],
+    ];
+    this.setOutput(true, 'Boolean');
+    this.appendDummyInput()
+        .appendField(createNonEditableField('AprilTagClusterDetection'))
+        .appendField('.')
+        .appendField(new Blockly.FieldDropdown(PROPERTY_CHOICES), 'PROP')
+        .appendField('!=')
+        .appendField(createNonEditableField('null'));
+    this.appendValueInput('APRIL_TAG_CLUSTER_DETECTION').setCheck('AprilTagDetection')
+        .appendField('aprilTagClusterDetection')
+        .setAlign(Blockly.ALIGN_RIGHT);
+    this.setColour(getPropertyColor);
+    // Assign 'this' to a variable for use in the closures below.
+    var thisBlock = this;
+    var TOOLTIPS = [
+        ['metadata', 'Returns true if the metadata field of the AprilTagClusterDetection is not null.'],
+    ];
+    this.setTooltip(function() {
+      var key = thisBlock.getFieldValue('PROP');
+      for (var i = 0; i < TOOLTIPS.length; i++) {
+        if (TOOLTIPS[i][0] == key) {
+          return TOOLTIPS[i][1];
+        }
+      }
+      return '';
+    });
+  }
+};
+
+Blockly.JavaScript['aprilTagClusterDetection_getProperty_IsNotNull'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagClusterDetection = Blockly.JavaScript.valueToCode(
+      block, 'APRIL_TAG_CLUSTER_DETECTION', Blockly.JavaScript.ORDER_MEMBER);
+  var code = aprilTagClusterDetection + '.' + property + ' != null';
+  var blockLabel = 'AprilTagClusterDetection.' + block.getField('PROP').getText();
+  return wrapJavaScriptCode(code, blockLabel);
+};
+
+Blockly.FtcJava['aprilTagClusterDetection_getProperty_IsNotNull'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagClusterDetection = Blockly.FtcJava.valueToCode(
+      block, 'APRIL_TAG_CLUSTER_DETECTION', Blockly.FtcJava.ORDER_MEMBER);
+  // This java code will throw ClassCastException if aprilTagClusterDetection is not an AprilTagClusterDetection.
+  Blockly.FtcJava.generateImport_('AprilTagClusterDetection');
+  var code = '((AprilTagClusterDetection) ' + aprilTagClusterDetection + ').' + property + ' != null';
+  return [code, Blockly.FtcJava.ORDER_EQUALITY];
+};
+
+Blockly.Blocks['aprilTagClusterDetection_getProperty_AprilTagClusterMetadata'] = {
+  init: function() {
+    var PROPERTY_CHOICES = [
+        ['metadata', 'metadata'],
+    ];
+    this.setOutput(true, 'AprilTagClusterMetadata');
+    this.appendDummyInput()
+        .appendField(createNonEditableField('AprilTagClusterDetection'))
+        .appendField('.')
+        .appendField(new Blockly.FieldDropdown(PROPERTY_CHOICES), 'PROP');
+    this.appendValueInput('APRIL_TAG_CLUSTER_DETECTION').setCheck('AprilTagDetection')
+        .appendField('aprilTagClusterDetection')
+        .setAlign(Blockly.ALIGN_RIGHT);
+    this.setColour(getPropertyColor);
+    // Assign 'this' to a variable for use in the closures below.
+    var thisBlock = this;
+    var TOOLTIPS = [
+        ['metadata', 'Returns the metadata field of the AprilTagClusterDetection.'],
+    ];
+    this.setTooltip(function() {
+      var key = thisBlock.getFieldValue('PROP');
+      for (var i = 0; i < TOOLTIPS.length; i++) {
+        if (TOOLTIPS[i][0] == key) {
+          return TOOLTIPS[i][1];
+        }
+      }
+      return '';
+    });
+  }
+};
+
+Blockly.JavaScript['aprilTagClusterDetection_getProperty_AprilTagClusterMetadata'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagClusterDetection = Blockly.JavaScript.valueToCode(
+      block, 'APRIL_TAG_CLUSTER_DETECTION', Blockly.JavaScript.ORDER_MEMBER);
+  var code = aprilTagClusterDetection + '.' + property;
+  var blockLabel = 'AprilTagClusterDetection.' + block.getField('PROP').getText();
+  return wrapJavaScriptCode(code, blockLabel);
+};
+
+Blockly.FtcJava['aprilTagClusterDetection_getProperty_AprilTagClusterMetadata'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagClusterDetection = Blockly.FtcJava.valueToCode(
+      block, 'APRIL_TAG_CLUSTER_DETECTION', Blockly.FtcJava.ORDER_MEMBER);
+  // This java code will throw ClassCastException if aprilTagClusterDetection is not an AprilTagClusterDetection.
+  Blockly.FtcJava.generateImport_('AprilTagClusterDetection');
+  var code = '((AprilTagClusterDetection) ' + aprilTagClusterDetection + ').' + property;
   return [code, Blockly.FtcJava.ORDER_MEMBER];
 };
 
@@ -1358,6 +1797,30 @@ Blockly.JavaScript['aprilTagGameDatabase_getDecodeTagLibrary'] = function(block)
 Blockly.FtcJava['aprilTagGameDatabase_getDecodeTagLibrary'] = function(block) {
   Blockly.FtcJava.generateImport_('AprilTagGameDatabase');
   var code = 'AprilTagGameDatabase.getDecodeTagLibrary()';
+  return [code, Blockly.FtcJava.ORDER_FUNCTION_CALL];
+};
+
+Blockly.Blocks['aprilTagGameDatabase_getBioBuzzTagLibrary'] = {
+  init: function() {
+    this.setOutput(true, 'AprilTagLibrary');
+    this.appendDummyInput()
+        .appendField('call')
+        .appendField(createNonEditableField('AprilTagGameDatabase'))
+        .appendField('.')
+        .appendField(createNonEditableField('getBioBuzzTagLibrary'));
+    this.setColour(functionColor);
+    this.setTooltip('Returns the tag library for the BioBuzz FTC game.');
+  }
+};
+
+Blockly.JavaScript['aprilTagGameDatabase_getBioBuzzTagLibrary'] = function(block) {
+  var code = aprilTagIdentifierForJavaScript + '.getBioBuzzTagLibrary()';
+  return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+};
+
+Blockly.FtcJava['aprilTagGameDatabase_getBioBuzzTagLibrary'] = function(block) {
+  Blockly.FtcJava.generateImport_('AprilTagGameDatabase');
+  var code = 'AprilTagGameDatabase.getBioBuzzTagLibrary()';
   return [code, Blockly.FtcJava.ORDER_FUNCTION_CALL];
 };
 
@@ -2130,6 +2593,208 @@ Blockly.FtcJava['aprilTagMetadata_getProperty_Quaternion'] = function(block) {
   var aprilTagMetadata = Blockly.FtcJava.valueToCode(
       block, 'APRIL_TAG_METADATA', Blockly.FtcJava.ORDER_MEMBER);
   var code = aprilTagMetadata + '.' + property;
+  return [code, Blockly.FtcJava.ORDER_MEMBER];
+};
+
+// AprilTagClusterMetadata
+
+Blockly.Blocks['aprilTagClusterMetadata_getProperty_String'] = {
+  init: function() {
+    var PROPERTY_CHOICES = [
+        ['name', 'name'],
+        ['shortName', 'shortName'],
+    ];
+    this.setOutput(true, 'String');
+    this.appendDummyInput()
+        .appendField(createNonEditableField('AprilTagClusterMetadata'))
+        .appendField('.')
+        .appendField(new Blockly.FieldDropdown(PROPERTY_CHOICES), 'PROP');
+    this.appendValueInput('APRIL_TAG_CLUSTER_METADATA').setCheck('AprilTagClusterMetadata')
+        .appendField('aprilTagClusterMetadata')
+        .setAlign(Blockly.ALIGN_RIGHT);
+    this.setColour(getPropertyColor);
+    // Assign 'this' to a variable for use in the closures below.
+    var thisBlock = this;
+    var TOOLTIPS = [
+        ['name', 'Returns the name field of the AprilTagClusterMetadata.'],
+        ['shortName', 'Returns the shortName field of the AprilTagClusterMetadata.'],
+    ];
+    this.setTooltip(function() {
+      var key = thisBlock.getFieldValue('PROP');
+      for (var i = 0; i < TOOLTIPS.length; i++) {
+        if (TOOLTIPS[i][0] == key) {
+          return TOOLTIPS[i][1];
+        }
+      }
+      return '';
+    });
+  }
+};
+
+Blockly.JavaScript['aprilTagClusterMetadata_getProperty_String'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagClusterMetadata = Blockly.JavaScript.valueToCode(
+      block, 'APRIL_TAG_CLUSTER_METADATA', Blockly.JavaScript.ORDER_MEMBER);
+  var code = aprilTagClusterMetadata + '.' + property;
+  var blockLabel = 'AprilTagClusterMetadata.' + block.getField('PROP').getText();
+  return wrapJavaScriptCode(code, blockLabel);
+};
+
+Blockly.FtcJava['aprilTagClusterMetadata_getProperty_String'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagClusterMetadata = Blockly.FtcJava.valueToCode(
+      block, 'APRIL_TAG_CLUSTER_METADATA', Blockly.FtcJava.ORDER_MEMBER);
+  var code = aprilTagClusterMetadata + '.' + property;
+  return [code, Blockly.FtcJava.ORDER_MEMBER];
+};
+
+Blockly.Blocks['aprilTagClusterMetadata_getProperty_DistanceUnit'] = {
+  init: function() {
+    var PROPERTY_CHOICES = [
+        ['distanceUnit', 'distanceUnit'],
+    ];
+    this.setOutput(true, 'DistanceUnit');
+    this.appendDummyInput()
+        .appendField(createNonEditableField('AprilTagClusterMetadata'))
+        .appendField('.')
+        .appendField(new Blockly.FieldDropdown(PROPERTY_CHOICES), 'PROP');
+    this.appendValueInput('APRIL_TAG_CLUSTER_METADATA').setCheck('AprilTagClusterMetadata')
+        .appendField('aprilTagClusterMetadata')
+        .setAlign(Blockly.ALIGN_RIGHT);
+    this.setColour(getPropertyColor);
+    // Assign 'this' to a variable for use in the closures below.
+    var thisBlock = this;
+    var TOOLTIPS = [
+        ['distanceUnit', 'Returns the distanceUnit field of the AprilTagClusterMetadata.'],
+    ];
+    this.setTooltip(function() {
+      var key = thisBlock.getFieldValue('PROP');
+      for (var i = 0; i < TOOLTIPS.length; i++) {
+        if (TOOLTIPS[i][0] == key) {
+          return TOOLTIPS[i][1];
+        }
+      }
+      return '';
+    });
+  }
+};
+
+Blockly.JavaScript['aprilTagClusterMetadata_getProperty_DistanceUnit'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagClusterMetadata = Blockly.JavaScript.valueToCode(
+      block, 'APRIL_TAG_CLUSTER_METADATA', Blockly.JavaScript.ORDER_MEMBER);
+  var code = aprilTagClusterMetadata + '.' + property;
+  var blockLabel = 'AprilTagClusterMetadata.' + block.getField('PROP').getText();
+  return wrapJavaScriptCode(code, blockLabel);
+};
+
+Blockly.FtcJava['aprilTagClusterMetadata_getProperty_DistanceUnit'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagClusterMetadata = Blockly.FtcJava.valueToCode(
+      block, 'APRIL_TAG_CLUSTER_METADATA', Blockly.FtcJava.ORDER_MEMBER);
+  var code = aprilTagClusterMetadata + '.' + property;
+  return [code, Blockly.FtcJava.ORDER_MEMBER];
+};
+
+Blockly.Blocks['aprilTagClusterMetadata_getProperty_VectorF'] = {
+  init: function() {
+    var PROPERTY_CHOICES = [
+        ['fieldPosition', 'fieldPosition'],
+    ];
+    this.setOutput(true, 'VectorF');
+    this.appendDummyInput()
+        .appendField(createNonEditableField('AprilTagClusterMetadata'))
+        .appendField('.')
+        .appendField(new Blockly.FieldDropdown(PROPERTY_CHOICES), 'PROP');
+    this.appendValueInput('APRIL_TAG_CLUSTER_METADATA').setCheck('AprilTagClusterMetadata')
+        .appendField('aprilTagClusterMetadata')
+        .setAlign(Blockly.ALIGN_RIGHT);
+    this.setColour(getPropertyColor);
+    // Assign 'this' to a variable for use in the closures below.
+    var thisBlock = this;
+    var TOOLTIPS = [
+        ['fieldPosition', 'Returns the fieldPosition field of the AprilTagClusterMetadata.'],
+    ];
+    this.setTooltip(function() {
+      var key = thisBlock.getFieldValue('PROP');
+      for (var i = 0; i < TOOLTIPS.length; i++) {
+        if (TOOLTIPS[i][0] == key) {
+          return TOOLTIPS[i][1];
+        }
+      }
+      return '';
+    });
+  }
+};
+
+Blockly.JavaScript['aprilTagClusterMetadata_getProperty_VectorF'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagClusterMetadata = Blockly.JavaScript.valueToCode(
+      block, 'APRIL_TAG_CLUSTER_METADATA', Blockly.JavaScript.ORDER_MEMBER);
+  var o = aprilTagClusterMetadata + '.' + property;
+  var code = aprilTagIdentifierForJavaScript + '.createVectorF(' +
+      '"GETTER", "AprilTagClusterMetadata", "' + property + '", ' +
+      'JSON.stringify(' + o + '))';
+  var wrappedCode = 'evalIfTruthy(' + o + ', \'' + code + '\', null)';
+  return [wrappedCode, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+};
+
+Blockly.FtcJava['aprilTagClusterMetadata_getProperty_VectorF'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagClusterMetadata = Blockly.FtcJava.valueToCode(
+      block, 'APRIL_TAG_CLUSTER_METADATA', Blockly.FtcJava.ORDER_MEMBER);
+  var code = aprilTagClusterMetadata + '.' + property;
+  return [code, Blockly.FtcJava.ORDER_MEMBER];
+};
+
+Blockly.Blocks['aprilTagClusterMetadata_getProperty_Quaternion'] = {
+  init: function() {
+    var PROPERTY_CHOICES = [
+        ['fieldOrientation', 'fieldOrientation'],
+    ];
+    this.setOutput(true, 'Quaternion');
+    this.appendDummyInput()
+        .appendField(createNonEditableField('AprilTagClusterMetadata'))
+        .appendField('.')
+        .appendField(new Blockly.FieldDropdown(PROPERTY_CHOICES), 'PROP');
+    this.appendValueInput('APRIL_TAG_CLUSTER_METADATA').setCheck('AprilTagClusterMetadata')
+        .appendField('aprilTagClusterMetadata')
+        .setAlign(Blockly.ALIGN_RIGHT);
+    this.setColour(getPropertyColor);
+    // Assign 'this' to a variable for use in the closures below.
+    var thisBlock = this;
+    var TOOLTIPS = [
+        ['fieldOrientation', 'Returns the fieldOrientation field of the AprilTagClusterMetadata.'],
+    ];
+    this.setTooltip(function() {
+      var key = thisBlock.getFieldValue('PROP');
+      for (var i = 0; i < TOOLTIPS.length; i++) {
+        if (TOOLTIPS[i][0] == key) {
+          return TOOLTIPS[i][1];
+        }
+      }
+      return '';
+    });
+  }
+};
+
+Blockly.JavaScript['aprilTagClusterMetadata_getProperty_Quaternion'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagClusterMetadata = Blockly.JavaScript.valueToCode(
+      block, 'APRIL_TAG_CLUSTER_METADATA', Blockly.JavaScript.ORDER_MEMBER);
+  var o = aprilTagClusterMetadata + '.' + property;
+  var code = aprilTagIdentifierForJavaScript + '.createQuaternion(' +
+      '"GETTER", "AprilTagClusterMetadata", "' + property + '", ' +
+      'JSON.stringify(' + o + '))';
+  var wrappedCode = 'evalIfTruthy(' + o + ', \'' + code + '\', null)';
+  return [wrappedCode, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+};
+
+Blockly.FtcJava['aprilTagClusterMetadata_getProperty_Quaternion'] = function(block) {
+  var property = block.getFieldValue('PROP');
+  var aprilTagClusterMetadata = Blockly.FtcJava.valueToCode(
+      block, 'APRIL_TAG_CLUSTER_METADATA', Blockly.FtcJava.ORDER_MEMBER);
+  var code = aprilTagClusterMetadata + '.' + property;
   return [code, Blockly.FtcJava.ORDER_MEMBER];
 };
 

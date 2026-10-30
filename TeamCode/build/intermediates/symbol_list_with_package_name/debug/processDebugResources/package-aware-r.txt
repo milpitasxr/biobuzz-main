@@ -326,6 +326,7 @@ attr colorControlHighlight
 attr colorControlNormal
 attr colorError
 attr colorErrorContainer
+attr colorInitReady
 attr colorMedium
 attr colorMediumLight
 attr colorMediumMedium
@@ -3054,13 +3055,13 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable button_shape
-drawable decode_background
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable feedback_shape_orange
+drawable first_biobuzz_logo_ftc
 drawable ic_arrow_back_black_24
 drawable ic_arrow_back_black_24dp
 drawable ic_call_answer
@@ -3312,6 +3313,8 @@ id collapseActionView
 id colorSwatch
 id compress
 id configIsReadOnlyFeedback
+id config_tree_caption
+id config_tree_layout
 id configureButton
 id configureFromTemplate
 id configureFromTemplateArea
@@ -3403,6 +3406,7 @@ id file_buttons
 id file_delete_button
 id file_edit_button
 id file_info_layout
+id file_tree_button
 id filename_editText
 id files_holder
 id fill
@@ -3789,6 +3793,7 @@ id transition_pause_alpha
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id tree_bottom
 id triangle
 id txtIsDSInstalled
 id txtIsDSInstalled_img
@@ -3972,6 +3977,7 @@ layout backbar_layout
 layout banner_parent
 layout button_list
 layout color_list_preference_line_item
+layout config_tree
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -4324,6 +4330,7 @@ string configTypeServoFullRange
 string configTypeServos
 string configTypeUnknown
 string configTypeWebcam
+string config_tree_caption
 string configurationNotSaved
 string configureFromTemplate
 string configure_activity
@@ -4411,6 +4418,7 @@ string file_activate_button
 string file_delete_button
 string file_edit_button
 string file_prompt
+string file_tree_button
 string filename_editText
 string filler_text
 string firmwareContext
@@ -4925,6 +4933,7 @@ string titleWarnAbout2_4GhzBand
 string titleWarnAboutIncorrectClocks
 string titleWarnAboutMismatchedAppVersions
 string titleWarnAboutObsoleteSoftware
+string title_activity_config_tree
 string title_activity_configfromtemplate
 string title_activity_load
 string title_activity_wifi_channel_selector

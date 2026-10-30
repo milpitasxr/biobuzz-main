@@ -44,7 +44,8 @@ function isObsolete(block) {
       block.type.startsWith('tfodRecognition_') ||
       block.type.startsWith('tfodProcessorBuilder_') ||
       block.type.startsWith('tfodProcessor_') ||
-      block.type == 'tfod_typedEnum_label') {
+      block.type == 'tfod_typedEnum_label' ||
+      block.type.startsWith('aprilTagDetection_')) {
     return true;
   }
   return false;

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.firstinspires.ftc.teamcode.simloopexample.ExampleAutoSimTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-28T00:50:40.600Z" hostname="Arnavs-MacBook-Pro.local" time="0.029">
+  <properties/>
+  <testcase name="theAutonomousRoutineScoresWithoutDroppingTheSample()" classname="org.firstinspires.ftc.teamcode.simloopexample.ExampleAutoSimTest" time="0.029"/>
+  <system-out><![CDATA[[PsiKit] II: RLOG writer started
+[PsiKit] II: got EOF, ending read of input file
+[PsiKit] II: Replay of log has ended.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

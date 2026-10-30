@@ -1,8 +1,5 @@
 <xml xmlns="https://developers.google.com/blockly/xml">
 <variables>
-<variable id="l4u_t,8(NrM,1//Wh@i~">myText</variable>
-<variable id="zT9$bXptkhP7|y|WD0S?">stringToSearch</variable>
-<variable id="S|Wd0ogYx;Zar4Q[5PtM">containText</variable>
 <variable id="3.)/eLHm(iRl1^Qsq;Hb">USE_WEBCAM</variable>
 <variable id="l)/,LjA`jR!1Nc@Z:`l!">myAprilTagDetections</variable>
 <variable type="AprilTagProcessor.Builder" id="NYqOu)Ei(Q{C!f;y!a^O">myAprilTagProcessorBuilder</variable>
@@ -477,6 +474,18 @@ https://ftc-docs.firstinspires.org/en/latest/game_specific_resources/field_coord
 <block type="comment" id="U@Dkpel-LMa.00jJsqA-">
 <field name="COMMENT">Display info about the detection.</field>
 <next>
+<block type="controls_if" id="8frjmZzXx`!mU=f5h6Qf">
+<value name="IF0">
+<block type="aprilTagDetection2_getProperty_Boolean" id="]@*--sLI*[1A,=g9-)P:">
+<field name="PROP">isSingleDetection</field>
+<value name="APRIL_TAG_DETECTION">
+<block type="variables_get" id="dY+2Ta51,^U^=j~%yqf+">
+<field name="VAR" id="vP~n9zf$lW%hYD/C.j_-">myAprilTagDetection</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
 <block type="telemetry_addLine" id="qrKb?#/HMYJo.RhU8rW:">
 <value name="TEXT">
 <shadow type="text" id="3^Lv-r.jG6}7LV;(yIh.">
@@ -487,9 +496,9 @@ https://ftc-docs.firstinspires.org/en/latest/game_specific_resources/field_coord
 <block type="controls_if" id="1KHSCf_sX!Qd~BKfG}QD">
 <mutation else="1"/>
 <value name="IF0">
-<block type="aprilTagDetection_getProperty_IsNotNull" id=":^$lP:Ut!p3Z)E+vy^]D">
+<block type="aprilTagSingleDetection_getProperty_IsNotNull" id=":^$lP:Ut!p3Z)E+vy^]D">
 <field name="PROP">metadata</field>
-<value name="APRIL_TAG_DETECTION">
+<value name="APRIL_TAG_SINGLE_DETECTION">
 <block type="variables_get" id="9Lq*6VTlT$7uDRiB|mYe">
 <field name="VAR" id="vP~n9zf$lW%hYD/C.j_-">myAprilTagDetection</field>
 </block>
@@ -510,9 +519,9 @@ https://ftc-docs.firstinspires.org/en/latest/game_specific_resources/field_coord
 </block>
 </value>
 <value name="ADD1">
-<block type="aprilTagDetection_getProperty_Number" id="lifbVBMNn+.1j?y6v54X">
+<block type="aprilTagSingleDetection_getProperty_Number" id="lifbVBMNn+.1j?y6v54X">
 <field name="PROP">id</field>
-<value name="APRIL_TAG_DETECTION">
+<value name="APRIL_TAG_SINGLE_DETECTION">
 <block type="variables_get" id="w(63KWmGiZ83+qITBep;">
 <field name="VAR" id="vP~n9zf$lW%hYD/C.j_-">myAprilTagDetection</field>
 </block>
@@ -525,9 +534,9 @@ https://ftc-docs.firstinspires.org/en/latest/game_specific_resources/field_coord
 </block>
 </value>
 <value name="ADD3">
-<block type="aprilTagDetection_getProperty_String" id="=AvXMAjUic3u3lbFtEt4">
+<block type="aprilTagSingleDetection_getProperty_String" id="=AvXMAjUic3u3lbFtEt4">
 <field name="PROP">metadata.name</field>
-<value name="APRIL_TAG_DETECTION">
+<value name="APRIL_TAG_SINGLE_DETECTION">
 <block type="variables_get" id="zKHYs.Y87Qrl9%G~Oq^V">
 <field name="VAR" id="vP~n9zf$lW%hYD/C.j_-">myAprilTagDetection</field>
 </block>
@@ -537,37 +546,6 @@ https://ftc-docs.firstinspires.org/en/latest/game_specific_resources/field_coord
 </block>
 </value>
 <next>
-<block type="controls_if" id="K|V2)U{oh`Dctcy)~a_x">
-<comment pinned="true" h="73.58892822265625" w="358.735595703125">Only use tags that don't have Obelisk in them since Obelisk tags don't have valid location data</comment>
-<data>{"commentPositionLeft":-53,"commentPositionTop":-99}</data>
-<value name="IF0">
-<block type="logic_negate" id="YNyDexcnx#ovx-Zx-{HA">
-<value name="BOOL">
-<block type="procedures_callreturn" id="%McY,/.xCkX4/^uoua!B">
-<mutation name="contains">
-<arg name="stringToSearch"/>
-<arg name="containText"/>
-</mutation>
-<value name="ARG0">
-<block type="aprilTagDetection_getProperty_String" id="X}jMPfgNnTOFAWCZTh5+">
-<field name="PROP">metadata.name</field>
-<value name="APRIL_TAG_DETECTION">
-<block type="variables_get" id="QC5qf!/PvQR$a_g=UV-Q">
-<field name="VAR" id="vP~n9zf$lW%hYD/C.j_-">myAprilTagDetection</field>
-</block>
-</value>
-</block>
-</value>
-<value name="ARG1">
-<block type="text" id="$eg^N=ED$|W#(3-ML]R{">
-<field name="TEXT">Obelisk</field>
-</block>
-</value>
-</block>
-</value>
-</block>
-</value>
-<statement name="DO0">
 <block type="telemetry_addLine" id=";grqK`+-g7;g50c=|L0l">
 <value name="TEXT">
 <shadow type="text" id="!y]i-sUsabeyV/)u=6D5">
@@ -577,7 +555,7 @@ https://ftc-docs.firstinspires.org/en/latest/game_specific_resources/field_coord
 <mutation items="7"/>
 <value name="ADD0">
 <block type="text" id="+]Cns+.i=%b0bFaT6;NI">
-<field name="TEXT">XYZ </field>
+<field name="TEXT">Robot XYZ </field>
 </block>
 </value>
 <value name="ADD1">
@@ -586,7 +564,7 @@ https://ftc-docs.firstinspires.org/en/latest/game_specific_resources/field_coord
 <shadow type="math_number" id="g`p?z|x@JeU%MJ4.tSFQ">
 <field name="NUM">3.14159265</field>
 </shadow>
-<block type="aprilTagDetection_getProperty_Number" id="jUN`u.6t[:O8`9Ncql]!">
+<block type="aprilTagDetection2_getProperty_Number" id="jUN`u.6t[:O8`9Ncql]!">
 <field name="PROP">robotPose.position.x</field>
 <value name="APRIL_TAG_DETECTION">
 <block type="variables_get" id="mb(6}~t}KLoi4`XT~d:H">
@@ -618,7 +596,7 @@ https://ftc-docs.firstinspires.org/en/latest/game_specific_resources/field_coord
 <shadow type="math_number" id="2cGf/q9c-ZnJ}LB6C1i$">
 <field name="NUM">3.14159265</field>
 </shadow>
-<block type="aprilTagDetection_getProperty_Number" id="^ZxENE!MDi;z:vW0d@XL">
+<block type="aprilTagDetection2_getProperty_Number" id="^ZxENE!MDi;z:vW0d@XL">
 <field name="PROP">robotPose.position.y</field>
 <value name="APRIL_TAG_DETECTION">
 <block type="variables_get" id="bYyr?K,sa#Z.])=_ot.X">
@@ -650,7 +628,7 @@ https://ftc-docs.firstinspires.org/en/latest/game_specific_resources/field_coord
 <shadow type="math_number" id="|j[Xf6X[,{Y~6k#Ow9ay">
 <field name="NUM">3.14159265</field>
 </shadow>
-<block type="aprilTagDetection_getProperty_Number" id="@o/Xx/]f-CWGv|Tr)2Nk">
+<block type="aprilTagDetection2_getProperty_Number" id="@o/Xx/]f-CWGv|Tr)2Nk">
 <field name="PROP">robotPose.position.z</field>
 <value name="APRIL_TAG_DETECTION">
 <block type="variables_get" id="[9!-4|yF{X2|/{iSu:SC">
@@ -688,7 +666,7 @@ https://ftc-docs.firstinspires.org/en/latest/game_specific_resources/field_coord
 <mutation items="7"/>
 <value name="ADD0">
 <block type="text" id="CNSpY2iH=tR#]P,pi4u.">
-<field name="TEXT">PRY </field>
+<field name="TEXT">Robot PRY </field>
 </block>
 </value>
 <value name="ADD1">
@@ -697,7 +675,7 @@ https://ftc-docs.firstinspires.org/en/latest/game_specific_resources/field_coord
 <shadow type="math_number" id="?pMQrP+klggGPQ})NZWJ">
 <field name="NUM">3.14159265</field>
 </shadow>
-<block type="aprilTagDetection_getProperty_Number" id="Iy|1o|tQ9/Xq~XhaEN$_">
+<block type="aprilTagDetection2_getProperty_Number" id="Iy|1o|tQ9/Xq~XhaEN$_">
 <field name="PROP">robotPose.orientation.pitch</field>
 <value name="APRIL_TAG_DETECTION">
 <block type="variables_get" id="rVJim4c8+/ys[,t:o!0a">
@@ -729,7 +707,7 @@ https://ftc-docs.firstinspires.org/en/latest/game_specific_resources/field_coord
 <shadow type="math_number" id="xsH[9W8/eLks@vlm]1*g">
 <field name="NUM">3.14159265</field>
 </shadow>
-<block type="aprilTagDetection_getProperty_Number" id="ShLjZCVXxN!~/4l*tkIW">
+<block type="aprilTagDetection2_getProperty_Number" id="ShLjZCVXxN!~/4l*tkIW">
 <field name="PROP">robotPose.orientation.roll</field>
 <value name="APRIL_TAG_DETECTION">
 <block type="variables_get" id="OCoPF8gE#WFKctf6vd6f">
@@ -761,7 +739,7 @@ https://ftc-docs.firstinspires.org/en/latest/game_specific_resources/field_coord
 <shadow type="math_number" id="v%b/#{Uh]xNL*jCpZAlp">
 <field name="NUM">3.14159265</field>
 </shadow>
-<block type="aprilTagDetection_getProperty_Number" id="rr^=wlJCB2_afebAXJ}Z">
+<block type="aprilTagDetection2_getProperty_Number" id="rr^=wlJCB2_afebAXJ}Z">
 <field name="PROP">robotPose.orientation.yaw</field>
 <value name="APRIL_TAG_DETECTION">
 <block type="variables_get" id="vBZ8!}wPWKb}V3-g]Wle">
@@ -792,8 +770,6 @@ https://ftc-docs.firstinspires.org/en/latest/game_specific_resources/field_coord
 </block>
 </next>
 </block>
-</statement>
-</block>
 </next>
 </block>
 </statement>
@@ -811,9 +787,9 @@ https://ftc-docs.firstinspires.org/en/latest/game_specific_resources/field_coord
 </block>
 </value>
 <value name="ADD1">
-<block type="aprilTagDetection_getProperty_Number" id="YbKMT]1!N/1orH}f.`^%">
+<block type="aprilTagSingleDetection_getProperty_Number" id="YbKMT]1!N/1orH}f.`^%">
 <field name="PROP">id</field>
-<value name="APRIL_TAG_DETECTION">
+<value name="APRIL_TAG_SINGLE_DETECTION">
 <block type="variables_get" id="*DZMa]u.xVDWo54-+9Xp">
 <field name="VAR" id="vP~n9zf$lW%hYD/C.j_-">myAprilTagDetection</field>
 </block>
@@ -846,9 +822,9 @@ https://ftc-docs.firstinspires.org/en/latest/game_specific_resources/field_coord
 <shadow type="math_number" id="WWZ1rIy[E-^rf4i5ES.w">
 <field name="NUM">3.14159265</field>
 </shadow>
-<block type="aprilTagDetection_getProperty_Number" id="Kns6PW?m}A;SO?@NVb#)">
+<block type="aprilTagSingleDetection_getProperty_Number" id="Kns6PW?m}A;SO?@NVb#)">
 <field name="PROP">center.x</field>
-<value name="APRIL_TAG_DETECTION">
+<value name="APRIL_TAG_SINGLE_DETECTION">
 <block type="variables_get" id="Ar)`$(G]w1~mg?c!0{v;">
 <field name="VAR" id="vP~n9zf$lW%hYD/C.j_-">myAprilTagDetection</field>
 </block>
@@ -878,9 +854,9 @@ https://ftc-docs.firstinspires.org/en/latest/game_specific_resources/field_coord
 <shadow type="math_number" id="iQ6P;:;Igrei}.mq2:.{">
 <field name="NUM">3.14159265</field>
 </shadow>
-<block type="aprilTagDetection_getProperty_Number" id="P2eT2TYX6nNBSYz7e^E)">
+<block type="aprilTagSingleDetection_getProperty_Number" id="P2eT2TYX6nNBSYz7e^E)">
 <field name="PROP">center.y</field>
-<value name="APRIL_TAG_DETECTION">
+<value name="APRIL_TAG_SINGLE_DETECTION">
 <block type="variables_get" id="ZmOVtYIkx|@b66VSAfd]">
 <field name="VAR" id="vP~n9zf$lW%hYD/C.j_-">myAprilTagDetection</field>
 </block>
@@ -912,6 +888,8 @@ https://ftc-docs.firstinspires.org/en/latest/game_specific_resources/field_coord
 </statement>
 </block>
 </next>
+</block>
+</statement>
 </block>
 </next>
 </block>
@@ -959,64 +937,9 @@ https://ftc-docs.firstinspires.org/en/latest/game_specific_resources/field_coord
 </block>
 </statement>
 </block>
-<block type="procedures_defreturn" id="mc!=|)1g+}o~pXq!hhQj" x="950" y="2393">
-<mutation>
-<arg name="stringToSearch" varid="zT9$bXptkhP7|y|WD0S?"/>
-<arg name="containText" varid="S|Wd0ogYx;Zar4Q[5PtM"/>
-</mutation>
-<field name="NAME">contains</field>
-<comment pinned="true" h="80" w="160">returns if the containText is inside of the stringToSearch</comment>
-<data>{"commentPositionLeft":-40,"commentPositionTop":-105}</data>
-<statement name="STACK">
-<block type="procedures_ifreturn" id="BBAcPU.SWa5]+xvx$C3D">
-<mutation value="1"/>
-<value name="CONDITION">
-<block type="logic_compare" id="qzJn`2tnACWZeyvCNeTn">
-<field name="OP">EQ</field>
-<value name="A">
-<block type="text_indexOf" id="Dh0FJES}`JjdA,4uBr6v">
-<field name="END">FIRST</field>
-<value name="VALUE">
-<block type="variables_get" id="6wJy`SkCC#y?~D-fpp@}">
-<field name="VAR" id="zT9$bXptkhP7|y|WD0S?">stringToSearch</field>
-</block>
-</value>
-<value name="FIND">
-<shadow type="text" id="}83j17|Zjdu`JrZ)NJE]">
-<field name="TEXT">Obelisk</field>
-</shadow>
-<block type="variables_get" id="=gL9UTpWOA)[EJjz|3sF">
-<field name="VAR" id="S|Wd0ogYx;Zar4Q[5PtM">containText</field>
-</block>
-</value>
-</block>
-</value>
-<value name="B">
-<block type="math_number" id=":fC3a~t2_T{J1p+:gQA9">
-<field name="NUM">0</field>
-</block>
-</value>
-</block>
-</value>
-<value name="VALUE">
-<block type="logic_boolean" id="$xx[.to#y^7^V.pmUi*n">
-<field name="BOOL">FALSE</field>
-</block>
-</value>
-</block>
-</statement>
-<value name="RETURN">
-<block type="logic_boolean" id="84$mzUZVvdWV=AJTrH$T">
-<field name="BOOL">TRUE</field>
-</block>
-</value>
-</block>
-<block type="variables_get" id="WzQ-nXkwb(.~MYOb1r2Z" x="312" y="2933">
-<field name="VAR" id="l4u_t,8(NrM,1//Wh@i~">myText</field>
-</block>
 </xml>
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
 <Extra>
-<OpModeMeta flavor="TELEOP" group="" autoTransition="" />
+<OpModeMeta flavor="TELEOP" group="Concept" />
 <Enabled value="true" />
 </Extra>

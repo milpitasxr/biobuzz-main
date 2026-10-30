@@ -293,12 +293,25 @@ https://ftc-docs.firstinspires.org/apriltag-detection-values</comment>
 </shadow>
 </value>
 <next>
+<block type="controls_if" id="8frjmZzXx`!mU=f5h6Qf">
+<mutation else="1"/>
+<value name="IF0">
+<block type="aprilTagDetection2_getProperty_Boolean" id="]@*--sLI*[1A,=g9-)P:">
+<field name="PROP">isSingleDetection</field>
+<value name="APRIL_TAG_DETECTION">
+<block type="variables_get" id="dY+2Ta51,^U^=j~%yqf+">
+<field name="VAR" id="vP~n9zf$lW%hYD/C.j_-">myAprilTagDetection</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
 <block type="controls_if" id="1KHSCf_sX!Qd~BKfG}QD">
 <mutation else="1"/>
 <value name="IF0">
-<block type="aprilTagDetection_getProperty_IsNotNull" id=":^$lP:Ut!p3Z)E+vy^]D">
+<block type="aprilTagSingleDetection_getProperty_IsNotNull" id=":^$lP:Ut!p3Z)E+vy^]D">
 <field name="PROP">metadata</field>
-<value name="APRIL_TAG_DETECTION">
+<value name="APRIL_TAG_SINGLE_DETECTION">
 <block type="variables_get" id="9Lq*6VTlT$7uDRiB|mYe">
 <field name="VAR" id="vP~n9zf$lW%hYD/C.j_-">myAprilTagDetection</field>
 </block>
@@ -319,9 +332,9 @@ https://ftc-docs.firstinspires.org/apriltag-detection-values</comment>
 </block>
 </value>
 <value name="ADD1">
-<block type="aprilTagDetection_getProperty_Number" id="lifbVBMNn+.1j?y6v54X">
+<block type="aprilTagSingleDetection_getProperty_Number" id="lifbVBMNn+.1j?y6v54X">
 <field name="PROP">id</field>
-<value name="APRIL_TAG_DETECTION">
+<value name="APRIL_TAG_SINGLE_DETECTION">
 <block type="variables_get" id="w(63KWmGiZ83+qITBep;">
 <field name="VAR" id="vP~n9zf$lW%hYD/C.j_-">myAprilTagDetection</field>
 </block>
@@ -334,9 +347,9 @@ https://ftc-docs.firstinspires.org/apriltag-detection-values</comment>
 </block>
 </value>
 <value name="ADD3">
-<block type="aprilTagDetection_getProperty_String" id="=AvXMAjUic3u3lbFtEt4">
+<block type="aprilTagSingleDetection_getProperty_String" id="=AvXMAjUic3u3lbFtEt4">
 <field name="PROP">metadata.name</field>
-<value name="APRIL_TAG_DETECTION">
+<value name="APRIL_TAG_SINGLE_DETECTION">
 <block type="variables_get" id="zKHYs.Y87Qrl9%G~Oq^V">
 <field name="VAR" id="vP~n9zf$lW%hYD/C.j_-">myAprilTagDetection</field>
 </block>
@@ -364,7 +377,7 @@ https://ftc-docs.firstinspires.org/apriltag-detection-values</comment>
 <shadow type="math_number" id="g`p?z|x@JeU%MJ4.tSFQ">
 <field name="NUM">3.14159265</field>
 </shadow>
-<block type="aprilTagDetection_getProperty_Number" id="jUN`u.6t[:O8`9Ncql]!">
+<block type="aprilTagDetection2_getProperty_Number" id="jUN`u.6t[:O8`9Ncql]!">
 <field name="PROP">ftcPose.x</field>
 <value name="APRIL_TAG_DETECTION">
 <block type="variables_get" id="mb(6}~t}KLoi4`XT~d:H">
@@ -396,7 +409,7 @@ https://ftc-docs.firstinspires.org/apriltag-detection-values</comment>
 <shadow type="math_number" id="2cGf/q9c-ZnJ}LB6C1i$">
 <field name="NUM">3.14159265</field>
 </shadow>
-<block type="aprilTagDetection_getProperty_Number" id="^ZxENE!MDi;z:vW0d@XL">
+<block type="aprilTagDetection2_getProperty_Number" id="^ZxENE!MDi;z:vW0d@XL">
 <field name="PROP">ftcPose.y</field>
 <value name="APRIL_TAG_DETECTION">
 <block type="variables_get" id="bYyr?K,sa#Z.])=_ot.X">
@@ -428,7 +441,7 @@ https://ftc-docs.firstinspires.org/apriltag-detection-values</comment>
 <shadow type="math_number" id="|j[Xf6X[,{Y~6k#Ow9ay">
 <field name="NUM">3.14159265</field>
 </shadow>
-<block type="aprilTagDetection_getProperty_Number" id="@o/Xx/]f-CWGv|Tr)2Nk">
+<block type="aprilTagDetection2_getProperty_Number" id="@o/Xx/]f-CWGv|Tr)2Nk">
 <field name="PROP">ftcPose.z</field>
 <value name="APRIL_TAG_DETECTION">
 <block type="variables_get" id="[9!-4|yF{X2|/{iSu:SC">
@@ -475,7 +488,7 @@ https://ftc-docs.firstinspires.org/apriltag-detection-values</comment>
 <shadow type="math_number" id="?pMQrP+klggGPQ})NZWJ">
 <field name="NUM">3.14159265</field>
 </shadow>
-<block type="aprilTagDetection_getProperty_Number" id="Iy|1o|tQ9/Xq~XhaEN$_">
+<block type="aprilTagDetection2_getProperty_Number" id="Iy|1o|tQ9/Xq~XhaEN$_">
 <field name="PROP">ftcPose.pitch</field>
 <value name="APRIL_TAG_DETECTION">
 <block type="variables_get" id="rVJim4c8+/ys[,t:o!0a">
@@ -507,7 +520,7 @@ https://ftc-docs.firstinspires.org/apriltag-detection-values</comment>
 <shadow type="math_number" id="xsH[9W8/eLks@vlm]1*g">
 <field name="NUM">3.14159265</field>
 </shadow>
-<block type="aprilTagDetection_getProperty_Number" id="ShLjZCVXxN!~/4l*tkIW">
+<block type="aprilTagDetection2_getProperty_Number" id="ShLjZCVXxN!~/4l*tkIW">
 <field name="PROP">ftcPose.roll</field>
 <value name="APRIL_TAG_DETECTION">
 <block type="variables_get" id="OCoPF8gE#WFKctf6vd6f">
@@ -539,7 +552,7 @@ https://ftc-docs.firstinspires.org/apriltag-detection-values</comment>
 <shadow type="math_number" id="v%b/#{Uh]xNL*jCpZAlp">
 <field name="NUM">3.14159265</field>
 </shadow>
-<block type="aprilTagDetection_getProperty_Number" id="rr^=wlJCB2_afebAXJ}Z">
+<block type="aprilTagDetection2_getProperty_Number" id="rr^=wlJCB2_afebAXJ}Z">
 <field name="PROP">ftcPose.yaw</field>
 <value name="APRIL_TAG_DETECTION">
 <block type="variables_get" id="vBZ8!}wPWKb}V3-g]Wle">
@@ -586,7 +599,7 @@ https://ftc-docs.firstinspires.org/apriltag-detection-values</comment>
 <shadow type="math_number" id="67$:0vchTm|ZAu?yf9Zs">
 <field name="NUM">3.14159265</field>
 </shadow>
-<block type="aprilTagDetection_getProperty_Number" id="V_e8w[RX[YJ6%2RfwTK4">
+<block type="aprilTagDetection2_getProperty_Number" id="V_e8w[RX[YJ6%2RfwTK4">
 <field name="PROP">ftcPose.range</field>
 <value name="APRIL_TAG_DETECTION">
 <block type="variables_get" id="5U:C0C|9gsGJwjwric-u">
@@ -618,7 +631,7 @@ https://ftc-docs.firstinspires.org/apriltag-detection-values</comment>
 <shadow type="math_number" id="%)S}?+}8]#C5YOJMTtIz">
 <field name="NUM">3.14159265</field>
 </shadow>
-<block type="aprilTagDetection_getProperty_Number" id="}bh%9Kz6)u_zYo7,L]Iq">
+<block type="aprilTagDetection2_getProperty_Number" id="}bh%9Kz6)u_zYo7,L]Iq">
 <field name="PROP">ftcPose.bearing</field>
 <value name="APRIL_TAG_DETECTION">
 <block type="variables_get" id="B6P^H@vWo+vyX@sYn_ik">
@@ -650,7 +663,7 @@ https://ftc-docs.firstinspires.org/apriltag-detection-values</comment>
 <shadow type="math_number" id=".MdJRQ6rUBU)RFzD8T%o">
 <field name="NUM">3.14159265</field>
 </shadow>
-<block type="aprilTagDetection_getProperty_Number" id="D(K1+O}E+Y7i_ek8}A?z">
+<block type="aprilTagDetection2_getProperty_Number" id="D(K1+O}E+Y7i_ek8}A?z">
 <field name="PROP">ftcPose.elevation</field>
 <value name="APRIL_TAG_DETECTION">
 <block type="variables_get" id="sv;lYz!5q^E[A|N14(.X">
@@ -700,9 +713,9 @@ https://ftc-docs.firstinspires.org/apriltag-detection-values</comment>
 </block>
 </value>
 <value name="ADD1">
-<block type="aprilTagDetection_getProperty_Number" id="YbKMT]1!N/1orH}f.`^%">
+<block type="aprilTagSingleDetection_getProperty_Number" id="YbKMT]1!N/1orH}f.`^%">
 <field name="PROP">id</field>
-<value name="APRIL_TAG_DETECTION">
+<value name="APRIL_TAG_SINGLE_DETECTION">
 <block type="variables_get" id="*DZMa]u.xVDWo54-+9Xp">
 <field name="VAR" id="vP~n9zf$lW%hYD/C.j_-">myAprilTagDetection</field>
 </block>
@@ -735,9 +748,9 @@ https://ftc-docs.firstinspires.org/apriltag-detection-values</comment>
 <shadow type="math_number" id="WWZ1rIy[E-^rf4i5ES.w">
 <field name="NUM">3.14159265</field>
 </shadow>
-<block type="aprilTagDetection_getProperty_Number" id="Kns6PW?m}A;SO?@NVb#)">
+<block type="aprilTagSingleDetection_getProperty_Number" id="Kns6PW?m}A;SO?@NVb#)">
 <field name="PROP">center.x</field>
-<value name="APRIL_TAG_DETECTION">
+<value name="APRIL_TAG_SINGLE_DETECTION">
 <block type="variables_get" id="Ar)`$(G]w1~mg?c!0{v;">
 <field name="VAR" id="vP~n9zf$lW%hYD/C.j_-">myAprilTagDetection</field>
 </block>
@@ -767,9 +780,9 @@ https://ftc-docs.firstinspires.org/apriltag-detection-values</comment>
 <shadow type="math_number" id="iQ6P;:;Igrei}.mq2:.{">
 <field name="NUM">3.14159265</field>
 </shadow>
-<block type="aprilTagDetection_getProperty_Number" id="P2eT2TYX6nNBSYz7e^E)">
+<block type="aprilTagSingleDetection_getProperty_Number" id="P2eT2TYX6nNBSYz7e^E)">
 <field name="PROP">center.y</field>
-<value name="APRIL_TAG_DETECTION">
+<value name="APRIL_TAG_SINGLE_DETECTION">
 <block type="variables_get" id="ZmOVtYIkx|@b66VSAfd]">
 <field name="VAR" id="vP~n9zf$lW%hYD/C.j_-">myAprilTagDetection</field>
 </block>
@@ -795,6 +808,406 @@ https://ftc-docs.firstinspires.org/apriltag-detection-values</comment>
 </value>
 </block>
 </value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</statement>
+<statement name="ELSE">
+<block type="telemetry_addLine" id="aVc[k(=YR@C7pj]|j0IE">
+<value name="TEXT">
+<shadow type="text">
+<field name="TEXT"/>
+</shadow>
+<block type="text_join" id="vl.J)u!lmf/N}2fLIY~w">
+<mutation items="3"/>
+<value name="ADD0">
+<block type="text" id="(R3]SOmorPE#heCcF`Fq">
+<field name="TEXT">==== Tag Cluster (</field>
+</block>
+</value>
+<value name="ADD1">
+<block type="aprilTagClusterDetection_getProperty_String" id="$!eTs6*-J}uf^=hY?5*i">
+<field name="PROP">metadata.name</field>
+<value name="APRIL_TAG_CLUSTER_DETECTION">
+<block type="variables_get" id="o}6.HNbWq%:is|FN2u1k">
+<field name="VAR" id="vP~n9zf$lW%hYD/C.j_-">myAprilTagDetection</field>
+</block>
+</value>
+</block>
+</value>
+<value name="ADD2">
+<block type="text" id="f_gN;/99^neRV6(2wN5_">
+<field name="TEXT">) </field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="telemetry_addLine" id="Dlu=!-H7@i$zn/US(_rw">
+<value name="TEXT">
+<shadow type="text" id="`m,loopGZ{Wm2`J@rUT]">
+<field name="TEXT">text</field>
+</shadow>
+<block type="text_join" id="KXfe($)?gOccn|_d`W}r">
+<mutation items="2"/>
+<value name="ADD0">
+<block type="text" id="5nGIKuL.=QHy`]_Wmfri">
+<field name="TEXT">Percent tags found: </field>
+</block>
+</value>
+<value name="ADD1">
+<block type="aprilTagClusterDetection_getProperty_Number" id="]j4Sl-xkv)ZG4:+BHl(r">
+<field name="PROP">percentClusterFound</field>
+<value name="APRIL_TAG_CLUSTER_DETECTION">
+<block type="variables_get" id="I%HE4fc*q4*D;j2MOHsT">
+<field name="VAR" id="vP~n9zf$lW%hYD/C.j_-">myAprilTagDetection</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="telemetry_addLine" id="G_xoG[ADcbYh8GprOU*Z">
+<value name="TEXT">
+<shadow type="text">
+<field name="TEXT"/>
+</shadow>
+<block type="text_join" id="k^qZD|z0|}Y,]cO,w2jY">
+<mutation items="7"/>
+<value name="ADD0">
+<block type="text" id="k6g.*$L~gYB!!6=GtFc2">
+<field name="TEXT">XYZ </field>
+</block>
+</value>
+<value name="ADD1">
+<block type="misc_formatNumber_withWidth" id="sz1{Zq3T^,Ao.2J9vB;/">
+<value name="NUMBER">
+<shadow type="math_number">
+<field name="NUM">3.14159265</field>
+</shadow>
+<block type="aprilTagDetection2_getProperty_Number" id="Ip=b|0ibIbjc|;M,Fnl)">
+<field name="PROP">ftcPose.x</field>
+<value name="APRIL_TAG_DETECTION">
+<block type="variables_get" id="k71km(`b/m#@liKe%o)|">
+<field name="VAR" id="vP~n9zf$lW%hYD/C.j_-">myAprilTagDetection</field>
+</block>
+</value>
+</block>
+</value>
+<value name="WIDTH">
+<shadow type="math_number" id="Ga8wQ,v@`m^2VHaXg|65">
+<field name="NUM">6</field>
+</shadow>
+</value>
+<value name="PRECISION">
+<shadow type="math_number" id="C)}K5|DKGGGRX3o{E{aF">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="ADD2">
+<block type="text" id="S1,NLumx]80i6`^=:99b">
+<field name="TEXT"> </field>
+</block>
+</value>
+<value name="ADD3">
+<block type="misc_formatNumber_withWidth" id="I!Y#n$B1.i|0I},)aR7c">
+<value name="NUMBER">
+<shadow type="math_number">
+<field name="NUM">3.14159265</field>
+</shadow>
+<block type="aprilTagDetection2_getProperty_Number" id="0L~c53X6d#Fsyl.HRGmy">
+<field name="PROP">ftcPose.y</field>
+<value name="APRIL_TAG_DETECTION">
+<block type="variables_get" id="/]h/bnsNkK0FpT=XPHm_">
+<field name="VAR" id="vP~n9zf$lW%hYD/C.j_-">myAprilTagDetection</field>
+</block>
+</value>
+</block>
+</value>
+<value name="WIDTH">
+<shadow type="math_number" id="I{eqJoo*B[QRc2jb-rxM">
+<field name="NUM">6</field>
+</shadow>
+</value>
+<value name="PRECISION">
+<shadow type="math_number" id="(8{asLTudUw(vIs}C,ct">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="ADD4">
+<block type="text" id="3@N9*OVaK?l.)a2Ajo:]">
+<field name="TEXT"> </field>
+</block>
+</value>
+<value name="ADD5">
+<block type="misc_formatNumber_withWidth" id="?~r6|sQ;{c}p,~pxr49j">
+<value name="NUMBER">
+<shadow type="math_number">
+<field name="NUM">3.14159265</field>
+</shadow>
+<block type="aprilTagDetection2_getProperty_Number" id="[PVe0No]=P17,*S![.hz">
+<field name="PROP">ftcPose.z</field>
+<value name="APRIL_TAG_DETECTION">
+<block type="variables_get" id="W*j=::%FzK73L}O1Z^PX">
+<field name="VAR" id="vP~n9zf$lW%hYD/C.j_-">myAprilTagDetection</field>
+</block>
+</value>
+</block>
+</value>
+<value name="WIDTH">
+<shadow type="math_number" id="A{;ll)M/3=rWGl4%s4G,">
+<field name="NUM">6</field>
+</shadow>
+</value>
+<value name="PRECISION">
+<shadow type="math_number" id="XkHh6TqF=hTRf*#}+e?T">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="ADD6">
+<block type="text" id="HmGvP0Jzk/UUYGW#_N*?">
+<field name="TEXT">  (inch)</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="telemetry_addLine" id="9M@%LWB^r*=7~cgbAUJk">
+<value name="TEXT">
+<shadow type="text">
+<field name="TEXT"/>
+</shadow>
+<block type="text_join" id="Lok*BCuOEkcc5ny/NGk0">
+<mutation items="7"/>
+<value name="ADD0">
+<block type="text" id=")kL,RXT+Ku!4)LX]gpCt">
+<field name="TEXT">PRY </field>
+</block>
+</value>
+<value name="ADD1">
+<block type="misc_formatNumber_withWidth" id="hJIwew3FduJoZz=pf29n">
+<value name="NUMBER">
+<shadow type="math_number">
+<field name="NUM">3.14159265</field>
+</shadow>
+<block type="aprilTagDetection2_getProperty_Number" id="MjH:RC`C-_wJ:ZwImC8@">
+<field name="PROP">ftcPose.pitch</field>
+<value name="APRIL_TAG_DETECTION">
+<block type="variables_get" id="L5rHDGGAWUDBwPHj,:cm">
+<field name="VAR" id="vP~n9zf$lW%hYD/C.j_-">myAprilTagDetection</field>
+</block>
+</value>
+</block>
+</value>
+<value name="WIDTH">
+<shadow type="math_number" id="S4e(:c065-Lh5c-W_VfD">
+<field name="NUM">6</field>
+</shadow>
+</value>
+<value name="PRECISION">
+<shadow type="math_number" id="dQ54R:JoRw#}%(/qRq3C">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="ADD2">
+<block type="text" id="lH#}`zaUTJVD*1v@MbDN">
+<field name="TEXT"> </field>
+</block>
+</value>
+<value name="ADD3">
+<block type="misc_formatNumber_withWidth" id="`g|Ts^tf{isvVTMoM3(*">
+<value name="NUMBER">
+<shadow type="math_number">
+<field name="NUM">3.14159265</field>
+</shadow>
+<block type="aprilTagDetection2_getProperty_Number" id="s|A15I=!UG1sw/4WiQDi">
+<field name="PROP">ftcPose.roll</field>
+<value name="APRIL_TAG_DETECTION">
+<block type="variables_get" id="sEX.2)aWoD_@B;mi%(n%">
+<field name="VAR" id="vP~n9zf$lW%hYD/C.j_-">myAprilTagDetection</field>
+</block>
+</value>
+</block>
+</value>
+<value name="WIDTH">
+<shadow type="math_number" id="Hjmq%=z#ID(nA(xyu{f[">
+<field name="NUM">6</field>
+</shadow>
+</value>
+<value name="PRECISION">
+<shadow type="math_number" id="..}8ry5g+xmpEWq(=u$3">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="ADD4">
+<block type="text" id="=j{9rz]W@K.$uv31ckGp">
+<field name="TEXT"> </field>
+</block>
+</value>
+<value name="ADD5">
+<block type="misc_formatNumber_withWidth" id="X*hf,SH0RM3Xte|rGlaC">
+<value name="NUMBER">
+<shadow type="math_number">
+<field name="NUM">3.14159265</field>
+</shadow>
+<block type="aprilTagDetection2_getProperty_Number" id="yJB088bgD7E{6`IKhrW7">
+<field name="PROP">ftcPose.yaw</field>
+<value name="APRIL_TAG_DETECTION">
+<block type="variables_get" id="EtV.tq@?75w{-(|XDty$">
+<field name="VAR" id="vP~n9zf$lW%hYD/C.j_-">myAprilTagDetection</field>
+</block>
+</value>
+</block>
+</value>
+<value name="WIDTH">
+<shadow type="math_number" id="wA!4H*-;IiK[{*tvOyK~">
+<field name="NUM">6</field>
+</shadow>
+</value>
+<value name="PRECISION">
+<shadow type="math_number" id="}W)0Uy!sn_-D`%HLOldG">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="ADD6">
+<block type="text" id="m65ct|L9)LFD}?um38k|">
+<field name="TEXT">  (deg)</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="telemetry_addLine" id="BS}{)4zNQ$jN:~tb=8Ph">
+<value name="TEXT">
+<shadow type="text">
+<field name="TEXT">text</field>
+</shadow>
+<block type="text_join" id="%pJ$o56R$%FDs,(T|u^x">
+<mutation items="7"/>
+<value name="ADD0">
+<block type="text" id="v?(i|CRAS.00_D)[G[b(">
+<field name="TEXT">RBE </field>
+</block>
+</value>
+<value name="ADD1">
+<block type="misc_formatNumber_withWidth" id="FV13]/r1tC5uuE]QSk4:">
+<value name="NUMBER">
+<shadow type="math_number">
+<field name="NUM">3.14159265</field>
+</shadow>
+<block type="aprilTagDetection2_getProperty_Number" id="apBGcdN2V)f?3nzyH@z4">
+<field name="PROP">ftcPose.range</field>
+<value name="APRIL_TAG_DETECTION">
+<block type="variables_get" id="*U_d[UTl:|j*HSif6a3W">
+<field name="VAR" id="vP~n9zf$lW%hYD/C.j_-">myAprilTagDetection</field>
+</block>
+</value>
+</block>
+</value>
+<value name="WIDTH">
+<shadow type="math_number" id="Z;Lx5vp(JX5v~V(-z5|f">
+<field name="NUM">6</field>
+</shadow>
+</value>
+<value name="PRECISION">
+<shadow type="math_number" id="rtz!iz0v|@s^=!X}:y^H">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="ADD2">
+<block type="text" id="c55nvxSCsF@!pSF0]UXx">
+<field name="TEXT"> </field>
+</block>
+</value>
+<value name="ADD3">
+<block type="misc_formatNumber_withWidth" id="n{2hn[O2J8B#N`9s9tc{">
+<value name="NUMBER">
+<shadow type="math_number">
+<field name="NUM">3.14159265</field>
+</shadow>
+<block type="aprilTagDetection2_getProperty_Number" id="^5E^H:fAUhHxuWpb/[Wm">
+<field name="PROP">ftcPose.bearing</field>
+<value name="APRIL_TAG_DETECTION">
+<block type="variables_get" id="x,P)URcnyKuOlB*elR,I">
+<field name="VAR" id="vP~n9zf$lW%hYD/C.j_-">myAprilTagDetection</field>
+</block>
+</value>
+</block>
+</value>
+<value name="WIDTH">
+<shadow type="math_number" id="Jrse.hGjJpK4db[eNnw.">
+<field name="NUM">6</field>
+</shadow>
+</value>
+<value name="PRECISION">
+<shadow type="math_number" id="HQoe(gVo/ej3:YHHw%~R">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="ADD4">
+<block type="text" id="QlG?$}kC)=.}egLYqt=s">
+<field name="TEXT"> </field>
+</block>
+</value>
+<value name="ADD5">
+<block type="misc_formatNumber_withWidth" id="/1Y9g#.7(CV{0[c)dVbB">
+<value name="NUMBER">
+<shadow type="math_number">
+<field name="NUM">3.14159265</field>
+</shadow>
+<block type="aprilTagDetection2_getProperty_Number" id="2nqjU})cd{sXfV-6RrL%">
+<field name="PROP">ftcPose.elevation</field>
+<value name="APRIL_TAG_DETECTION">
+<block type="variables_get" id="+#WMJqKFMMv^z60`P8Rn">
+<field name="VAR" id="vP~n9zf$lW%hYD/C.j_-">myAprilTagDetection</field>
+</block>
+</value>
+</block>
+</value>
+<value name="WIDTH">
+<shadow type="math_number" id="p)$+:ga@l@tWUe.WrNuZ">
+<field name="NUM">6</field>
+</shadow>
+</value>
+<value name="PRECISION">
+<shadow type="math_number" id="QJh!`vTyHq`Nov:PnhFC">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="ADD6">
+<block type="text" id="Hzk3n`k]]D%w0$~TH_-%">
+<field name="TEXT">  (inch, deg, deg)</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
 </block>
 </next>
 </block>
@@ -860,6 +1273,6 @@ https://ftc-docs.firstinspires.org/apriltag-detection-values</comment>
 </xml>
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
 <Extra>
-<OpModeMeta flavor="TELEOP" group="" autoTransition="" />
+<OpModeMeta flavor="TELEOP" group="Concept" />
 <Enabled value="true" />
 </Extra>
