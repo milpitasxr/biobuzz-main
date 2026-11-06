@@ -23,6 +23,14 @@ android {
     packagingOptions {
         jniLibs.useLegacyPackaging true
     }
+
+    // The AutoTune tuners need the tuning library, so leave them out unless pedroAutoTune=true
+    if (findProperty('pedroAutoTune') != 'true') {
+        sourceSets.main.java {
+            exclude '**/pedro/Tuning.java'
+            exclude '**/pedro/procedures/**'
+        }
+    }
 }
 
 dependencies {

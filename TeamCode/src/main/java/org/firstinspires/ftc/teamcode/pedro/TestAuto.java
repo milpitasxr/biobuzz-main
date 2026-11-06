@@ -38,6 +38,8 @@ public class TestAuto extends OpMode {
     @Override
     public void loop(){
         follower.update();
+        // Save the field pose every loop so TeleOp starts where Auto ended
+        PoseStorage.currentPose = follower.pose();
 
         telemetry.addData("Busy", follower.isBusy());
         Pose pose = follower.pose();

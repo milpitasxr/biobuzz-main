@@ -30,6 +30,8 @@ public class TestingAuto extends OpMode {
     }
     @Override
     public void loop(){
-
+        follower.update();
+        // Save the field pose every loop so TeleOp starts where Auto ended
+        PoseStorage.currentPose = follower.pose();
     }
 }

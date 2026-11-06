@@ -196,560 +196,559 @@
 114-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:15:9-41
 115        android:largeHeap="true"
 115-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:16:9-33
-116        android:testOnly="true"
-117        android:theme="@style/AppThemeRedRC"
-117-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:17:9-45
-118        android:usesCleartextTraffic="true" > <!-- Indicates to the ControlHubUpdater what the latest version of the Control Hub is that this app supports -->
-118-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:18:9-44
-119        <meta-data
-119-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:21:9-23:33
-120            android:name="org.firstinspires.latestSupportedControlHubVersion"
-120-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:22:13-78
-121            android:value="1" /> <!-- The main robot controller activity -->
-121-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:23:13-30
-122        <activity
-122-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:26:9-37:20
-123            android:name="org.firstinspires.ftc.robotcontroller.internal.PermissionValidatorWrapper"
-123-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:27:13-101
-124            android:configChanges="orientation|screenSize"
-124-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:28:13-59
-125            android:label="@string/app_name"
-125-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:29:13-45
-126            android:launchMode="singleTask"
-126-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:30:13-44
-127            android:screenOrientation="fullUser" >
-127-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:31:13-49
-128            <intent-filter>
-128-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:32:13-36:29
-129                <category android:name="android.intent.category.LAUNCHER" />
-129-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:33:17-77
-129-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:33:27-74
-130
-131                <action android:name="android.intent.action.MAIN" />
-131-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:35:17-69
-131-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:35:25-66
-132            </intent-filter>
-133        </activity>
-134        <activity
-134-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:38:9-56:20
-135            android:name="org.firstinspires.ftc.robotcontroller.internal.FtcRobotControllerActivity"
-135-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:39:13-101
-136            android:configChanges="orientation|screenSize"
-136-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:40:13-59
-137            android:label="@string/app_name"
-137-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:41:13-45
-138            android:launchMode="singleTask"
-138-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:42:13-44
-139            android:screenOrientation="fullUser" >
-139-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:43:13-49
-140            <intent-filter>
-140-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:44:13-46:29
-141                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
-141-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:45:17-90
-141-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:45:25-87
-142            </intent-filter>
-143
-144            <meta-data
-144-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:48:13-50:57
-145                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
-145-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:49:17-79
-146                android:resource="@xml/device_filter" />
-146-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:50:17-54
-147
-148            <!-- org.firstinspires.main.entry indicates that this app is compatible with the Dragonboard Control Hub -->
-149            <meta-data
-149-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:53:13-55:40
-150                android:name="org.firstinspires.main.entry"
-150-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:54:17-60
-151                android:value="true" />
-151-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:55:17-37
-152        </activity> <!-- The robot controller service in which most of the robot functionality is managed -->
-153        <service
-153-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:59:9-61:38
-154            android:name="com.qualcomm.ftccommon.FtcRobotControllerService"
-154-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:60:13-76
-155            android:enabled="true" /> <!-- Assistant that autostarts the robot controller on android boot (if it's supposed to) -->
-155-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:61:13-35
-156        <receiver
-156-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:64:9-75:20
-157            android:name="org.firstinspires.ftc.ftccommon.internal.RunOnBoot"
-157-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:65:13-78
-158            android:enabled="true"
-158-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:66:13-35
-159            android:exported="true"
-159-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:67:13-36
-160            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
-160-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:68:13-75
-161            <intent-filter>
-161-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:69:13-74:29
-162                <category android:name="android.intent.category.DEFAULT" />
-162-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:70:17-76
-162-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:70:27-73
-163
-164                <action android:name="android.intent.action.BOOT_COMPLETED" />
-164-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:72:17-79
-164-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:72:25-76
-165                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
-165-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:73:17-82
-165-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:73:25-79
-166            </intent-filter>
-167        </receiver>
-168
-169        <activity
-169-->[org.firstinspires.ftc:Blocks:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/361abb6a221215d8d0b2477242fb34a4/transformed/Blocks-12.0.0/AndroidManifest.xml:17:9-21:20
-170            android:name="org.firstinspires.ftc.ftccommon.internal.ProgramAndManageActivity"
-170-->[org.firstinspires.ftc:Blocks:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/361abb6a221215d8d0b2477242fb34a4/transformed/Blocks-12.0.0/AndroidManifest.xml:18:13-93
-171            android:configChanges="orientation|screenSize"
-171-->[org.firstinspires.ftc:Blocks:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/361abb6a221215d8d0b2477242fb34a4/transformed/Blocks-12.0.0/AndroidManifest.xml:19:13-59
-172            android:label="@string/program_and_manage_activity" >
-172-->[org.firstinspires.ftc:Blocks:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/361abb6a221215d8d0b2477242fb34a4/transformed/Blocks-12.0.0/AndroidManifest.xml:20:13-64
-173        </activity>
-174        <activity
-174-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:24:9-28:47
-175            android:name="com.qualcomm.ftccommon.StackTraceActivity"
-175-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:25:13-69
-176            android:configChanges="orientation|screenSize"
-176-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:26:13-59
-177            android:exported="true"
-177-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:27:13-36
-178            android:launchMode="singleTask" />
-178-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:28:13-44
-179        <activity
-179-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:29:9-33:20
-180            android:name="com.qualcomm.ftccommon.FtcRobotControllerSettingsActivity"
-180-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:30:13-85
-181            android:exported="true"
-181-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:31:13-36
-182            android:label="@string/settings_activity" >
-182-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:32:13-54
-183        </activity>
-184        <activity
-184-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:34:9-39:20
-185            android:name="com.qualcomm.ftccommon.configuration.FtcLoadFileActivity"
-185-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:35:13-84
-186            android:configChanges="orientation|screenSize"
-186-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:36:13-59
-187            android:exported="true"
-187-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:37:13-36
-188            android:label="@string/configure_activity" >
-188-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:38:13-55
-189        </activity>
-190        <activity
-190-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:40:9-45:20
-191            android:name="com.qualcomm.ftccommon.configuration.ConfigureFromTemplateActivity"
-191-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:41:13-94
-192            android:configChanges="orientation|screenSize"
-192-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:42:13-59
-193            android:exported="true"
-193-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:43:13-36
-194            android:label="@string/title_activity_configfromtemplate" >
-194-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:44:13-70
-195        </activity>
-196        <activity
-196-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:46:9-51:20
-197            android:name="com.qualcomm.ftccommon.ViewLogsActivity"
-197-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:47:13-67
-198            android:configChanges="orientation|screenSize"
-198-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:48:13-59
-199            android:exported="true"
-199-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:49:13-36
-200            android:label="@string/view_logs_activity" >
-200-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:50:13-55
-201        </activity>
-202        <activity
-202-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:52:9-56:20
-203            android:name="com.qualcomm.ftccommon.configuration.FtcConfigurationActivity"
-203-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:53:13-89
-204            android:configChanges="orientation|screenSize"
-204-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:54:13-59
-205            android:label="@string/app_name" >
-205-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:55:13-45
-206        </activity>
-207        <activity
-207-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:57:9-61:20
-208            android:name="com.qualcomm.ftccommon.configuration.ConfigurationTreeActivity"
-208-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:58:13-90
-209            android:configChanges="orientation|screenSize"
-209-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:59:13-59
-210            android:label="@string/title_activity_config_tree" >
-210-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:60:13-63
-211        </activity>
-212        <activity
-212-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:62:9-66:20
-213            android:name="com.qualcomm.ftccommon.configuration.FtcNewFileActivity"
-213-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:63:13-83
-214            android:configChanges="orientation|screenSize"
-214-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:64:13-59
-215            android:label="@string/app_name" >
-215-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:65:13-45
-216        </activity>
-217        <activity
-217-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:67:9-71:20
-218            android:name="com.qualcomm.ftccommon.FtcAdvancedRCSettingsActivity"
-218-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:68:13-80
-219            android:exported="true"
-219-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:69:13-36
-220            android:label="@string/titleAdvancedRCSettings" >
-220-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:70:13-60
-221        </activity>
-222        <activity
-222-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:72:9-75:20
-223            android:name="com.qualcomm.ftccommon.FtcLynxFirmwareUpdateActivity"
-223-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:73:13-80
-224            android:exported="true" >
-224-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:74:13-36
-225        </activity>
-226        <activity
-226-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:76:9-79:20
-227            android:name="com.qualcomm.ftccommon.FtcLynxModuleAddressUpdateActivity"
-227-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:77:13-85
-228            android:exported="true" >
-228-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:78:13-36
-229        </activity>
-230        <activity
-230-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:80:9-84:20
-231            android:name="com.qualcomm.ftccommon.FtcWifiDirectChannelSelectorActivity"
-231-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:81:13-87
-232            android:exported="true"
-232-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:82:13-36
-233            android:label="@string/title_activity_wifi_channel_selector" >
-233-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:83:13-73
-234        </activity>
-235        <activity
-235-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:85:9-89:20
-236            android:name="com.qualcomm.ftccommon.FtcWifiDirectRememberedGroupsActivity"
-236-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:86:13-88
-237            android:exported="true"
-237-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:87:13-36
-238            android:label="@string/title_activity_wifi_remembered_groups_editor" >
-238-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:88:13-81
-239        </activity>
-240        <activity
-240-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:90:9-93:20
-241            android:name="com.qualcomm.ftccommon.AboutActivity"
-241-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:91:13-64
-242            android:label="@string/about_activity" >
-242-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:92:13-51
-243        </activity>
-244        <activity
-244-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:94:9-97:20
-245            android:name="com.qualcomm.ftccommon.FtcAboutActivity"
-245-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:95:13-67
-246            android:label="@string/ftc_about_activity" >
-246-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:96:13-55
-247        </activity>
-248        <activity
-248-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:98:9-103:20
-249            android:name="com.qualcomm.ftccommon.configuration.EditSwapUsbDevices"
-249-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:99:13-83
-250            android:configChanges="orientation|screenSize"
-250-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:100:13-59
-251            android:label="@string/edit_swap_devices_activity"
-251-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:101:13-63
-252            android:windowSoftInputMode="stateHidden" >
-252-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:102:13-54
-253        </activity>
-254        <activity
-254-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:104:9-109:20
-255            android:name="com.qualcomm.ftccommon.configuration.EditMotorListActivity"
-255-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:105:13-86
-256            android:configChanges="orientation|screenSize"
-256-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:106:13-59
-257            android:label="@string/edit_motor_controller_activity"
-257-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:107:13-67
-258            android:windowSoftInputMode="stateHidden" >
-258-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:108:13-54
-259        </activity>
-260        <activity
-260-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:110:9-115:20
-261            android:name="com.qualcomm.ftccommon.configuration.EditServoListActivity"
-261-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:111:13-86
-262            android:configChanges="orientation|screenSize"
-262-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:112:13-59
-263            android:label="@string/edit_servo_controller_activity"
-263-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:113:13-67
-264            android:windowSoftInputMode="stateHidden|adjustResize" >
-264-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:114:13-67
-265        </activity>
-266        <activity
-266-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:116:9-121:20
-267            android:name="com.qualcomm.ftccommon.configuration.EditLynxModuleActivity"
-267-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:117:13-87
-268            android:configChanges="orientation|screenSize"
-268-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:118:13-59
-269            android:label="@string/edit_lynx_module_controller_activity"
-269-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:119:13-73
-270            android:windowSoftInputMode="stateHidden|adjustResize" >
-270-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:120:13-67
-271        </activity>
-272        <activity
-272-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:122:9-127:20
-273            android:name="com.qualcomm.ftccommon.configuration.EditLynxUsbDeviceActivity"
-273-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:123:13-90
-274            android:configChanges="orientation|screenSize"
-274-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:124:13-59
-275            android:label="@string/edit_lynx_usb_device_activity"
-275-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:125:13-66
-276            android:windowSoftInputMode="stateHidden|adjustResize" >
-276-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:126:13-67
-277        </activity>
-278        <activity
-278-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:128:9-133:20
-279            android:name="com.qualcomm.ftccommon.configuration.EditWebcamActivity"
-279-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:129:13-83
-280            android:configChanges="orientation|screenSize"
-280-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:130:13-59
-281            android:label="@string/edit_webcam_activity"
-281-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:131:13-57
-282            android:windowSoftInputMode="stateHidden|adjustResize" >
-282-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:132:13-67
-283        </activity>
-284        <activity
-284-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:134:9-139:20
-285            android:name="com.qualcomm.ftccommon.configuration.EditPWMDevicesActivity"
-285-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:135:13-87
-286            android:configChanges="orientation|screenSize"
-286-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:136:13-59
-287            android:label="@string/edit_pwm_devices_activity"
-287-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:137:13-62
-288            android:windowSoftInputMode="stateHidden|adjustResize" >
-288-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:138:13-67
-289        </activity>
-290        <activity
-290-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:140:9-145:20
-291            android:name="com.qualcomm.ftccommon.configuration.EditAnalogInputDevicesActivity"
-291-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:141:13-95
-292            android:configChanges="orientation|screenSize"
-292-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:142:13-59
-293            android:label="@string/edit_analog_input_devices_activity"
-293-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:143:13-71
-294            android:windowSoftInputMode="stateHidden|adjustResize" >
-294-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:144:13-67
-295        </activity>
-296        <activity
-296-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:146:9-151:20
-297            android:name="com.qualcomm.ftccommon.configuration.EditDigitalDevicesActivity"
-297-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:147:13-91
-298            android:configChanges="orientation|screenSize"
-298-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:148:13-59
-299            android:label="@string/edit_digital_devices_activity"
-299-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:149:13-66
-300            android:windowSoftInputMode="stateHidden|adjustResize" >
-300-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:150:13-67
-301        </activity>
-302        <activity
-302-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:152:9-157:20
-303            android:name="com.qualcomm.ftccommon.configuration.EditDigitalDevicesActivityLynx"
-303-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:153:13-95
-304            android:configChanges="orientation|screenSize"
-304-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:154:13-59
-305            android:label="@string/edit_digital_devices_activity_lynx"
-305-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:155:13-71
-306            android:windowSoftInputMode="stateHidden|adjustResize" >
-306-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:156:13-67
-307        </activity>
-308        <activity
-308-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:158:9-163:20
-309            android:name="com.qualcomm.ftccommon.configuration.EditI2cDevicesActivity"
-309-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:159:13-87
-310            android:configChanges="orientation|screenSize"
-310-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:160:13-59
-311            android:label="@string/edit_i2c_devices_activity"
-311-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:161:13-62
-312            android:windowSoftInputMode="stateHidden|adjustResize" >
-312-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:162:13-67
-313        </activity>
-314        <activity
-314-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:164:9-169:20
-315            android:name="com.qualcomm.ftccommon.configuration.EditI2cDevicesActivityLynx"
-315-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:165:13-91
-316            android:configChanges="orientation|screenSize"
-316-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:166:13-59
-317            android:label="@string/edit_i2c_devices_activity"
-317-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:167:13-62
-318            android:windowSoftInputMode="stateHidden|adjustResize" >
-318-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:168:13-67
-319        </activity>
-320        <activity
-320-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:170:9-175:20
-321            android:name="com.qualcomm.ftccommon.configuration.EditEthernetOverUsbActivity"
-321-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:171:13-92
-322            android:configChanges="orientation|screenSize"
-322-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:172:13-59
-323            android:label="@string/edit_ethernet_devices_activity"
-323-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:173:13-67
-324            android:windowSoftInputMode="stateHidden|adjustResize" >
-324-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:174:13-67
-325        </activity> <!-- A service that will auto-restart the robot controller if it crashes (if it's supposed to) -->
-326        <service
-326-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:178:9-180:38
-327            android:name="org.firstinspires.ftc.ftccommon.internal.FtcRobotControllerWatchdogService"
-327-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:179:13-102
-328            android:enabled="true" />
-328-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:180:13-35
-329
-330        <activity
-330-->[org.firstinspires.ftc:Inspection:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/35555f32a075b99488923dd911af52ca/transformed/Inspection-12.0.0/AndroidManifest.xml:18:9-22:20
-331            android:name="org.firstinspires.inspection.DsInspectionActivity"
-331-->[org.firstinspires.ftc:Inspection:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/35555f32a075b99488923dd911af52ca/transformed/Inspection-12.0.0/AndroidManifest.xml:19:13-77
-332            android:configChanges="orientation|screenSize"
-332-->[org.firstinspires.ftc:Inspection:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/35555f32a075b99488923dd911af52ca/transformed/Inspection-12.0.0/AndroidManifest.xml:20:13-59
-333            android:label="@string/inspection_activity" >
-333-->[org.firstinspires.ftc:Inspection:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/35555f32a075b99488923dd911af52ca/transformed/Inspection-12.0.0/AndroidManifest.xml:21:13-56
-334        </activity>
-335        <activity
-335-->[org.firstinspires.ftc:Inspection:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/35555f32a075b99488923dd911af52ca/transformed/Inspection-12.0.0/AndroidManifest.xml:23:9-27:20
-336            android:name="org.firstinspires.inspection.RcInspectionActivity"
-336-->[org.firstinspires.ftc:Inspection:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/35555f32a075b99488923dd911af52ca/transformed/Inspection-12.0.0/AndroidManifest.xml:24:13-77
-337            android:configChanges="orientation|screenSize"
-337-->[org.firstinspires.ftc:Inspection:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/35555f32a075b99488923dd911af52ca/transformed/Inspection-12.0.0/AndroidManifest.xml:25:13-59
-338            android:label="@string/inspection_activity" >
-338-->[org.firstinspires.ftc:Inspection:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/35555f32a075b99488923dd911af52ca/transformed/Inspection-12.0.0/AndroidManifest.xml:26:13-56
-339        </activity>
-340        <!--
-341    Needed to support sending logs from log viewer on Nougat and later.
-342    Note: DON'T need to shift meta-data to 'androidx' from 'android.support.FILE_PROVIDER_PATHS'
-343        -->
-344        <provider
-344-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:91:9-99:20
-345            android:name="androidx.core.content.FileProvider"
-345-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:92:13-62
-346            android:authorities="com.qualcomm.ftcrobotcontroller.provider"
-346-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:93:13-60
-347            android:exported="false"
-347-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:94:13-37
-348            android:grantUriPermissions="true" >
-348-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:95:13-47
-349            <meta-data
-349-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:96:13-98:63
-350                android:name="android.support.FILE_PROVIDER_PATHS"
-350-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:97:17-67
-351                android:resource="@xml/file_provider_paths" />
-351-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:98:17-60
-352        </provider> <!-- Service that keeps desktop folders up to date with respect to actual phone file system contents -->
-353        <service
-353-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:102:9-104:38
-354            android:name="org.firstinspires.ftc.robotcore.internal.files.MediaTransferProtocolMonitorService"
-354-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:103:13-110
-355            android:enabled="true" />
-355-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:104:13-35
-356
-357        <meta-data
-357-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:106:9-108:41
-358            android:name="autoStartService.org.firstinspires.ftc.robotcore.internal.files.MediaTransferProtocolMonitorService"
-358-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:107:13-127
-359            android:value="BOTH|1000" /> <!-- Service that provides build services for OnBotJava -->
-359-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:108:13-38
-360        <service
-360-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:111:9-113:38
-361            android:name="org.firstinspires.ftc.onbotjava.OnBotJavaService"
-361-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:112:13-76
-362            android:enabled="true" />
-362-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:113:13-35
-363
-364        <meta-data
-364-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:115:9-117:39
-365            android:name="autoStartService.org.firstinspires.ftc.onbotjava.OnBotJavaService"
-365-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:116:13-93
-366            android:value="RC|2000" />
-366-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:117:13-36
-367
-368        <receiver
-368-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:119:9-126:20
-369            android:name="org.firstinspires.ftc.robotserver.internal.webserver.controlhubupdater.ChUpdaterCommManager$ChUpdaterBroadcastReceiver"
-369-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:120:13-146
-370            android:exported="true"
-370-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:121:13-36
-371            android:permission="android.permission.INSTALL_PACKAGES" >
-371-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:122:13-69
-372            <intent-filter>
-372-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:123:13-125:29
-373                <action android:name="com.revrobotics.controlhubupdater.broadcast.RESULT_BROADCAST" />
-373-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:124:17-103
-373-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:124:25-100
-374            </intent-filter>
-375        </receiver>
-376
-377        <activity
-377-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/426c9d58e3babdc965e5ee1f7b49b81c/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:47:9-53:63
-378            android:name="com.journeyapps.barcodescanner.CaptureActivity"
-378-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/426c9d58e3babdc965e5ee1f7b49b81c/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:48:13-74
-379            android:clearTaskOnLaunch="true"
-379-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/426c9d58e3babdc965e5ee1f7b49b81c/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:49:13-45
-380            android:screenOrientation="sensorLandscape"
-380-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/426c9d58e3babdc965e5ee1f7b49b81c/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:50:13-56
-381            android:stateNotNeeded="true"
-381-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/426c9d58e3babdc965e5ee1f7b49b81c/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:51:13-42
-382            android:theme="@style/zxing_CaptureTheme"
-382-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/426c9d58e3babdc965e5ee1f7b49b81c/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:52:13-54
-383            android:windowSoftInputMode="stateAlwaysHidden" />
-383-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/426c9d58e3babdc965e5ee1f7b49b81c/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:53:13-60
-384
-385        <provider
-385-->[androidx.emoji2:emoji2:1.2.0] /Users/gupta/.gradle/caches/9.1.0/transforms/bb7b8e989808c1a3b0f1ff66a2caf130/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-386            android:name="androidx.startup.InitializationProvider"
-386-->[androidx.emoji2:emoji2:1.2.0] /Users/gupta/.gradle/caches/9.1.0/transforms/bb7b8e989808c1a3b0f1ff66a2caf130/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
-387            android:authorities="com.qualcomm.ftcrobotcontroller.androidx-startup"
-387-->[androidx.emoji2:emoji2:1.2.0] /Users/gupta/.gradle/caches/9.1.0/transforms/bb7b8e989808c1a3b0f1ff66a2caf130/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
-388            android:exported="false" >
-388-->[androidx.emoji2:emoji2:1.2.0] /Users/gupta/.gradle/caches/9.1.0/transforms/bb7b8e989808c1a3b0f1ff66a2caf130/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
-389            <meta-data
-389-->[androidx.emoji2:emoji2:1.2.0] /Users/gupta/.gradle/caches/9.1.0/transforms/bb7b8e989808c1a3b0f1ff66a2caf130/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-390                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-390-->[androidx.emoji2:emoji2:1.2.0] /Users/gupta/.gradle/caches/9.1.0/transforms/bb7b8e989808c1a3b0f1ff66a2caf130/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
-391                android:value="androidx.startup" />
-391-->[androidx.emoji2:emoji2:1.2.0] /Users/gupta/.gradle/caches/9.1.0/transforms/bb7b8e989808c1a3b0f1ff66a2caf130/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
-392            <meta-data
-392-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/gupta/.gradle/caches/9.1.0/transforms/76a0d09378676ca5f12caf9fee08097f/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
-393                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-393-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/gupta/.gradle/caches/9.1.0/transforms/76a0d09378676ca5f12caf9fee08097f/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
-394                android:value="androidx.startup" />
-394-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/gupta/.gradle/caches/9.1.0/transforms/76a0d09378676ca5f12caf9fee08097f/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
-395            <meta-data
-395-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
-396                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-396-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
-397                android:value="androidx.startup" />
-397-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
-398        </provider>
-399
-400        <receiver
-400-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
-401            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-401-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
-402            android:directBootAware="false"
-402-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
-403            android:enabled="true"
-403-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
-404            android:exported="true"
-404-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
-405            android:permission="android.permission.DUMP" >
-405-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
-406            <intent-filter>
-406-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
-407                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-407-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
-407-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
-408            </intent-filter>
-409            <intent-filter>
-409-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
-410                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-410-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
-410-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
-411            </intent-filter>
-412            <intent-filter>
-412-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
-413                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-413-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
-413-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
-414            </intent-filter>
-415            <intent-filter>
-415-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
-416                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-416-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
-416-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
-417            </intent-filter>
-418        </receiver>
-419    </application>
-420
-421</manifest>
+116        android:theme="@style/AppThemeRedRC"
+116-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:17:9-45
+117        android:usesCleartextTraffic="true" > <!-- Indicates to the ControlHubUpdater what the latest version of the Control Hub is that this app supports -->
+117-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:18:9-44
+118        <meta-data
+118-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:21:9-23:33
+119            android:name="org.firstinspires.latestSupportedControlHubVersion"
+119-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:22:13-78
+120            android:value="1" /> <!-- The main robot controller activity -->
+120-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:23:13-30
+121        <activity
+121-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:26:9-37:20
+122            android:name="org.firstinspires.ftc.robotcontroller.internal.PermissionValidatorWrapper"
+122-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:27:13-101
+123            android:configChanges="orientation|screenSize"
+123-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:28:13-59
+124            android:label="@string/app_name"
+124-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:29:13-45
+125            android:launchMode="singleTask"
+125-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:30:13-44
+126            android:screenOrientation="fullUser" >
+126-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:31:13-49
+127            <intent-filter>
+127-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:32:13-36:29
+128                <category android:name="android.intent.category.LAUNCHER" />
+128-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:33:17-77
+128-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:33:27-74
+129
+130                <action android:name="android.intent.action.MAIN" />
+130-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:35:17-69
+130-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:35:25-66
+131            </intent-filter>
+132        </activity>
+133        <activity
+133-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:38:9-56:20
+134            android:name="org.firstinspires.ftc.robotcontroller.internal.FtcRobotControllerActivity"
+134-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:39:13-101
+135            android:configChanges="orientation|screenSize"
+135-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:40:13-59
+136            android:label="@string/app_name"
+136-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:41:13-45
+137            android:launchMode="singleTask"
+137-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:42:13-44
+138            android:screenOrientation="fullUser" >
+138-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:43:13-49
+139            <intent-filter>
+139-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:44:13-46:29
+140                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+140-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:45:17-90
+140-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:45:25-87
+141            </intent-filter>
+142
+143            <meta-data
+143-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:48:13-50:57
+144                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+144-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:49:17-79
+145                android:resource="@xml/device_filter" />
+145-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:50:17-54
+146
+147            <!-- org.firstinspires.main.entry indicates that this app is compatible with the Dragonboard Control Hub -->
+148            <meta-data
+148-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:53:13-55:40
+149                android:name="org.firstinspires.main.entry"
+149-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:54:17-60
+150                android:value="true" />
+150-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:55:17-37
+151        </activity> <!-- The robot controller service in which most of the robot functionality is managed -->
+152        <service
+152-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:59:9-61:38
+153            android:name="com.qualcomm.ftccommon.FtcRobotControllerService"
+153-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:60:13-76
+154            android:enabled="true" /> <!-- Assistant that autostarts the robot controller on android boot (if it's supposed to) -->
+154-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:61:13-35
+155        <receiver
+155-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:64:9-75:20
+156            android:name="org.firstinspires.ftc.ftccommon.internal.RunOnBoot"
+156-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:65:13-78
+157            android:enabled="true"
+157-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:66:13-35
+158            android:exported="true"
+158-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:67:13-36
+159            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
+159-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:68:13-75
+160            <intent-filter>
+160-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:69:13-74:29
+161                <category android:name="android.intent.category.DEFAULT" />
+161-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:70:17-76
+161-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:70:27-73
+162
+163                <action android:name="android.intent.action.BOOT_COMPLETED" />
+163-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:72:17-79
+163-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:72:25-76
+164                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+164-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:73:17-82
+164-->[:FtcRobotController] /Users/gupta/Documents/GitHub/FTC/biobuzz-v0/FtcRobotController/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:73:25-79
+165            </intent-filter>
+166        </receiver>
+167
+168        <activity
+168-->[org.firstinspires.ftc:Blocks:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/361abb6a221215d8d0b2477242fb34a4/transformed/Blocks-12.0.0/AndroidManifest.xml:17:9-21:20
+169            android:name="org.firstinspires.ftc.ftccommon.internal.ProgramAndManageActivity"
+169-->[org.firstinspires.ftc:Blocks:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/361abb6a221215d8d0b2477242fb34a4/transformed/Blocks-12.0.0/AndroidManifest.xml:18:13-93
+170            android:configChanges="orientation|screenSize"
+170-->[org.firstinspires.ftc:Blocks:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/361abb6a221215d8d0b2477242fb34a4/transformed/Blocks-12.0.0/AndroidManifest.xml:19:13-59
+171            android:label="@string/program_and_manage_activity" >
+171-->[org.firstinspires.ftc:Blocks:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/361abb6a221215d8d0b2477242fb34a4/transformed/Blocks-12.0.0/AndroidManifest.xml:20:13-64
+172        </activity>
+173        <activity
+173-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:24:9-28:47
+174            android:name="com.qualcomm.ftccommon.StackTraceActivity"
+174-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:25:13-69
+175            android:configChanges="orientation|screenSize"
+175-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:26:13-59
+176            android:exported="true"
+176-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:27:13-36
+177            android:launchMode="singleTask" />
+177-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:28:13-44
+178        <activity
+178-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:29:9-33:20
+179            android:name="com.qualcomm.ftccommon.FtcRobotControllerSettingsActivity"
+179-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:30:13-85
+180            android:exported="true"
+180-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:31:13-36
+181            android:label="@string/settings_activity" >
+181-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:32:13-54
+182        </activity>
+183        <activity
+183-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:34:9-39:20
+184            android:name="com.qualcomm.ftccommon.configuration.FtcLoadFileActivity"
+184-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:35:13-84
+185            android:configChanges="orientation|screenSize"
+185-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:36:13-59
+186            android:exported="true"
+186-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:37:13-36
+187            android:label="@string/configure_activity" >
+187-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:38:13-55
+188        </activity>
+189        <activity
+189-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:40:9-45:20
+190            android:name="com.qualcomm.ftccommon.configuration.ConfigureFromTemplateActivity"
+190-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:41:13-94
+191            android:configChanges="orientation|screenSize"
+191-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:42:13-59
+192            android:exported="true"
+192-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:43:13-36
+193            android:label="@string/title_activity_configfromtemplate" >
+193-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:44:13-70
+194        </activity>
+195        <activity
+195-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:46:9-51:20
+196            android:name="com.qualcomm.ftccommon.ViewLogsActivity"
+196-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:47:13-67
+197            android:configChanges="orientation|screenSize"
+197-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:48:13-59
+198            android:exported="true"
+198-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:49:13-36
+199            android:label="@string/view_logs_activity" >
+199-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:50:13-55
+200        </activity>
+201        <activity
+201-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:52:9-56:20
+202            android:name="com.qualcomm.ftccommon.configuration.FtcConfigurationActivity"
+202-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:53:13-89
+203            android:configChanges="orientation|screenSize"
+203-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:54:13-59
+204            android:label="@string/app_name" >
+204-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:55:13-45
+205        </activity>
+206        <activity
+206-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:57:9-61:20
+207            android:name="com.qualcomm.ftccommon.configuration.ConfigurationTreeActivity"
+207-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:58:13-90
+208            android:configChanges="orientation|screenSize"
+208-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:59:13-59
+209            android:label="@string/title_activity_config_tree" >
+209-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:60:13-63
+210        </activity>
+211        <activity
+211-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:62:9-66:20
+212            android:name="com.qualcomm.ftccommon.configuration.FtcNewFileActivity"
+212-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:63:13-83
+213            android:configChanges="orientation|screenSize"
+213-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:64:13-59
+214            android:label="@string/app_name" >
+214-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:65:13-45
+215        </activity>
+216        <activity
+216-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:67:9-71:20
+217            android:name="com.qualcomm.ftccommon.FtcAdvancedRCSettingsActivity"
+217-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:68:13-80
+218            android:exported="true"
+218-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:69:13-36
+219            android:label="@string/titleAdvancedRCSettings" >
+219-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:70:13-60
+220        </activity>
+221        <activity
+221-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:72:9-75:20
+222            android:name="com.qualcomm.ftccommon.FtcLynxFirmwareUpdateActivity"
+222-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:73:13-80
+223            android:exported="true" >
+223-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:74:13-36
+224        </activity>
+225        <activity
+225-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:76:9-79:20
+226            android:name="com.qualcomm.ftccommon.FtcLynxModuleAddressUpdateActivity"
+226-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:77:13-85
+227            android:exported="true" >
+227-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:78:13-36
+228        </activity>
+229        <activity
+229-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:80:9-84:20
+230            android:name="com.qualcomm.ftccommon.FtcWifiDirectChannelSelectorActivity"
+230-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:81:13-87
+231            android:exported="true"
+231-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:82:13-36
+232            android:label="@string/title_activity_wifi_channel_selector" >
+232-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:83:13-73
+233        </activity>
+234        <activity
+234-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:85:9-89:20
+235            android:name="com.qualcomm.ftccommon.FtcWifiDirectRememberedGroupsActivity"
+235-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:86:13-88
+236            android:exported="true"
+236-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:87:13-36
+237            android:label="@string/title_activity_wifi_remembered_groups_editor" >
+237-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:88:13-81
+238        </activity>
+239        <activity
+239-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:90:9-93:20
+240            android:name="com.qualcomm.ftccommon.AboutActivity"
+240-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:91:13-64
+241            android:label="@string/about_activity" >
+241-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:92:13-51
+242        </activity>
+243        <activity
+243-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:94:9-97:20
+244            android:name="com.qualcomm.ftccommon.FtcAboutActivity"
+244-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:95:13-67
+245            android:label="@string/ftc_about_activity" >
+245-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:96:13-55
+246        </activity>
+247        <activity
+247-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:98:9-103:20
+248            android:name="com.qualcomm.ftccommon.configuration.EditSwapUsbDevices"
+248-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:99:13-83
+249            android:configChanges="orientation|screenSize"
+249-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:100:13-59
+250            android:label="@string/edit_swap_devices_activity"
+250-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:101:13-63
+251            android:windowSoftInputMode="stateHidden" >
+251-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:102:13-54
+252        </activity>
+253        <activity
+253-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:104:9-109:20
+254            android:name="com.qualcomm.ftccommon.configuration.EditMotorListActivity"
+254-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:105:13-86
+255            android:configChanges="orientation|screenSize"
+255-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:106:13-59
+256            android:label="@string/edit_motor_controller_activity"
+256-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:107:13-67
+257            android:windowSoftInputMode="stateHidden" >
+257-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:108:13-54
+258        </activity>
+259        <activity
+259-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:110:9-115:20
+260            android:name="com.qualcomm.ftccommon.configuration.EditServoListActivity"
+260-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:111:13-86
+261            android:configChanges="orientation|screenSize"
+261-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:112:13-59
+262            android:label="@string/edit_servo_controller_activity"
+262-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:113:13-67
+263            android:windowSoftInputMode="stateHidden|adjustResize" >
+263-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:114:13-67
+264        </activity>
+265        <activity
+265-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:116:9-121:20
+266            android:name="com.qualcomm.ftccommon.configuration.EditLynxModuleActivity"
+266-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:117:13-87
+267            android:configChanges="orientation|screenSize"
+267-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:118:13-59
+268            android:label="@string/edit_lynx_module_controller_activity"
+268-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:119:13-73
+269            android:windowSoftInputMode="stateHidden|adjustResize" >
+269-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:120:13-67
+270        </activity>
+271        <activity
+271-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:122:9-127:20
+272            android:name="com.qualcomm.ftccommon.configuration.EditLynxUsbDeviceActivity"
+272-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:123:13-90
+273            android:configChanges="orientation|screenSize"
+273-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:124:13-59
+274            android:label="@string/edit_lynx_usb_device_activity"
+274-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:125:13-66
+275            android:windowSoftInputMode="stateHidden|adjustResize" >
+275-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:126:13-67
+276        </activity>
+277        <activity
+277-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:128:9-133:20
+278            android:name="com.qualcomm.ftccommon.configuration.EditWebcamActivity"
+278-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:129:13-83
+279            android:configChanges="orientation|screenSize"
+279-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:130:13-59
+280            android:label="@string/edit_webcam_activity"
+280-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:131:13-57
+281            android:windowSoftInputMode="stateHidden|adjustResize" >
+281-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:132:13-67
+282        </activity>
+283        <activity
+283-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:134:9-139:20
+284            android:name="com.qualcomm.ftccommon.configuration.EditPWMDevicesActivity"
+284-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:135:13-87
+285            android:configChanges="orientation|screenSize"
+285-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:136:13-59
+286            android:label="@string/edit_pwm_devices_activity"
+286-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:137:13-62
+287            android:windowSoftInputMode="stateHidden|adjustResize" >
+287-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:138:13-67
+288        </activity>
+289        <activity
+289-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:140:9-145:20
+290            android:name="com.qualcomm.ftccommon.configuration.EditAnalogInputDevicesActivity"
+290-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:141:13-95
+291            android:configChanges="orientation|screenSize"
+291-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:142:13-59
+292            android:label="@string/edit_analog_input_devices_activity"
+292-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:143:13-71
+293            android:windowSoftInputMode="stateHidden|adjustResize" >
+293-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:144:13-67
+294        </activity>
+295        <activity
+295-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:146:9-151:20
+296            android:name="com.qualcomm.ftccommon.configuration.EditDigitalDevicesActivity"
+296-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:147:13-91
+297            android:configChanges="orientation|screenSize"
+297-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:148:13-59
+298            android:label="@string/edit_digital_devices_activity"
+298-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:149:13-66
+299            android:windowSoftInputMode="stateHidden|adjustResize" >
+299-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:150:13-67
+300        </activity>
+301        <activity
+301-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:152:9-157:20
+302            android:name="com.qualcomm.ftccommon.configuration.EditDigitalDevicesActivityLynx"
+302-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:153:13-95
+303            android:configChanges="orientation|screenSize"
+303-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:154:13-59
+304            android:label="@string/edit_digital_devices_activity_lynx"
+304-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:155:13-71
+305            android:windowSoftInputMode="stateHidden|adjustResize" >
+305-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:156:13-67
+306        </activity>
+307        <activity
+307-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:158:9-163:20
+308            android:name="com.qualcomm.ftccommon.configuration.EditI2cDevicesActivity"
+308-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:159:13-87
+309            android:configChanges="orientation|screenSize"
+309-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:160:13-59
+310            android:label="@string/edit_i2c_devices_activity"
+310-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:161:13-62
+311            android:windowSoftInputMode="stateHidden|adjustResize" >
+311-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:162:13-67
+312        </activity>
+313        <activity
+313-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:164:9-169:20
+314            android:name="com.qualcomm.ftccommon.configuration.EditI2cDevicesActivityLynx"
+314-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:165:13-91
+315            android:configChanges="orientation|screenSize"
+315-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:166:13-59
+316            android:label="@string/edit_i2c_devices_activity"
+316-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:167:13-62
+317            android:windowSoftInputMode="stateHidden|adjustResize" >
+317-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:168:13-67
+318        </activity>
+319        <activity
+319-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:170:9-175:20
+320            android:name="com.qualcomm.ftccommon.configuration.EditEthernetOverUsbActivity"
+320-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:171:13-92
+321            android:configChanges="orientation|screenSize"
+321-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:172:13-59
+322            android:label="@string/edit_ethernet_devices_activity"
+322-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:173:13-67
+323            android:windowSoftInputMode="stateHidden|adjustResize" >
+323-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:174:13-67
+324        </activity> <!-- A service that will auto-restart the robot controller if it crashes (if it's supposed to) -->
+325        <service
+325-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:178:9-180:38
+326            android:name="org.firstinspires.ftc.ftccommon.internal.FtcRobotControllerWatchdogService"
+326-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:179:13-102
+327            android:enabled="true" />
+327-->[org.firstinspires.ftc:FtcCommon:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/dad254e52d27ed09cf77d54daabd69a1/transformed/FtcCommon-12.0.0/AndroidManifest.xml:180:13-35
+328
+329        <activity
+329-->[org.firstinspires.ftc:Inspection:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/35555f32a075b99488923dd911af52ca/transformed/Inspection-12.0.0/AndroidManifest.xml:18:9-22:20
+330            android:name="org.firstinspires.inspection.DsInspectionActivity"
+330-->[org.firstinspires.ftc:Inspection:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/35555f32a075b99488923dd911af52ca/transformed/Inspection-12.0.0/AndroidManifest.xml:19:13-77
+331            android:configChanges="orientation|screenSize"
+331-->[org.firstinspires.ftc:Inspection:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/35555f32a075b99488923dd911af52ca/transformed/Inspection-12.0.0/AndroidManifest.xml:20:13-59
+332            android:label="@string/inspection_activity" >
+332-->[org.firstinspires.ftc:Inspection:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/35555f32a075b99488923dd911af52ca/transformed/Inspection-12.0.0/AndroidManifest.xml:21:13-56
+333        </activity>
+334        <activity
+334-->[org.firstinspires.ftc:Inspection:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/35555f32a075b99488923dd911af52ca/transformed/Inspection-12.0.0/AndroidManifest.xml:23:9-27:20
+335            android:name="org.firstinspires.inspection.RcInspectionActivity"
+335-->[org.firstinspires.ftc:Inspection:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/35555f32a075b99488923dd911af52ca/transformed/Inspection-12.0.0/AndroidManifest.xml:24:13-77
+336            android:configChanges="orientation|screenSize"
+336-->[org.firstinspires.ftc:Inspection:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/35555f32a075b99488923dd911af52ca/transformed/Inspection-12.0.0/AndroidManifest.xml:25:13-59
+337            android:label="@string/inspection_activity" >
+337-->[org.firstinspires.ftc:Inspection:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/35555f32a075b99488923dd911af52ca/transformed/Inspection-12.0.0/AndroidManifest.xml:26:13-56
+338        </activity>
+339        <!--
+340    Needed to support sending logs from log viewer on Nougat and later.
+341    Note: DON'T need to shift meta-data to 'androidx' from 'android.support.FILE_PROVIDER_PATHS'
+342        -->
+343        <provider
+343-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:91:9-99:20
+344            android:name="androidx.core.content.FileProvider"
+344-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:92:13-62
+345            android:authorities="com.qualcomm.ftcrobotcontroller.provider"
+345-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:93:13-60
+346            android:exported="false"
+346-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:94:13-37
+347            android:grantUriPermissions="true" >
+347-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:95:13-47
+348            <meta-data
+348-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:96:13-98:63
+349                android:name="android.support.FILE_PROVIDER_PATHS"
+349-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:97:17-67
+350                android:resource="@xml/file_provider_paths" />
+350-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:98:17-60
+351        </provider> <!-- Service that keeps desktop folders up to date with respect to actual phone file system contents -->
+352        <service
+352-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:102:9-104:38
+353            android:name="org.firstinspires.ftc.robotcore.internal.files.MediaTransferProtocolMonitorService"
+353-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:103:13-110
+354            android:enabled="true" />
+354-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:104:13-35
+355
+356        <meta-data
+356-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:106:9-108:41
+357            android:name="autoStartService.org.firstinspires.ftc.robotcore.internal.files.MediaTransferProtocolMonitorService"
+357-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:107:13-127
+358            android:value="BOTH|1000" /> <!-- Service that provides build services for OnBotJava -->
+358-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:108:13-38
+359        <service
+359-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:111:9-113:38
+360            android:name="org.firstinspires.ftc.onbotjava.OnBotJavaService"
+360-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:112:13-76
+361            android:enabled="true" />
+361-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:113:13-35
+362
+363        <meta-data
+363-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:115:9-117:39
+364            android:name="autoStartService.org.firstinspires.ftc.onbotjava.OnBotJavaService"
+364-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:116:13-93
+365            android:value="RC|2000" />
+365-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:117:13-36
+366
+367        <receiver
+367-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:119:9-126:20
+368            android:name="org.firstinspires.ftc.robotserver.internal.webserver.controlhubupdater.ChUpdaterCommManager$ChUpdaterBroadcastReceiver"
+368-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:120:13-146
+369            android:exported="true"
+369-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:121:13-36
+370            android:permission="android.permission.INSTALL_PACKAGES" >
+370-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:122:13-69
+371            <intent-filter>
+371-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:123:13-125:29
+372                <action android:name="com.revrobotics.controlhubupdater.broadcast.RESULT_BROADCAST" />
+372-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:124:17-103
+372-->[org.firstinspires.ftc:RobotCore:12.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/eaebef3b76c7a936b6670ece7b5222a6/transformed/RobotCore-12.0.0/AndroidManifest.xml:124:25-100
+373            </intent-filter>
+374        </receiver>
+375
+376        <activity
+376-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/426c9d58e3babdc965e5ee1f7b49b81c/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:47:9-53:63
+377            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+377-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/426c9d58e3babdc965e5ee1f7b49b81c/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:48:13-74
+378            android:clearTaskOnLaunch="true"
+378-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/426c9d58e3babdc965e5ee1f7b49b81c/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:49:13-45
+379            android:screenOrientation="sensorLandscape"
+379-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/426c9d58e3babdc965e5ee1f7b49b81c/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:50:13-56
+380            android:stateNotNeeded="true"
+380-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/426c9d58e3babdc965e5ee1f7b49b81c/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:51:13-42
+381            android:theme="@style/zxing_CaptureTheme"
+381-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/426c9d58e3babdc965e5ee1f7b49b81c/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:52:13-54
+382            android:windowSoftInputMode="stateAlwaysHidden" />
+382-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/426c9d58e3babdc965e5ee1f7b49b81c/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:53:13-60
+383
+384        <provider
+384-->[androidx.emoji2:emoji2:1.2.0] /Users/gupta/.gradle/caches/9.1.0/transforms/bb7b8e989808c1a3b0f1ff66a2caf130/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+385            android:name="androidx.startup.InitializationProvider"
+385-->[androidx.emoji2:emoji2:1.2.0] /Users/gupta/.gradle/caches/9.1.0/transforms/bb7b8e989808c1a3b0f1ff66a2caf130/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+386            android:authorities="com.qualcomm.ftcrobotcontroller.androidx-startup"
+386-->[androidx.emoji2:emoji2:1.2.0] /Users/gupta/.gradle/caches/9.1.0/transforms/bb7b8e989808c1a3b0f1ff66a2caf130/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+387            android:exported="false" >
+387-->[androidx.emoji2:emoji2:1.2.0] /Users/gupta/.gradle/caches/9.1.0/transforms/bb7b8e989808c1a3b0f1ff66a2caf130/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+388            <meta-data
+388-->[androidx.emoji2:emoji2:1.2.0] /Users/gupta/.gradle/caches/9.1.0/transforms/bb7b8e989808c1a3b0f1ff66a2caf130/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+389                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+389-->[androidx.emoji2:emoji2:1.2.0] /Users/gupta/.gradle/caches/9.1.0/transforms/bb7b8e989808c1a3b0f1ff66a2caf130/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+390                android:value="androidx.startup" />
+390-->[androidx.emoji2:emoji2:1.2.0] /Users/gupta/.gradle/caches/9.1.0/transforms/bb7b8e989808c1a3b0f1ff66a2caf130/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+391            <meta-data
+391-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/gupta/.gradle/caches/9.1.0/transforms/76a0d09378676ca5f12caf9fee08097f/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+392                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+392-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/gupta/.gradle/caches/9.1.0/transforms/76a0d09378676ca5f12caf9fee08097f/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+393                android:value="androidx.startup" />
+393-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/gupta/.gradle/caches/9.1.0/transforms/76a0d09378676ca5f12caf9fee08097f/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+394            <meta-data
+394-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+395                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+395-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+396                android:value="androidx.startup" />
+396-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+397        </provider>
+398
+399        <receiver
+399-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+400            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+400-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+401            android:directBootAware="false"
+401-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+402            android:enabled="true"
+402-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+403            android:exported="true"
+403-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+404            android:permission="android.permission.DUMP" >
+404-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+405            <intent-filter>
+405-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+406                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+406-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+406-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+407            </intent-filter>
+408            <intent-filter>
+408-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+409                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+409-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+409-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+410            </intent-filter>
+411            <intent-filter>
+411-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+412                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+412-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+412-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+413            </intent-filter>
+414            <intent-filter>
+414-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+415                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+415-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+415-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/gupta/.gradle/caches/9.1.0/transforms/6c86a009ae74b8cd43aaf4fb17765cfb/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+416            </intent-filter>
+417        </receiver>
+418    </application>
+419
+420</manifest>

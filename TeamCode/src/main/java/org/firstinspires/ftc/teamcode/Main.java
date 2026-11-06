@@ -1,59 +1,47 @@
 package org.firstinspires.ftc.teamcode;
 
-import com.qualcomm.hardware.rev.RevHubOrientationOnRobot;
+import com.bylazar.telemetry.PanelsTelemetry;
+import com.bylazar.telemetry.TelemetryManager;
+
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
-import com.qualcomm.robotcore.hardware.DcMotorEx;
-import com.qualcomm.robotcore.hardware.IMU;
+
+import org.firstinspires.ftc.teamcode.Helper.GamepadHelper;
 
 @TeleOp
 public class Main extends OpMode {
     Drivetrain dt;
-    IMU imu;
-    DcMotorEx intake, transfer;
+    Intake intake;
+    Shooter shooter;
+
+    GamepadHelper xbox;
+
+    TelemetryManager panelsTelemetry = PanelsTelemetry.INSTANCE.getTelemetry();
 
     @Override
     public void init() {
-        // --- IMU setup ---
-        // Adjust logo/usb facing direction to match how your Control/Expansion Hub is actually mounted.
-        imu = hardwareMap.get(IMU.class, "imu");
-        imu.initialize(new IMU.Parameters(
-                new RevHubOrientationOnRobot(
-                        RevHubOrientationOnRobot.LogoFacingDirection.FORWARD,
-                        RevHubOrientationOnRobot.UsbFacingDirection.UP
-                )
-        ));
+        xbox = new GamepadHelper(this);
 
-        // Create drivetrain instance
-        dt = new Drivetrain(this, imu);
-        intake = hardwareMap.get(DcMotorEx.class, "intake");
-        transfer = hardwareMap.get(DcMotorEx.class, "transfer");
+        // Create drivetrain instance (field-centric, Pinpoint localizer)
+        dt = new Drivetrain(this);
+        intake = new Intake(this, xbox);
+        shooter = new Shooter(this, xbox);
+
+
     }
 
     @Override
     public void loop() {
-        // Update drivetrain
+        // Read button edges once per loop, before any subsystem checks them
+        xbox.update();
+
         dt.update();
+        intake.updateIntake();
+        shooter.updateShooter();
 
-        // intake
-        if(gamepad1.a){
-            intake.setPower(-1);
+        // Send telemetry once per loop so subsystems don't overwrite each other's lines
+        panelsTelemetry.update(telemetry);
 
-        // stop everything
-        } else if (gamepad1.b) {
-            intake.setPower(0);
-            transfer.setPower(0);
-
-        // shoot
-        } else if (gamepad1.y) {
-            intake.setPower(-1);
-            transfer.setPower(1);
-
-        // outtake
-        } else if (gamepad1.x){
-            intake.setPower(1);
-            transfer.setPower(-1);
-        }
 
 
     }

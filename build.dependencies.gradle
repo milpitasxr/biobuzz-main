@@ -22,7 +22,11 @@ dependencies {
     implementation 'com.bylazar:fullpanels:1.0.13'
 
     implementation 'com.pedropathing:revhub:3.0.2'
-    implementation 'com.pedropathing:tuning:1.0.3-beta.1'
+    // AutoTune pulls in Sloth, which loads TeamCode in its own class loader and breaks Panels configurables.
+    // Only include it while tuning: set pedroAutoTune=true in gradle.properties.
+    if (findProperty('pedroAutoTune') == 'true') {
+        implementation 'com.pedropathing:tuning:1.0.3-beta.1'
+    }
 
     implementation 'com.pedropathing.ivy:pedro:1.1.1'
     implementation 'com.pedropathing:core:3.0.0-20260828.185437-17'

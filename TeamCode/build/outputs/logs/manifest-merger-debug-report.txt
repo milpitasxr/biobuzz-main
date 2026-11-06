@@ -20,7 +20,6 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/gupta/.gra
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/gupta/.gradle/caches/9.1.0/transforms/7ea426458cb1d77a146bd91b2c2b91d1/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/gupta/.gradle/caches/9.1.0/transforms/a2423c45bf9d3432ddc7dc11b76cd84f/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
 MERGED from [com.pedropathing:telemetry:1.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/8f42b1dbe709b74f8ad96d21684f1047/transformed/telemetry-1.0.0/AndroidManifest.xml:2:1-7:12
-MERGED from [com.pedropathing:tuning:1.0.3-beta.1] /Users/gupta/.gradle/caches/9.1.0/transforms/690e673ad35667b4dcf14de8dd1fce2f/transformed/tuning-1.0.3-beta.1/AndroidManifest.xml:2:1-7:12
 MERGED from [com.pedropathing:revhub:3.0.2] /Users/gupta/.gradle/caches/9.1.0/transforms/fec322acff2d39e604639d9d44f207bf/transformed/revhub-3.0.2/AndroidManifest.xml:2:1-7:12
 MERGED from [com.pedropathing.ivy:pedro:1.1.1] /Users/gupta/.gradle/caches/9.1.0/transforms/1a4b365b0e021071243d29de5f3d755a/transformed/pedro-1.1.1/AndroidManifest.xml:2:1-7:12
 MERGED from [com.github.Horizon-36596:zenith:v0.1.2] /Users/gupta/.gradle/caches/9.1.0/transforms/28da626f09a30435c9cb866978b2c1e9/transformed/zenith-v0.1.2/AndroidManifest.xml:2:1-7:12
@@ -79,7 +78,6 @@ MERGED from [com.bylazar:pinger:1.0.3] /Users/gupta/.gradle/caches/9.1.0/transfo
 MERGED from [com.bylazar:graph:1.0.4] /Users/gupta/.gradle/caches/9.1.0/transforms/9e4f4d2a6139278d3c46d7d692d8202b/transformed/graph-1.0.4/AndroidManifest.xml:2:1-7:12
 MERGED from [com.bylazar:lights:1.0.3] /Users/gupta/.gradle/caches/9.1.0/transforms/8106b5d771751ff668d5861233336a36/transformed/lights-1.0.3/AndroidManifest.xml:2:1-7:12
 MERGED from [com.bylazar:camerastream:1.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/e2059b49f7335979886b446f7c33acbf/transformed/camerastream-1.0.0/AndroidManifest.xml:2:1-7:12
-MERGED from [dev.frozenmilk.sinister:Sloth:0.3.2] /Users/gupta/.gradle/caches/9.1.0/transforms/0818c21593ec1ee2e728c2ce0054ac7d/transformed/Sloth-0.3.2/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/gupta/.gradle/caches/9.1.0/transforms/411bc736d84fea128b53f9f2372f0702/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:2:1-7:12
 MERGED from [org.openftc:opencv-repackaged-bundled-dylibs:4.10.0-A] /Users/gupta/.gradle/caches/9.1.0/transforms/f963acdc53ac3e3991ef2a15210419ab/transformed/opencv-repackaged-bundled-dylibs-4.10.0-A/AndroidManifest.xml:2:1-9:12
 	package
@@ -177,8 +175,6 @@ MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/gupta/.gradle/caches/9.1
 MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/gupta/.gradle/caches/9.1.0/transforms/a2423c45bf9d3432ddc7dc11b76cd84f/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
 MERGED from [com.pedropathing:telemetry:1.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/8f42b1dbe709b74f8ad96d21684f1047/transformed/telemetry-1.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.pedropathing:telemetry:1.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/8f42b1dbe709b74f8ad96d21684f1047/transformed/telemetry-1.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.pedropathing:tuning:1.0.3-beta.1] /Users/gupta/.gradle/caches/9.1.0/transforms/690e673ad35667b4dcf14de8dd1fce2f/transformed/tuning-1.0.3-beta.1/AndroidManifest.xml:5:5-44
-MERGED from [com.pedropathing:tuning:1.0.3-beta.1] /Users/gupta/.gradle/caches/9.1.0/transforms/690e673ad35667b4dcf14de8dd1fce2f/transformed/tuning-1.0.3-beta.1/AndroidManifest.xml:5:5-44
 MERGED from [com.pedropathing:revhub:3.0.2] /Users/gupta/.gradle/caches/9.1.0/transforms/fec322acff2d39e604639d9d44f207bf/transformed/revhub-3.0.2/AndroidManifest.xml:5:5-44
 MERGED from [com.pedropathing:revhub:3.0.2] /Users/gupta/.gradle/caches/9.1.0/transforms/fec322acff2d39e604639d9d44f207bf/transformed/revhub-3.0.2/AndroidManifest.xml:5:5-44
 MERGED from [com.pedropathing.ivy:pedro:1.1.1] /Users/gupta/.gradle/caches/9.1.0/transforms/1a4b365b0e021071243d29de5f3d755a/transformed/pedro-1.1.1/AndroidManifest.xml:5:5-44
@@ -295,8 +291,6 @@ MERGED from [com.bylazar:lights:1.0.3] /Users/gupta/.gradle/caches/9.1.0/transfo
 MERGED from [com.bylazar:lights:1.0.3] /Users/gupta/.gradle/caches/9.1.0/transforms/8106b5d771751ff668d5861233336a36/transformed/lights-1.0.3/AndroidManifest.xml:5:5-44
 MERGED from [com.bylazar:camerastream:1.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/e2059b49f7335979886b446f7c33acbf/transformed/camerastream-1.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.bylazar:camerastream:1.0.0] /Users/gupta/.gradle/caches/9.1.0/transforms/e2059b49f7335979886b446f7c33acbf/transformed/camerastream-1.0.0/AndroidManifest.xml:5:5-44
-MERGED from [dev.frozenmilk.sinister:Sloth:0.3.2] /Users/gupta/.gradle/caches/9.1.0/transforms/0818c21593ec1ee2e728c2ce0054ac7d/transformed/Sloth-0.3.2/AndroidManifest.xml:5:5-44
-MERGED from [dev.frozenmilk.sinister:Sloth:0.3.2] /Users/gupta/.gradle/caches/9.1.0/transforms/0818c21593ec1ee2e728c2ce0054ac7d/transformed/Sloth-0.3.2/AndroidManifest.xml:5:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/gupta/.gradle/caches/9.1.0/transforms/411bc736d84fea128b53f9f2372f0702/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/gupta/.gradle/caches/9.1.0/transforms/411bc736d84fea128b53f9f2372f0702/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
 MERGED from [org.openftc:opencv-repackaged-bundled-dylibs:4.10.0-A] /Users/gupta/.gradle/caches/9.1.0/transforms/f963acdc53ac3e3991ef2a15210419ab/transformed/opencv-repackaged-bundled-dylibs-4.10.0-A/AndroidManifest.xml:5:5-7:41

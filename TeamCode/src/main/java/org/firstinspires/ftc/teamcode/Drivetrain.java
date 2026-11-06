@@ -1,17 +1,23 @@
 package org.firstinspires.ftc.teamcode;
 
 import com.bylazar.configurables.annotations.Configurable;
+import com.bylazar.telemetry.PanelsTelemetry;
+import com.bylazar.telemetry.TelemetryManager;
+import com.pedropathing.math.Pose;
+import com.pedropathing.revhub.localizers.PinpointLocalizer;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 import com.qualcomm.robotcore.hardware.Gamepad;
-import com.qualcomm.robotcore.hardware.IMU;
-import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
-import org.firstinspires.ftc.robotcore.external.navigation.CurrentUnit;
-import org.firstinspires.ftc.robotcore.external.navigation.YawPitchRollAngles;
-import org.firstinspires.ftc.teamcode.Helper.PIDController;
-import com.bylazar.telemetry.PanelsTelemetry;
-import com.bylazar.telemetry.TelemetryManager;
 
+import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
+import org.firstinspires.ftc.teamcode.pedro.Constants;
+import org.firstinspires.ftc.teamcode.pedro.PoseStorage;
+
+/**
+ * Field-centric mecanum drive. The goBILDA Pinpoint is the localizer: it gives the robot's
+ * field pose (x, y in inches, heading in radians), configured from Constants.localizerConfig
+ * so TeleOp and Pedro Auto share the exact same pod offsets/directions.
+ */
 @Configurable
 public class Drivetrain {
     DcMotorEx leftFront, leftBack, rightFront, rightBack;
@@ -19,24 +25,20 @@ public class Drivetrain {
     public double powerFactor = 1;
     Gamepad xbox;
 
-    IMU imu;
-    PIDController drivePID;
-    double targetHeading = 0; // radians, updated whenever we're not manually turning
-    double currentHeading = 0; // radians, read from the IMU once per loop
+    PinpointLocalizer localizer;
+    Pose pose = new Pose(0, 0, 0);   // field pose, read from the Pinpoint once per loop
+
+    // Field heading (radians) that points straight away from the driver.
+    // Stick "up" drives the robot toward this heading. Back button re-zeroes it.
+    double driverForward;
+
     TelemetryManager panelsTelemetry = PanelsTelemetry.INSTANCE.getTelemetry();
 
     // Tune these for your bot
     static final double DRIVE_DEADZONE = 0.05;      // ignore tiny stick drift
-    static final double MANUAL_TURN_SCALE = 0.6;   // how fast right stick spins the bot
-    static final double MAX_HEADING_CORRECTION = 0.5; // clamp PID output so it can't fight the drivetrain too hard
+    static final double TURN_FACTOR = 0.6;   // how fast right stick spins the bot
 
-    // PID Values
-    public static double Kp = 0;
-    public static double Ki = 0;
-    public static double Kd = 0;
-    public static double maxIntegral = 0;
-
-    public Drivetrain(OpMode opmode, IMU imu1) {
+    public Drivetrain(OpMode opmode) {
         // Initialize variables
         op = opmode;
         xbox = op.gamepad1;
@@ -45,12 +47,14 @@ public class Drivetrain {
         leftBack = op.hardwareMap.get(DcMotorEx.class, "bL");
         rightBack = op.hardwareMap.get(DcMotorEx.class, "bR");
 
-        imu = imu1;
-        imu.resetYaw();
+        // Pinpoint setup comes from Pedro's config (recalibrates the IMU, keep the robot still in init)
+        localizer = new PinpointLocalizer(op.hardwareMap, Constants.localizerConfig);
+        // Pick up where Auto left off so the field pose stays continuous into TeleOp
+        localizer.setPose(PoseStorage.currentPose);
+        pose = PoseStorage.currentPose;
 
-        // Kp, Ki, Kd, maxIntegral — start with just Kp and tune from there
-        drivePID = new PIDController(Kp, Ki, Kd, maxIntegral);
-        targetHeading = getHeading();
+        // Whatever way the robot faces at init is "forward" for the driver
+        driverForward = pose.heading();
 
         // Set Zero power behavior for all 4 drive motors
         rightFront.setZeroPowerBehavior(DcMotorEx.ZeroPowerBehavior.BRAKE);
@@ -60,81 +64,69 @@ public class Drivetrain {
 
         // Reverse direction of motors if needed (prolly left motors icl)
         // leftFront.setDirection(DcMotorEx.Direction.REVERSE);
-
-
     }
 
-    /** Call this once per loop. Reads both sticks and drives the robot (robot-centric). */
+    /** Call this once per loop. Updates the Pinpoint, then drives field-centric from both sticks. */
     public void update() {
-        drivePID.setConstants(Kp, Ki, Kd, maxIntegral);
-        currentHeading = getHeading();
-        double power = getPower();
-        double theta = getTheta();
-        double turn = getTurn();
+        localizer.update();
+        pose = localizer.state().pose();
+        PoseStorage.currentPose = pose;
 
-        updateDrivetrain(turn, theta, power);
-        panelsTelemetry.update(op.telemetry);
-    }
+        // Back button: "forward" becomes wherever the robot is facing right now.
+        // Only the driver offset changes; the Pinpoint's field pose is left alone.
+        if (xbox.back) {
+            driverForward = pose.heading();
+        }
 
-    public double getPower() {
+        // Robot heading measured from the driver's forward direction
+        double heading = AngleUnit.normalizeRadians(pose.heading() - driverForward);
+
+        // Left stick as a vector: x = right, y = forward (stick y is inverted)
         double x = deadzone(xbox.left_stick_x);
         double y = deadzone(-xbox.left_stick_y);
-        return Math.hypot(x, y);
+
+        double[] robotVector = fieldToRobot(x, y, heading);
+        double x1 = robotVector[0];
+        double y1 = robotVector[1];
+
+        double power = Math.hypot(x1, y1);
+        double theta = Math.atan2(y1, x1);
+        double turn = getTurn();
+
+        panelsTelemetry.addData("X (in)", pose.x());
+        panelsTelemetry.addData("Y (in)", pose.y());
+        panelsTelemetry.addData("Heading (deg)", Math.toDegrees(pose.heading()));
+        panelsTelemetry.addData("Driver heading (deg)", Math.toDegrees(heading));
+
+        updateDrivetrain(turn, theta, power);
+    }
+
+    /** Field pose from the Pinpoint (inches, radians). */
+    public Pose getPose() {
+        return pose;
+    }
+
+    /**
+     * Rotates a field-frame stick vector into the robot's frame using a 2D rotation matrix.
+     * heading is the robot's yaw in radians (counter-clockwise positive).
+     * Returns {x, y} in the robot frame.
+     */
+    private double[] fieldToRobot(double x, double y, double heading) {
+        // Rotate by -heading: [cos h  sin h; -sin h  cos h] * [x; y]
+        double cos = Math.cos(heading);
+        double sin = Math.sin(heading);
+        double robotX = x * cos + y * sin;
+        double robotY = -x * sin + y * cos;
+        return new double[]{robotX, robotY};
     }
 
     private double deadzone(double value) {
         return Math.abs(value) > DRIVE_DEADZONE ? value : 0;
     }
 
-    // Get the theta of that the left joystick creates
-    public double getTheta() {
-        double x = deadzone(xbox.left_stick_x);
-        double y = deadzone(-xbox.left_stick_y);
-        return Math.atan2(y, x);
-    }
-
     private double getTurn() {
-        // Get turn and current heading
-        double rightStickX = xbox.right_stick_x;
-
-        panelsTelemetry.addData("Current heading (deg)", Math.toDegrees(currentHeading));
-        panelsTelemetry.addData("Target heading (deg)", Math.toDegrees(targetHeading));
-
-        // Checks to make sure joystick is acutally pushed
-        if (Math.abs(rightStickX) > DRIVE_DEADZONE) {
-            // Manual turning: drive rotation directly from the stick,
-            // and keep re-marking the target heading so it locks wherever you let go.
-            targetHeading = currentHeading;
-            drivePID.reset(); // avoid an integral/derivative jump when we re-engage the lock
-            return rightStickX * MANUAL_TURN_SCALE; // takes only a factor of the actual turn
-
-        }else {
-            // Locked: hold targetHeading using PID
-            double error = angleWrap(targetHeading - currentHeading);
-            double correction = -drivePID.update(error);
-
-            // Clamp so heading-hold can't overpower translation
-            if (correction > MAX_HEADING_CORRECTION) correction = MAX_HEADING_CORRECTION;
-            if (correction < -MAX_HEADING_CORRECTION) correction = -MAX_HEADING_CORRECTION;
-
-            panelsTelemetry.addData("Heading error (deg)", Math.toDegrees(error));
-            panelsTelemetry.addData("Correction", correction);
-
-            return correction;
-        }
-    }
-
-    // Get current heading of the robot using IMU
-    private double getHeading() {
-        YawPitchRollAngles angles = imu.getRobotYawPitchRollAngles();
-        return angles.getYaw(AngleUnit.RADIANS);
-    }
-
-    // Normalizes angle to between [-PI, PI]
-    private double angleWrap(double radians) {
-        while (radians > Math.PI) radians -= 2 * Math.PI;
-        while (radians < -Math.PI) radians += 2 * Math.PI;
-        return radians;
+        // Right stick drives rotation directly, scaled down so it isn't too twitchy
+        return deadzone(xbox.right_stick_x) * TURN_FACTOR;
     }
 
     public void updateDrivetrain(double turn, double theta, double power) {
@@ -164,20 +156,5 @@ public class Drivetrain {
         rightFront.setPower(rightFrontPower * powerFactor);
         leftBack.setPower(-leftBackPower * powerFactor);
         rightBack.setPower(rightBackPower * powerFactor);
-
-        op.telemetry.addData("LX / LY", "%.3f / %.3f", xbox.left_stick_x, xbox.left_stick_y);
-        op.telemetry.addData("RX", "%.3f", xbox.right_stick_x);
-//        op.telemetry.addData("Heading (deg)", Math.toDegrees(currentHeading));
-//        op.telemetry.addData("Target (deg)", Math.toDegrees(targetHeading));
-//        op.telemetry.addData("Power / Theta", "%.3f / %.3f", power, theta);
-//        op.telemetry.addData("Turn", "%.3f", turn);
-        op.telemetry.addData("Left Front Current", leftFront.getCurrent(CurrentUnit.AMPS));
-        op.telemetry.addData("Left Back Current", leftBack.getCurrent(CurrentUnit.AMPS));
-        op.telemetry.addData("Right Front Current", rightFront.getCurrent(CurrentUnit.AMPS));
-        op.telemetry.addData("Right Back Current", rightBack.getCurrent(CurrentUnit.AMPS));
-
-
     }
-
-
 }
