@@ -25,7 +25,8 @@ explain the units and purpose of each value. Edit, rebuild/install, then re-INIT
 
 The reader copies its settings at construction. Other OpModes can use its
 explicit constructor to supply polling and maximum-age values independently.
-The test mode has no Dashboard dependency; settings are changed in source.
+The test mode uses the repository's existing Panels telemetry for browser readings;
+settings are changed in source.
 
 ## Code guide
 
@@ -60,6 +61,15 @@ The test mode has no Dashboard dependency; settings are changed in source.
    re-INIT. This is a manual setup acknowledgment, not automatic calibration or
    map validation. Until then, the reader reports SETUP REQUIRED and returns no
    field fix; individual tag diagnostics remain available.
+
+## Browser distance display
+
+With the Control Hub connected over USB, forward Hub ports 8001 and 8002 using ADB.
+Open http://localhost:8001 and add the OpMode and Telemetry panels. Select
+**BIOBUZZ Limelight Localization** and press INIT. The Telemetry panel shows visible
+IDs, camera-to-tag distance in meters/inches, and right/up/forward offsets.
+These distance readings work with the field-position setup flag still false;
+accurate ranges still require the correct physical tag size and Full 3D.
 
 ## On-robot check
 
